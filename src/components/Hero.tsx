@@ -37,7 +37,7 @@ const slides: Slide[] = [
 export function Hero() {
   const [index, setIndex] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const durationMs = 6000; // 6s per slide for smoother pacing
+  const durationMs = 9000; // 9s per slide for slower, smoother pacing
 
   const start = () => {
     if (timerRef.current) return;
@@ -63,7 +63,7 @@ export function Hero() {
   return (
     <section className="relative">
       <div className="mx-auto max-w-7xl container-px py-20 sm:py-28" onMouseEnter={stop} onMouseLeave={start}>
-        <div className="max-w-3xl transition-all duration-1000 ease-in-out will-change-transform will-change-opacity" key={index}>
+        <div className="max-w-3xl transition-all duration-1600 ease-in-out will-change-transform will-change-opacity" key={index}>
           <span className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-tech-gray-800/60 px-3 py-1 text-xs text-tech-gray-200">
             {slide.badge}
           </span>
@@ -102,7 +102,7 @@ export function Hero() {
               <button
                 key={i}
                 aria-label={`Go to slide ${i + 1}`}
-                className={`h-1.5 w-6 rounded-full transition-all duration-500 ${i === index ? 'bg-white w-8' : 'bg-white/30 w-6'}`}
+                className={`h-1.5 w-6 rounded-full transition-all duration-700 ${i === index ? 'bg-white w-10' : 'bg-white/30 w-6'}`}
                 onClick={() => setIndex(i)}
               />
             ))}
