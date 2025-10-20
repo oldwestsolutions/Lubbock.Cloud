@@ -64,7 +64,7 @@ export function Hero() {
     <section className="relative">
       <div className="mx-auto max-w-7xl container-px py-14 sm:py-20" onMouseEnter={stop} onMouseLeave={start}>
         <div className="grid gap-6 lg:grid-cols-2 items-center">
-          <div className="transition-all duration-1000 ease-in-out will-change-transform will-change-opacity flex flex-col gap-5" key={index}>
+          <div className="transition-all duration-1000 ease-in-out will-change-transform will-change-opacity flex flex-col gap-5 max-w-2xl" key={index}>
           <span className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-tech-gray-800/60 px-3 py-1 text-xs text-tech-gray-200">
             {slide.badge}
           </span>
