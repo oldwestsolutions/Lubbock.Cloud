@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-surface {
+  @apply bg-tech-gray-800/70 backdrop-blur-md shadow-soft border border-white/5;
+}
+
+.container-px {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+
