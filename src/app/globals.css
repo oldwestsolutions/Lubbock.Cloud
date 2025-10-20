@@ -10,4 +10,9 @@
   @apply px-4 sm:px-6 lg:px-8;
 }
 
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .card-surface { box-shadow: none; }
+}
+
 

@@ -29,7 +29,7 @@ export function Navbar() {
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm text-tech-gray-300" />
         <div className="flex items-center gap-3">
-          <Link href="#" className="rounded-md bg-tech-red px-3 py-2 text-sm font-medium text-white hover:opacity-95">Log in</Link>
+          <Link href="/login" className="rounded-md bg-tech-red px-3 py-2 text-sm font-medium text-white hover:opacity-95">Log in</Link>
         </div>
       </div>
     </header>

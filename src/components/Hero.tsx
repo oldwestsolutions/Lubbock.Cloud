@@ -1,6 +1,5 @@
 "use client";
 import Link from 'next/link';
-import Image from 'next/image';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 type Slide = {
@@ -38,7 +37,7 @@ const slides: Slide[] = [
 export function Hero() {
   const [index, setIndex] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const durationMs = 9000; // 9s per slide for slower, smoother pacing
+  const durationMs = 6000; // 6s per slide
 
   const start = () => {
     if (timerRef.current) return;
@@ -63,9 +62,9 @@ export function Hero() {
 
   return (
     <section className="relative">
-      <div className="mx-auto max-w-7xl container-px py-20 sm:py-28" onMouseEnter={stop} onMouseLeave={start}>
-        <div className="grid gap-10 lg:grid-cols-2 items-center">
-          <div className="transition-all duration-1600 ease-in-out will-change-transform will-change-opacity flex flex-col gap-6" key={index}>
+      <div className="mx-auto max-w-7xl container-px py-14 sm:py-20" onMouseEnter={stop} onMouseLeave={start}>
+        <div className="grid gap-6 lg:grid-cols-2 items-center">
+          <div className="transition-all duration-1000 ease-in-out will-change-transform will-change-opacity flex flex-col gap-5" key={index}>
           <span className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-tech-gray-800/60 px-3 py-1 text-xs text-tech-gray-200">
             {slide.badge}
           </span>
@@ -104,24 +103,14 @@ export function Hero() {
               <button
                 key={i}
                 aria-label={`Go to slide ${i + 1}`}
-                className={`h-1.5 w-6 rounded-full transition-all duration-700 ${i === index ? 'bg-white w-10' : 'bg-white/30 w-6'}`}
-                onClick={() => setIndex(i)}
+                  className={`h-1.5 w-6 rounded-full transition-all duration-700 ${i === index ? 'bg-white w-10' : 'bg-white/30 w-6'}`}
+                  onClick={() => setIndex(i)}
               />
             ))}
           </div>
           </div>
-          <div className="relative order-first lg:order-none">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg border border-white/5 shadow-soft">
-              <Image
-                src="/hero.jpg"
-                alt="Lubbock landscape"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                priority
-                onError={(e: any) => { try { e.currentTarget.src = '/hero.svg'; } catch (_) {} }}
-              />
-            </div>
+          <div className="hidden lg:block" aria-hidden="true">
+            <div className="h-[320px] w-full rounded-lg border border-white/5 bg-tech-gray-800/40" />
           </div>
         </div>
       </div>
