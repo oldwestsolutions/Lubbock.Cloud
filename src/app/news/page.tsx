@@ -53,8 +53,8 @@ export default function NewsPage() {
               with enterprise-grade performance and reliability at competitive pricing.
             </p>
             <p className="text-tech-gray-300 leading-relaxed mb-6">
-              "We're excited to bring Supermicro's proven hardware to our customers," said the engineering team. 
-              "These servers represent our commitment to providing the best possible infrastructure for modern applications."
+              &ldquo;We&apos;re excited to bring Supermicro&apos;s proven hardware to our customers,&rdquo; said the engineering team. 
+              &ldquo;These servers represent our commitment to providing the best possible infrastructure for modern applications.&rdquo;
             </p>
             <Link href="/dedicated-servers" className="inline-flex items-center gap-2 bg-tech-red text-white px-4 py-2 rounded-md hover:opacity-95 transition-opacity">
               Read Full Article

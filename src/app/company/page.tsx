@@ -172,7 +172,7 @@ export default function CompanyPage() {
             <div>
               <h3 className="text-xl font-semibold mb-2 text-white">Today - Supermicro Partnership</h3>
               <p className="text-tech-gray-300 leading-relaxed">
-                We've partnered with Supermicro to deliver dedicated servers with enterprise-grade performance. 
+                We&apos;ve partnered with Supermicro to deliver dedicated servers with enterprise-grade performance. 
                 Our infrastructure now powers businesses across the globe, from startups to Fortune 500 companies.
               </p>
             </div>
@@ -183,7 +183,7 @@ export default function CompanyPage() {
             <div>
               <h3 className="text-xl font-semibold mb-2 text-white">Future - Global Expansion</h3>
               <p className="text-tech-gray-300 leading-relaxed">
-                We're expanding our reach, bringing the reliability and performance of Lubbock Cloud to new markets 
+                We&apos;re expanding our reach, bringing the reliability and performance of Lubbock Cloud to new markets 
                 and new opportunities, always maintaining our commitment to security, performance, and customer success.
               </p>
             </div>
