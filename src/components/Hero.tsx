@@ -63,17 +63,17 @@ export function Hero() {
   return (
     <section className="relative">
       <div className="mx-auto max-w-7xl container-px py-20 sm:py-28" onMouseEnter={stop} onMouseLeave={start}>
-        <div className="max-w-3xl transition-all duration-1600 ease-in-out will-change-transform will-change-opacity" key={index}>
+        <div className="max-w-3xl transition-all duration-1600 ease-in-out will-change-transform will-change-opacity flex flex-col gap-6" key={index}>
           <span className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-tech-gray-800/60 px-3 py-1 text-xs text-tech-gray-200">
             {slide.badge}
           </span>
-          <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
+          <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
             {slide.title}
           </h1>
-          <p className="mt-5 text-tech-gray-300 text-lg">
+          <p className="text-tech-gray-300 text-lg">
             {slide.body}
           </p>
-          <div className="mt-8 flex items-center gap-3">
+          <div className="flex items-center gap-3">
             <Link
               href={slide.primary.href}
               className={
@@ -97,7 +97,7 @@ export function Hero() {
               {slide.secondary.label}
             </Link>
           </div>
-          <div className="mt-6 flex gap-2">
+          <div className="flex gap-2">
             {slides.map((_, i) => (
               <button
                 key={i}

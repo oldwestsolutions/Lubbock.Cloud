@@ -8,11 +8,10 @@ export function Footer() {
             <p className="mt-3 text-tech-gray-300">Dedicated servers with modern performance and excellent connectivity.</p>
           </div>
           <div>
-            <h4 className="font-semibold">Products</h4>
+            <h4 className="font-semibold">Lubbock</h4>
             <ul className="mt-3 space-y-2 text-tech-gray-300">
-              <li><a href="/dedicated-servers" className="hover:text-white">Dedicated Servers</a></li>
-              <li><a href="/storage" className="hover:text-white">Storage</a></li>
-              <li><a href="/networking" className="hover:text-white">Networking</a></li>
+              <li><a href="/company" className="hover:text-white">Company</a></li>
+              <li><a href="/news" className="hover:text-white">News</a></li>
             </ul>
           </div>
           <div>
@@ -24,7 +23,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold">Company</h4>
+            <h4 className="font-semibold">Support</h4>
             <ul className="mt-3 space-y-2 text-tech-gray-300">
               <li><a href="/docs" className="hover:text-white">Docs</a></li>
               <li><a href="/support" className="hover:text-white">Support</a></li>
@@ -35,8 +34,8 @@ export function Footer() {
         <div className="mt-10 flex items-center justify-between text-xs text-tech-gray-400">
           <p>© {new Date().getFullYear()} Lubbock Cloud</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Terms</a>
+            <a href="/privacy" className="hover:text-white">Privacy</a>
+            <a href="/terms" className="hover:text-white">Terms</a>
           </div>
         </div>
       </div>
