@@ -20,7 +20,3 @@ pnpm-debug.log*
 .DS_Store
 
 
-
-# project ssh keys
-.ssh_lubbock
-.ssh_lubbock.pub

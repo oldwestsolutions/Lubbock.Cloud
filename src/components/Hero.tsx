@@ -13,7 +13,7 @@ type Slide = {
 const slides: Slide[] = [
   {
     badge: 'Dedicated Servers • Supermicro powered',
-    title: 'Dedicated root servers for peak performance.',
+    title: 'Dedicated root servers.',
     body: 'Dedicated servers built on Supermicro platforms — consistent performance, excellent connectivity, and full control. Starting at $39/mo.',
     primary: { label: 'The Difference', href: '#difference', variant: 'red' },
     secondary: { label: 'Dedicated Servers', href: '/dedicated-servers', variant: 'outline' },
@@ -65,9 +65,6 @@ export function Hero() {
       <div className="mx-auto max-w-7xl container-px py-14 sm:py-20" onMouseEnter={stop} onMouseLeave={start}>
         <div className="flex justify-center">
           <div className="transition-all duration-1000 ease-in-out will-change-transform will-change-opacity flex flex-col gap-5 max-w-3xl text-center" key={index}>
-          <span className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-tech-gray-800/60 px-3 py-1 text-xs text-tech-gray-200">
-            {slide.badge}
-          </span>
           <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
             {slide.title}
           </h1>
