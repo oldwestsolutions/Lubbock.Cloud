@@ -58,7 +58,7 @@ export default function DashboardPage() {
           <ul className="space-y-2">
             <li>Nightly backups — Success (02:00)</li>
             <li>Patching window — Scheduled (Sunday 01:00)</li>
-            <li>Scale policy — Enabled (CPU > 75%)</li>
+            <li>Scale policy — Enabled (CPU {'>'} 75%)</li>
           </ul>
         </Card>
         <Card title="Networking">
