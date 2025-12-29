@@ -645,7 +645,7 @@ export function SystemLayers() {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
-                href="/investors"
+                href="/products"
                 className="inline-flex items-center justify-center gap-2 rounded-md border border-white/30 bg-white/10 backdrop-blur-sm px-6 py-3 text-sm font-medium text-white hover:border-white/50 hover:bg-white/20 transition-colors"
               >
                 Learn More

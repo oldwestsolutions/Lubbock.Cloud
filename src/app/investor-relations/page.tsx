@@ -69,7 +69,7 @@ export default function InvestorRelationsPage() {
                 Detailed financial metrics, unit economics, and growth projections available upon request.
               </p>
               <Link
-                href="/investors"
+                href="/products"
                 className="inline-flex items-center gap-2 text-tech-red hover:text-tech-red/80 text-sm font-medium"
               >
                 View Investor Page
