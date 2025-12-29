@@ -110,9 +110,9 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-20 mx-auto max-w-7xl container-px py-14 sm:py-20 min-h-[600px] sm:min-h-[700px] flex items-center" onMouseEnter={stop} onMouseLeave={start}>
-        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
-          {/* Left Column - Content */}
-          <div className={`transition-all duration-1000 ease-in-out flex flex-col gap-5 ${isTransitioning ? 'opacity-0 translate-x-[-20px]' : 'opacity-100 translate-x-0'}`}>
+        <div className="w-full">
+          {/* Centered Content */}
+          <div className={`transition-all duration-1000 ease-in-out flex flex-col gap-5 items-center text-center max-w-4xl mx-auto ${isTransitioning ? 'opacity-0 translate-y-[-20px]' : 'opacity-100 translate-y-0'}`}>
             <div className="inline-block">
               <span className="text-xs font-medium text-tech-gray-300 uppercase tracking-wider bg-tech-gray-900/50 px-3 py-1 rounded-md backdrop-blur-sm">
                 {slide.badge}
@@ -124,7 +124,7 @@ export function Hero() {
             <p className="text-tech-gray-200 text-lg drop-shadow-md">
               {slide.body}
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center gap-3">
               <Link
                 href={slide.primary.href}
                 className={
@@ -148,7 +148,7 @@ export function Hero() {
                 {slide.secondary.label}
               </Link>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 justify-center">
               {slides.map((_, i) => (
                 <button
                   key={i}
@@ -161,9 +161,6 @@ export function Hero() {
               ))}
             </div>
           </div>
-
-          {/* Right Column - Spacer for Layout */}
-          <div className="hidden lg:block" />
         </div>
       </div>
     </section>
