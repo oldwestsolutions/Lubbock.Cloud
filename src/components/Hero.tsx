@@ -78,10 +78,7 @@ export function Hero() {
     }
   };
 
-  useEffect(() => {
-    start();
-    return stop;
-  }, []);
+  // Auto-transition removed - cards only change on manual click
 
   return (
     <section className="relative overflow-hidden min-h-[600px] sm:min-h-[700px]">
@@ -109,7 +106,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 mx-auto max-w-7xl py-14 sm:py-20 min-h-[600px] sm:min-h-[700px] flex items-center" onMouseEnter={stop} onMouseLeave={start}>
+      <div className="relative z-20 mx-auto max-w-7xl py-14 sm:py-20 min-h-[600px] sm:min-h-[700px] flex items-center">
         <div className="w-full pl-8 sm:pl-12 lg:pl-20 xl:pl-32">
           {/* Left-Aligned Content */}
           <div className={`transition-all duration-1000 ease-in-out flex flex-col gap-5 max-w-3xl ${isTransitioning ? 'opacity-0 translate-x-[-20px]' : 'opacity-100 translate-x-0'}`}>
