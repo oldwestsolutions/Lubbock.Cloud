@@ -8,10 +8,10 @@ export function Footer() {
             <p className="mt-3 text-tech-gray-300">Dedicated servers with modern performance and excellent connectivity.</p>
           </div>
           <div>
-            <h4 className="font-semibold">Lubbock</h4>
+            <h4 className="font-semibold">Investor Relations</h4>
             <ul className="mt-3 space-y-2 text-tech-gray-300">
-              <li><a href="/company" className="hover:text-white">Company</a></li>
-              <li><a href="/news" className="hover:text-white">News</a></li>
+              <li><a href="/investor-relations" className="hover:text-white">Investor Relations</a></li>
+              <li><a href="/investors" className="hover:text-white">Investors</a></li>
             </ul>
           </div>
           <div>
