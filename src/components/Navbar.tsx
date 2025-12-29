@@ -28,7 +28,11 @@ export function Navbar() {
           <Logo className="h-7 w-7" />
           <span className="font-semibold tracking-tight">Lubbock Cloud</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm text-tech-gray-300" />
+        <nav className="hidden md:flex items-center gap-6 text-sm text-tech-gray-300">
+          <Link href="/solutions" className="hover:text-white transition-colors">Solutions</Link>
+          <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+          <Link href="/investors" className="hover:text-white transition-colors">Investors</Link>
+        </nav>
         <div className="flex items-center gap-3">
           <button className="rounded-md p-2 text-tech-gray-300 hover:text-white hover:bg-tech-gray-800 transition-colors" aria-label="Search">
             <Search className="w-5 h-5" />
