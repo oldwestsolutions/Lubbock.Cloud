@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { Wind, TrendingUp, Droplet, Mountain, Plug, Zap } from 'lucide-react';
 
 export function WestTexasContext() {
@@ -12,7 +13,7 @@ export function WestTexasContext() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="card-surface rounded-xl p-6">
+        <Link href="/excess-wind-solar" className="card-surface rounded-xl p-6 hover:border-tech-red/30 border border-transparent transition-all hover:scale-[1.02] cursor-pointer">
           <div className="mb-4">
             <Wind className="w-8 h-8 text-tech-red" />
           </div>
@@ -20,9 +21,9 @@ export function WestTexasContext() {
           <p className="text-tech-gray-300 text-sm">
             At certain hours, renewable generation exceeds demand, creating opportunities for negative pricing and curtailment capture.
           </p>
-        </div>
+        </Link>
 
-        <div className="card-surface rounded-xl p-6">
+        <Link href="/power-price-volatility" className="card-surface rounded-xl p-6 hover:border-tech-blue/30 border border-transparent transition-all hover:scale-[1.02] cursor-pointer">
           <div className="mb-4">
             <TrendingUp className="w-8 h-8 text-tech-blue" />
           </div>
@@ -30,9 +31,9 @@ export function WestTexasContext() {
           <p className="text-tech-gray-300 text-sm">
             ERCOT&apos;s real-time market creates extreme price swings — from negative prices to thousands of dollars per MWh during scarcity events.
           </p>
-        </div>
+        </Link>
 
-        <div className="card-surface rounded-xl p-6">
+        <Link href="/water-constraints" className="card-surface rounded-xl p-6 hover:border-tech-blue/30 border border-transparent transition-all hover:scale-[1.02] cursor-pointer">
           <div className="mb-4">
             <Droplet className="w-8 h-8 text-tech-blue" />
           </div>
@@ -40,9 +41,9 @@ export function WestTexasContext() {
           <p className="text-tech-gray-300 text-sm">
             Limited water resources require intelligent management. Water optimization becomes a competitive moat, not just a cost center.
           </p>
-        </div>
+        </Link>
 
-        <div className="card-surface rounded-xl p-6">
+        <Link href="/cheap-land" className="card-surface rounded-xl p-6 hover:border-tech-gray-400/30 border border-transparent transition-all hover:scale-[1.02] cursor-pointer">
           <div className="mb-4">
             <Mountain className="w-8 h-8 text-tech-gray-400" />
           </div>
@@ -50,9 +51,9 @@ export function WestTexasContext() {
           <p className="text-tech-gray-300 text-sm">
             Abundant, affordable land enables large-scale infrastructure deployment and co-location of generation, storage, and compute.
           </p>
-        </div>
+        </Link>
 
-        <div className="card-surface rounded-xl p-6">
+        <Link href="/grid-congestion" className="card-surface rounded-xl p-6 hover:border-tech-gray-400/30 border border-transparent transition-all hover:scale-[1.02] cursor-pointer">
           <div className="mb-4">
             <Plug className="w-8 h-8 text-tech-gray-400" />
           </div>
@@ -60,9 +61,9 @@ export function WestTexasContext() {
           <p className="text-tech-gray-300 text-sm">
             Transmission constraints create localized pricing opportunities. Strategic siting near congestion points enables arbitrage.
           </p>
-        </div>
+        </Link>
 
-        <div className="card-surface rounded-xl p-6 bg-gradient-to-br from-tech-red/10 to-tech-blue/10 border-2 border-tech-red/20">
+        <Link href="/the-opportunity" className="card-surface rounded-xl p-6 bg-gradient-to-br from-tech-red/10 to-tech-blue/10 border-2 border-tech-red/20 hover:border-tech-red/40 transition-all hover:scale-[1.02] cursor-pointer">
           <div className="mb-4">
             <Zap className="w-8 h-8 text-tech-red" />
           </div>
@@ -70,7 +71,7 @@ export function WestTexasContext() {
           <p className="text-tech-gray-300 text-sm">
             These constraints aren&apos;t problems — they&apos;re the raw materials for an energy arbitrage platform that turns volatility into competitive advantage.
           </p>
-        </div>
+        </Link>
       </div>
     </section>
   );
