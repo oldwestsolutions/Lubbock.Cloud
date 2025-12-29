@@ -275,69 +275,46 @@ export function SystemLayers() {
               </div>
             </div>
 
-            <div>
-              <h4 className="text-xl font-semibold text-white mb-3">What This Layer Does</h4>
-              <p className="text-tech-gray-300 text-sm mb-3">GitLab as System of Record</p>
-              <ul className="space-y-2 text-tech-gray-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-tech-blue mt-1">•</span>
-                  <span>Stores algorithms, not just code</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-tech-blue mt-1">•</span>
-                  <span>Tracks energy strategies, load-shedding logic, trading heuristics</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-tech-blue mt-1">•</span>
-                  <span>Enables reproducibility and auditability</span>
-                </li>
-              </ul>
-            </div>
-
             <div className="card-surface rounded-xl p-6">
               <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                 <GitBranch className="w-6 h-6 text-tech-blue" />
                 Why GitLab-Style Systems Matter
               </h4>
+              <div className="mb-6">
+                <h5 className="text-lg font-semibold text-white mb-3">What This Layer Does</h5>
+                <p className="text-tech-gray-300 text-sm mb-3 font-medium">GitLab as System of Record</p>
+                <ul className="space-y-2 text-tech-gray-300">
+                  <li className="flex items-start gap-2">
+                    <span className="text-tech-blue mt-1">•</span>
+                    <span>Stores algorithms, not just code</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-tech-blue mt-1">•</span>
+                    <span>Tracks energy strategies, load-shedding logic, trading heuristics</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-tech-blue mt-1">•</span>
+                    <span>Enables reproducibility and auditability</span>
+                  </li>
+                </ul>
+              </div>
               <p className="text-tech-gray-300 mb-4">
-                This is where energy arbitrage logic lives, mining schedules live, battery dispatch logic lives, and risk controls live.
+                The Algorithm & Workflow Layer serves as the central nervous system for energy arbitrage operations. This is where energy arbitrage logic lives, mining schedules live, battery dispatch logic lives, and risk controls live. GitLab functions as the system of record, providing version control, continuous integration, and deployment pipelines for physical infrastructure configurations. This enables deterministic, reproducible, and auditable control over energy routing decisions, storage timing protocols, water pumping schedules, and miner on/off logic.
               </p>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-tech-gray-800/50 rounded-lg p-4">
                   <h5 className="font-semibold text-white mb-2 text-sm">Versioned Infrastructure Logic</h5>
-                  <p className="text-tech-gray-300 text-xs">Track changes to physical system configurations</p>
+                  <p className="text-tech-gray-300 text-xs">Track changes to physical system configurations with full audit trails and rollback capabilities</p>
                 </div>
                 <div className="bg-tech-gray-800/50 rounded-lg p-4">
                   <h5 className="font-semibold text-white mb-2 text-sm">CI/CD for Physical Systems</h5>
-                  <p className="text-tech-gray-300 text-xs">Deploy energy strategies like software</p>
+                  <p className="text-tech-gray-300 text-xs">Deploy energy strategies like software with automated testing and validation pipelines</p>
                 </div>
                 <div className="bg-tech-gray-800/50 rounded-lg p-4">
                   <h5 className="font-semibold text-white mb-2 text-sm">Separation of Logic from Execution</h5>
-                  <p className="text-tech-gray-300 text-xs">Control infrastructure like code</p>
+                  <p className="text-tech-gray-300 text-xs">Control infrastructure like code with declarative configuration management</p>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-tech-gray-800/50 rounded-lg p-6 border-l-4 border-tech-blue">
-              <h5 className="font-semibold text-white mb-2">Key Insight</h5>
-              <p className="text-tech-gray-300 text-sm mb-3">
-                Your &quot;algorithms&quot; are not just financial. They are:
-              </p>
-              <ul className="space-y-1 text-tech-gray-300 text-sm">
-                <li>• Power routing decisions</li>
-                <li>• Storage timing decisions</li>
-                <li>• Water pumping schedules</li>
-                <li>• Miner on/off logic</li>
-              </ul>
-            </div>
-
-            <div className="bg-tech-gray-800/50 rounded-lg p-6 border-l-4 border-tech-blue">
-              <h5 className="font-semibold text-white mb-2">Success Metrics</h5>
-              <ul className="space-y-1 text-tech-gray-300 text-sm">
-                <li>• Time from strategy update → live deployment</li>
-                <li>• Rollback safety</li>
-                <li>• Audit trail integrity</li>
-              </ul>
             </div>
           </div>
         </div>
@@ -494,25 +471,6 @@ export function SystemLayers() {
               </div>
             </div>
 
-            <div>
-              <h4 className="text-xl font-semibold text-white mb-3">What This Layer Does</h4>
-              <p className="text-tech-gray-300 text-sm mb-3">Bitcoin Miners as Synthetic Demand</p>
-              <ul className="space-y-2 text-tech-gray-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-tech-red mt-1">•</span>
-                  <span>Monetizes excess power instantly</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-tech-red mt-1">•</span>
-                  <span>Acts as a buyer of last resort</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-tech-red mt-1">•</span>
-                  <span>Provides price discovery for energy</span>
-                </li>
-              </ul>
-            </div>
-
             <div className="card-surface rounded-xl p-6">
               <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                 <Cpu className="w-6 h-6 text-tech-red" />
@@ -554,15 +512,6 @@ export function SystemLayers() {
               </ul>
             </div>
 
-            <div className="bg-tech-gray-800/50 rounded-lg p-6 border-l-4 border-tech-red">
-              <h5 className="font-semibold text-white mb-2">Success Metrics</h5>
-              <ul className="space-y-1 text-tech-gray-300 text-sm">
-                <li>• Hashrate per kWh (efficiency)</li>
-                <li>• On/off latency (response time)</li>
-                <li>• Profitability vs spot power price (arbitrage margin)</li>
-                <li>• Uptime during negative pricing windows</li>
-              </ul>
-            </div>
           </div>
         </div>
 
