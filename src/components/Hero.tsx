@@ -12,25 +12,25 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    badge: 'Dedicated Servers • Supermicro powered',
-    title: 'Dedicated root servers.',
-    body: 'Dedicated servers built on Supermicro platforms — consistent performance, excellent connectivity, and full control. Starting at $39/mo.',
-    primary: { label: 'The Difference', href: '#difference', variant: 'red' },
-    secondary: { label: 'Dedicated Servers', href: '/dedicated-servers', variant: 'outline' },
+    badge: 'Energy Arbitrage • Primary Engine',
+    title: 'Turn power volatility into competitive advantage.',
+    body: 'Energy arbitrage is the backbone. We transform cheap or negative-priced electricity, grid imbalance events, and off-peak pricing into revenue through intelligent load management.',
+    primary: { label: 'Explore Three Pillars', href: '#three-pillars', variant: 'red' },
+    secondary: { label: 'Learn More', href: '#west-texas', variant: 'outline' },
   },
   {
-    badge: 'Developer Services',
-    title: 'Ship faster with managed developer tooling.',
-    body: 'Managed APIs, serverless functions, CI/CD pipelines, and app accelerators to reduce toil and speed delivery.',
-    primary: { label: 'Explore Dev Services', href: '/developer-services', variant: 'blue' },
-    secondary: { label: 'Docs', href: '/developer-services', variant: 'gray' },
+    badge: 'Compute Arbitrage • Secondary Engine',
+    title: 'Cloud without uptime guarantees.',
+    body: 'When power is cheap, we run miners and HPC jobs. When expensive, we shut down compute and discharge batteries. This is cloud that adapts to energy markets in real-time.',
+    primary: { label: 'System Layers', href: '#system-layers', variant: 'blue' },
+    secondary: { label: 'How It Works', href: '#three-pillars', variant: 'gray' },
   },
   {
-    badge: 'Acceleration',
-    title: 'Edge, GPUs, and low-latency routing.',
-    body: 'Local CDN caching, AI/ML acceleration nodes, and ISP partnerships for the fastest path to your users.',
-    primary: { label: 'See Acceleration', href: '/acceleration', variant: 'red' },
-    secondary: { label: 'GPU Nodes', href: '/acceleration', variant: 'outline' },
+    badge: 'Natural Resource Optimization • Long-Term Moat',
+    title: 'Resource optimizer, not just a miner.',
+    body: 'We optimize water, power, and land resources to create sustainable competitive advantages. This is where Lubbock.cloud becomes hard to copy.',
+    primary: { label: 'See Ecosystem', href: '#ecosystem', variant: 'red' },
+    secondary: { label: 'Three Pillars', href: '#three-pillars', variant: 'outline' },
   },
 ];
 
