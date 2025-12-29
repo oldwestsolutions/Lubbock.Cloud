@@ -83,7 +83,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden min-h-[600px] sm:min-h-[700px]">
       {/* Background Images with Fade */}
       <div className="absolute inset-0 z-0">
         {slides.map((slideItem, i) => (
@@ -105,8 +105,8 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 mx-auto max-w-7xl container-px py-14 sm:py-20" onMouseEnter={stop} onMouseLeave={start}>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-20 mx-auto max-w-7xl container-px py-14 sm:py-20 min-h-[600px] sm:min-h-[700px] flex items-center" onMouseEnter={stop} onMouseLeave={start}>
+        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left Column - Content */}
           <div className={`transition-all duration-1000 ease-in-out flex flex-col gap-5 ${isTransitioning ? 'opacity-0 translate-x-[-20px]' : 'opacity-100 translate-x-0'}`}>
             <div className="inline-block">
