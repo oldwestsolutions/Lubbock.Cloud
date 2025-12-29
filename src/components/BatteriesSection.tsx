@@ -6,7 +6,7 @@ export function BatteriesSection() {
       <div className="text-center mb-16">
         <h2 className="text-4xl sm:text-5xl font-semibold mb-4">How Batteries Fit</h2>
         <p className="text-tech-gray-300 text-lg max-w-3xl mx-auto">
-          Batteries are the brain stem of the system — they're not optional
+          Batteries are the brain stem of the system — they&apos;re not optional
         </p>
       </div>
 
@@ -15,7 +15,7 @@ export function BatteriesSection() {
           <div>
             <h3 className="text-2xl font-semibold mb-4">Batteries Are The Brain Stem</h3>
             <p className="text-tech-gray-300 text-lg mb-6">
-              Batteries enable the entire system to function intelligently. They're not just storage — they're the control mechanism that makes energy arbitrage possible.
+              Batteries enable the entire system to function intelligently. They&apos;re not just storage — they&apos;re the control mechanism that makes energy arbitrage possible.
             </p>
           </div>
 
@@ -51,11 +51,11 @@ export function BatteriesSection() {
               <div className="space-y-4">
                 <div>
                   <p className="text-tech-gray-400 text-sm mb-2">Without batteries:</p>
-                  <p className="text-white font-medium">You're a miner</p>
+                  <p className="text-white font-medium">You&apos;re a miner</p>
                 </div>
                 <div className="border-t border-tech-gray-700 pt-4">
                   <p className="text-tech-gray-400 text-sm mb-2">With batteries:</p>
-                  <p className="text-white font-medium">You're an energy market participant</p>
+                  <p className="text-white font-medium">You&apos;re an energy market participant</p>
                 </div>
               </div>
               <p className="text-tech-gray-300 text-sm mt-4 italic">

@@ -113,7 +113,7 @@ export function PublicCompanyEcosystem() {
       <div className="text-center mb-16">
         <h2 className="text-4xl sm:text-5xl font-semibold mb-4">Public-Company Ecosystem</h2>
         <p className="text-tech-gray-300 text-lg max-w-3xl mx-auto">
-          Think in layers. Each layer has multiple viable vendors so you're never captive to one.
+          Think in layers. Each layer has multiple viable vendors so you&apos;re never captive to one.
         </p>
       </div>
 
