@@ -4,7 +4,6 @@ import { WestTexasContext } from '@/components/WestTexasContext';
 import { ThreePillars } from '@/components/ThreePillars';
 import { BatteriesSection } from '@/components/BatteriesSection';
 import { SystemLayers } from '@/components/SystemLayers';
-import { PublicCompanyEcosystem } from '@/components/PublicCompanyEcosystem';
 import { Footer } from '@/components/Footer';
 
 export default function Page() {
@@ -16,7 +15,6 @@ export default function Page() {
       <ThreePillars />
       <BatteriesSection />
       <SystemLayers />
-      <PublicCompanyEcosystem />
       <Footer />
     </main>
   );

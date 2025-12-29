@@ -182,16 +182,92 @@ export function SystemLayers() {
         </div>
 
         {/* Layer 2: Algorithms */}
-        <div className="card-surface rounded-xl p-8 sm:p-12">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-full bg-tech-blue/20 flex items-center justify-center">
-              <GitBranch className="w-6 h-6 text-tech-blue" />
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Laboratory Illustration */}
+          <div className="card-surface rounded-xl p-8 bg-tech-gray-900 border border-tech-gray-700">
+            <div className="flex items-center gap-2 mb-6">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              <span className="ml-4 text-tech-gray-400 text-sm">gitlab-laboratory.terminal</span>
             </div>
-            <h3 className="text-3xl font-semibold">Algorithm & Workflow Layer</h3>
-            <span className="ml-auto px-4 py-1.5 rounded-full bg-tech-blue/20 text-tech-blue text-sm font-medium">GitLab as System of Record</span>
+            
+            {/* Laboratory Visualization */}
+            <div className="mb-6">
+              <div className="bg-tech-gray-800/50 rounded-lg p-6 border border-tech-gray-700">
+                {/* Laboratory Setup */}
+                <div className="space-y-4">
+                  {/* Lab Bench */}
+                  <div className="h-24 bg-gradient-to-b from-tech-gray-700 to-tech-gray-800 rounded-lg border border-tech-gray-600 relative">
+                    {/* Test Tubes / Code Modules */}
+                    <div className="absolute top-2 left-4 flex gap-2">
+                      <div className="w-3 h-12 bg-gradient-to-t from-tech-blue/60 to-tech-blue/30 rounded-t border border-tech-blue/40"></div>
+                      <div className="w-3 h-10 bg-gradient-to-t from-tech-blue/60 to-tech-blue/30 rounded-t border border-tech-blue/40"></div>
+                      <div className="w-3 h-14 bg-gradient-to-t from-tech-blue/60 to-tech-blue/30 rounded-t border border-tech-blue/40"></div>
+                    </div>
+                    {/* GitLab Logo / Central System */}
+                    <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-tech-blue/20 rounded-lg border-2 border-tech-blue/40 flex items-center justify-center">
+                      <GitBranch className="w-6 h-6 text-tech-blue" />
+                    </div>
+                    {/* Code Files / Documents */}
+                    <div className="absolute top-2 right-4 flex flex-col gap-1">
+                      <div className="w-8 h-2 bg-tech-gray-600 rounded"></div>
+                      <div className="w-10 h-2 bg-tech-gray-600 rounded"></div>
+                      <div className="w-6 h-2 bg-tech-gray-600 rounded"></div>
+                    </div>
+                    {/* Connection Lines */}
+                    <div className="absolute top-8 left-12 w-16 h-0.5 bg-tech-blue/30"></div>
+                    <div className="absolute top-8 right-12 w-16 h-0.5 bg-tech-blue/30"></div>
+                  </div>
+                  
+                  {/* Lab Equipment / Monitoring */}
+                  <div className="grid grid-cols-3 gap-2">
+                    <div className="bg-tech-gray-700/50 rounded p-2 border border-tech-gray-600">
+                      <div className="text-xs text-tech-gray-400 mb-1">Version</div>
+                      <div className="text-xs text-green-400 font-mono">v2.4.1</div>
+                    </div>
+                    <div className="bg-tech-gray-700/50 rounded p-2 border border-tech-gray-600">
+                      <div className="text-xs text-tech-gray-400 mb-1">Status</div>
+                      <div className="text-xs text-green-400 font-mono">Active</div>
+                    </div>
+                    <div className="bg-tech-gray-700/50 rounded p-2 border border-tech-gray-600">
+                      <div className="text-xs text-tech-gray-400 mb-1">Tests</div>
+                      <div className="text-xs text-green-400 font-mono">98%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* GitLab Stats */}
+            <div className="font-mono text-sm space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-tech-gray-400">Repositories:</span>
+                <span className="text-green-400">24</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-tech-gray-400">Pipelines:</span>
+                <span className="text-green-400">Active</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-tech-gray-400">Deployments:</span>
+                <span className="text-green-400">12</span>
+              </div>
+            </div>
           </div>
 
+          {/* Right Column - Content */}
           <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-tech-blue/20 flex items-center justify-center">
+                <GitBranch className="w-6 h-6 text-tech-blue" />
+              </div>
+              <div>
+                <h3 className="text-3xl font-semibold">Algorithm & Workflow Layer</h3>
+                <span className="px-4 py-1.5 rounded-full bg-tech-blue/20 text-tech-blue text-sm font-medium">GitLab as System of Record</span>
+              </div>
+            </div>
+
             <div>
               <h4 className="text-xl font-semibold text-white mb-3">What This Layer Does</h4>
               <ul className="space-y-2 text-tech-gray-300">
@@ -210,23 +286,26 @@ export function SystemLayers() {
               </ul>
             </div>
 
-            <div>
-              <h4 className="text-xl font-semibold text-white mb-3">Why GitLab-Style Systems Matter</h4>
+            <div className="card-surface rounded-xl p-6">
+              <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                <GitBranch className="w-6 h-6 text-tech-blue" />
+                Why GitLab-Style Systems Matter
+              </h4>
               <p className="text-tech-gray-300 mb-4">
                 This is where energy arbitrage logic lives, mining schedules live, battery dispatch logic lives, and risk controls live.
               </p>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-tech-gray-800/50 rounded-lg p-4">
-                  <h5 className="font-semibold text-white mb-2">Versioned Infrastructure Logic</h5>
-                  <p className="text-tech-gray-300 text-sm">Track changes to physical system configurations</p>
+                  <h5 className="font-semibold text-white mb-2 text-sm">Versioned Infrastructure Logic</h5>
+                  <p className="text-tech-gray-300 text-xs">Track changes to physical system configurations</p>
                 </div>
                 <div className="bg-tech-gray-800/50 rounded-lg p-4">
-                  <h5 className="font-semibold text-white mb-2">CI/CD for Physical Systems</h5>
-                  <p className="text-tech-gray-300 text-sm">Deploy energy strategies like software</p>
+                  <h5 className="font-semibold text-white mb-2 text-sm">CI/CD for Physical Systems</h5>
+                  <p className="text-tech-gray-300 text-xs">Deploy energy strategies like software</p>
                 </div>
                 <div className="bg-tech-gray-800/50 rounded-lg p-4">
-                  <h5 className="font-semibold text-white mb-2">Separation of Logic from Execution</h5>
-                  <p className="text-tech-gray-300 text-sm">Control infrastructure like code</p>
+                  <h5 className="font-semibold text-white mb-2 text-sm">Separation of Logic from Execution</h5>
+                  <p className="text-tech-gray-300 text-xs">Control infrastructure like code</p>
                 </div>
               </div>
             </div>
@@ -257,7 +336,7 @@ export function SystemLayers() {
 
         {/* Layer 3: Flexible Compute */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Bitcoin Miner Oil Rig Illustration */}
+          {/* Left Column - Oil Drilling Rig Illustration */}
           <div className="card-surface rounded-xl p-8 bg-tech-gray-900 border border-tech-gray-700">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -266,40 +345,56 @@ export function SystemLayers() {
               <span className="ml-4 text-tech-gray-400 text-sm">bitcoin-miner.terminal</span>
             </div>
             
-            {/* Oil Rig Style Miner Visualization */}
+            {/* Oil Drilling Rig Visualization */}
             <div className="mb-6">
               <div className="bg-tech-gray-800/50 rounded-lg p-6 border border-tech-gray-700">
                 {/* Oil Rig Structure */}
                 <div className="flex flex-col items-center mb-4">
-                  {/* Rig Tower */}
+                  {/* Derrick (Main Tower) */}
                   <div className="relative mb-2">
-                    {/* Main Tower */}
-                    <div className="w-16 h-32 bg-gradient-to-b from-tech-red/40 via-tech-red/30 to-tech-red/20 border-2 border-tech-red/50 rounded-t-lg relative">
-                      {/* Tower Sections */}
-                      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-tech-red/60"></div>
-                      <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-tech-red/60"></div>
-                      <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-tech-red/60"></div>
+                    {/* Derrick Structure */}
+                    <div className="relative">
+                      {/* Left Leg */}
+                      <div className="absolute left-0 w-1 h-40 bg-gradient-to-b from-tech-red/50 to-tech-red/30"></div>
+                      {/* Right Leg */}
+                      <div className="absolute right-0 w-1 h-40 bg-gradient-to-b from-tech-red/50 to-tech-red/30"></div>
+                      {/* Center Support */}
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-40 bg-tech-red/40"></div>
+                      {/* Cross Braces */}
+                      <div className="absolute top-8 left-0 right-0 h-1 bg-tech-red/30"></div>
+                      <div className="absolute top-16 left-0 right-0 h-1 bg-tech-red/30"></div>
+                      <div className="absolute top-24 left-0 right-0 h-1 bg-tech-red/30"></div>
+                      <div className="absolute top-32 left-0 right-0 h-1 bg-tech-red/30"></div>
                       {/* Top Platform */}
-                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-20 h-3 bg-tech-red/50 rounded"></div>
-                    </div>
-                    {/* Rig Base */}
-                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-8 bg-gradient-to-b from-tech-gray-600 to-tech-gray-700 rounded-lg border border-tech-gray-500">
-                      <div className="flex items-center justify-center h-full gap-1">
-                        <Cpu className="w-3 h-3 text-tech-red" />
-                        <Cpu className="w-3 h-3 text-tech-red" />
-                        <Cpu className="w-3 h-3 text-tech-red" />
+                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-tech-red/60 rounded-t border border-tech-red/50">
+                        <div className="flex items-center justify-center h-full">
+                          <Cpu className="w-3 h-3 text-white" />
+                        </div>
+                      </div>
+                      {/* Drilling Platform */}
+                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-6 bg-gradient-to-b from-tech-gray-600 to-tech-gray-700 rounded-lg border border-tech-gray-500">
+                        <div className="flex items-center justify-center h-full gap-1">
+                          <Cpu className="w-2.5 h-2.5 text-tech-red" />
+                          <Cpu className="w-2.5 h-2.5 text-tech-red" />
+                          <Cpu className="w-2.5 h-2.5 text-tech-red" />
+                        </div>
                       </div>
                     </div>
+                    {/* Drill Pipe */}
+                    <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-1 h-16 bg-tech-gray-500/50"></div>
                   </div>
                   
-                  {/* Support Structures */}
-                  <div className="flex gap-8 mt-2">
-                    <div className="w-1 h-12 bg-tech-red/30"></div>
-                    <div className="w-1 h-12 bg-tech-red/30"></div>
+                  {/* Support Base */}
+                  <div className="w-40 h-6 bg-gradient-to-b from-tech-gray-700 to-tech-gray-800 rounded-lg border border-tech-gray-600 mt-2">
+                    <div className="flex items-center justify-center h-full gap-2">
+                      <div className="w-2 h-2 bg-tech-red/50 rounded"></div>
+                      <div className="w-2 h-2 bg-tech-red/50 rounded"></div>
+                      <div className="w-2 h-2 bg-tech-red/50 rounded"></div>
+                    </div>
                   </div>
                   
-                  {/* Ground Platform */}
-                  <div className="w-32 h-4 bg-tech-gray-700/50 rounded border border-tech-gray-600 mt-2"></div>
+                  {/* Ground Level */}
+                  <div className="w-full h-3 bg-tech-gray-700/30 rounded border border-tech-gray-600/50 mt-2"></div>
                 </div>
                 
                 {/* Miner Stats */}
@@ -457,24 +552,63 @@ export function SystemLayers() {
 
         {/* Layer Interaction Diagram */}
         <div className="card-surface rounded-xl p-8 sm:p-12 bg-gradient-to-br from-tech-gray-800/50 to-tech-gray-900/50">
-          <h3 className="text-2xl font-semibold mb-6 text-center">How These Layers Reinforce Each Other</h3>
-          <div className="flex flex-col items-center gap-4">
-            <div className="bg-tech-blue/20 rounded-lg p-4 border border-tech-blue/30">
-              <p className="text-white font-medium">Algorithms (GitLab)</p>
+          <h3 className="text-2xl font-semibold mb-8 text-center">How These Layers Reinforce Each Other</h3>
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8">
+            {/* Algorithms */}
+            <div className="flex flex-col items-center gap-3">
+              <div className="bg-tech-blue/20 rounded-xl p-6 border-2 border-tech-blue/40 shadow-lg min-w-[180px] text-center">
+                <GitBranch className="w-8 h-8 text-tech-blue mx-auto mb-2" />
+                <p className="text-white font-semibold">Algorithms</p>
+                <p className="text-tech-gray-300 text-xs mt-1">(GitLab)</p>
+              </div>
             </div>
-            <div className="text-tech-gray-400">↓</div>
-            <div className="bg-tech-gray-700/50 rounded-lg p-4 border border-tech-gray-600 flex items-center gap-4">
-              <span className="text-white font-medium">Batteries</span>
-              <span className="text-tech-gray-400">←→</span>
-              <span className="text-white font-medium">Power Markets</span>
+            
+            {/* Arrow */}
+            <div className="flex items-center">
+              <ArrowRight className="w-8 h-8 text-tech-blue lg:block hidden" />
+              <div className="w-8 h-8 border-b-2 border-tech-blue lg:hidden"></div>
             </div>
-            <div className="text-tech-gray-400">↓</div>
-            <div className="bg-tech-red/20 rounded-lg p-4 border border-tech-red/30">
-              <p className="text-white font-medium">Storage (Pure-style)</p>
+            
+            {/* Batteries & Power Markets */}
+            <div className="flex flex-col items-center gap-3">
+              <div className="bg-tech-gray-700/50 rounded-xl p-6 border-2 border-tech-gray-600 shadow-lg min-w-[180px] text-center">
+                <Battery className="w-8 h-8 text-tech-blue mx-auto mb-2" />
+                <p className="text-white font-semibold">Batteries</p>
+              </div>
+              <div className="flex items-center gap-2 text-tech-gray-400">
+                <span className="text-xs">←→</span>
+                <span className="text-xs">Power Markets</span>
+              </div>
             </div>
-            <div className="text-tech-gray-400">↓</div>
-            <div className="bg-tech-gray-700/50 rounded-lg p-4 border border-tech-gray-600">
-              <p className="text-white font-medium">Compute (Miners / AI jobs)</p>
+            
+            {/* Arrow */}
+            <div className="flex items-center">
+              <ArrowRight className="w-8 h-8 text-tech-red lg:block hidden" />
+              <div className="w-8 h-8 border-b-2 border-tech-red lg:hidden"></div>
+            </div>
+            
+            {/* Storage */}
+            <div className="flex flex-col items-center gap-3">
+              <div className="bg-tech-red/20 rounded-xl p-6 border-2 border-tech-red/40 shadow-lg min-w-[180px] text-center">
+                <Database className="w-8 h-8 text-tech-red mx-auto mb-2" />
+                <p className="text-white font-semibold">Storage</p>
+                <p className="text-tech-gray-300 text-xs mt-1">(Pure-style)</p>
+              </div>
+            </div>
+            
+            {/* Arrow */}
+            <div className="flex items-center">
+              <ArrowRight className="w-8 h-8 text-tech-red lg:block hidden" />
+              <div className="w-8 h-8 border-b-2 border-tech-red lg:hidden"></div>
+            </div>
+            
+            {/* Compute */}
+            <div className="flex flex-col items-center gap-3">
+              <div className="bg-tech-gray-700/50 rounded-xl p-6 border-2 border-tech-gray-600 shadow-lg min-w-[180px] text-center">
+                <Cpu className="w-8 h-8 text-tech-red mx-auto mb-2" />
+                <p className="text-white font-semibold">Compute</p>
+                <p className="text-tech-gray-300 text-xs mt-1">(Miners / AI jobs)</p>
+              </div>
             </div>
           </div>
         </div>
