@@ -270,7 +270,7 @@ export function SystemLayers() {
 
             <div>
               <h4 className="text-xl font-semibold text-white mb-3">What This Layer Does</h4>
-              <p className="text-tech-gray-300 text-sm mb-3 italic">GitLab as System of Record</p>
+              <p className="text-tech-gray-300 text-sm mb-3">GitLab as System of Record</p>
               <ul className="space-y-2 text-tech-gray-300">
                 <li className="flex items-start gap-2">
                   <span className="text-tech-blue mt-1">•</span>
@@ -482,7 +482,7 @@ export function SystemLayers() {
 
             <div>
               <h4 className="text-xl font-semibold text-white mb-3">What This Layer Does</h4>
-              <p className="text-tech-gray-300 text-sm mb-3 italic">Bitcoin Miners as Synthetic Demand</p>
+              <p className="text-tech-gray-300 text-sm mb-3">Bitcoin Miners as Synthetic Demand</p>
               <ul className="space-y-2 text-tech-gray-300">
                 <li className="flex items-start gap-2">
                   <span className="text-tech-red mt-1">•</span>
