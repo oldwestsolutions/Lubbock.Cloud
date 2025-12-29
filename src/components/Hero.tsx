@@ -19,7 +19,7 @@ const slides: Slide[] = [
     body: 'We optimize water, power, and land resources to create sustainable competitive advantages. This is where Lubbock.cloud becomes hard to copy.',
     primary: { label: 'See Ecosystem', href: '#ecosystem', variant: 'red' },
     secondary: { label: 'Three Pillars', href: '#three-pillars', variant: 'outline' },
-    backgroundImage: '/sunset.jpg',
+    backgroundImage: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
   },
   {
     badge: 'Compute Arbitrage • Secondary Engine',
@@ -27,7 +27,7 @@ const slides: Slide[] = [
     body: 'When power is cheap, we run miners and HPC jobs. When expensive, we shut down compute and discharge batteries. This is cloud that adapts to energy markets in real-time.',
     primary: { label: 'System Layers', href: '#system-layers', variant: 'blue' },
     secondary: { label: 'How It Works', href: '#three-pillars', variant: 'gray' },
-    backgroundImage: '/clouds.png',
+    backgroundImage: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
   },
   {
     badge: 'Natural Resource Optimization • Long-Term Moat',
@@ -35,7 +35,7 @@ const slides: Slide[] = [
     body: 'We optimize water, power, and land resources to create sustainable competitive advantages. This is where Lubbock.cloud becomes hard to copy.',
     primary: { label: 'See Ecosystem', href: '#ecosystem', variant: 'red' },
     secondary: { label: 'Three Pillars', href: '#three-pillars', variant: 'outline' },
-    backgroundImage: '/hero.svg',
+    backgroundImage: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
   },
 ];
 
