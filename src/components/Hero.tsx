@@ -14,7 +14,7 @@ type Slide = {
 const slides: Slide[] = [
   {
     badge: 'Energy Arbitrage • Primary Engine',
-    title: 'Turn power volatility into competitive advantage.',
+    title: 'Energy arbitrage at scale.',
     body: 'Energy arbitrage is the backbone. We transform cheap or negative-priced electricity and grid imbalance events into revenue through intelligent load management.',
     primary: { label: 'Explore Three Pillars', href: '#three-pillars', variant: 'red' },
     secondary: { label: 'Learn More', href: '#west-texas', variant: 'outline' },
