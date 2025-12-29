@@ -263,16 +263,6 @@ export function SystemLayers() {
 
           {/* Right Column - Content */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-tech-blue/20 flex items-center justify-center">
-                <GitBranch className="w-6 h-6 text-tech-blue" />
-              </div>
-              <div>
-                <h3 className="text-3xl font-semibold">Algorithm & Workflow Layer</h3>
-                <span className="px-4 py-1.5 rounded-full bg-tech-blue/20 text-tech-blue text-sm font-medium">GitLab as System of Record</span>
-              </div>
-            </div>
-
             <div>
               <h4 className="text-xl font-semibold text-white mb-3">What This Layer Does</h4>
               <ul className="space-y-2 text-tech-gray-300">
@@ -479,16 +469,6 @@ export function SystemLayers() {
 
           {/* Right Column - Content */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-tech-red/20 flex items-center justify-center">
-                <Cpu className="w-6 h-6 text-tech-red" />
-              </div>
-              <div>
-                <h3 className="text-3xl font-semibold">Flexible Compute Layer</h3>
-                <span className="px-4 py-1.5 rounded-full bg-tech-red/20 text-tech-red text-sm font-medium">Bitcoin Miners as Synthetic Demand</span>
-              </div>
-            </div>
-
             <div>
               <h4 className="text-xl font-semibold text-white mb-3">What This Layer Does</h4>
               <ul className="space-y-2 text-tech-gray-300">
