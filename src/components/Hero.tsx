@@ -91,20 +91,16 @@ export function Hero() {
           <div
             key={i}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              i === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              i === index ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
             }`}
           >
-            <img
-              src={slideItem.backgroundImage}
-              alt=""
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{ objectPosition: 'center' }}
-              loading={i === 0 ? 'eager' : 'lazy'}
-              onError={(e) => {
-                console.error('Failed to load image:', slideItem.backgroundImage, e);
-              }}
-              onLoad={() => {
-                console.log('Image loaded successfully:', slideItem.backgroundImage);
+            <div
+              className="absolute inset-0 w-full h-full"
+              style={{
+                backgroundImage: `url(${slideItem.backgroundImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
               }}
             />
             <div className="absolute inset-0 bg-tech-gray-900/70" />
