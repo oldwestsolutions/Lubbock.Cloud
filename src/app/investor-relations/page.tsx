@@ -115,11 +115,11 @@ export default function InvestorRelationsPage() {
         <div className="card-surface rounded-xl p-8 bg-gradient-to-br from-tech-red/10 to-tech-blue/10 border-2 border-tech-red/20">
           <h2 className="text-2xl font-semibold mb-4">Quick Links</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/investors" className="flex items-center gap-3 p-4 bg-tech-gray-800/50 rounded-lg hover:bg-tech-gray-800/70 transition-colors">
+            <Link href="/products" className="flex items-center gap-3 p-4 bg-tech-gray-800/50 rounded-lg hover:bg-tech-gray-800/70 transition-colors">
               <TrendingUp className="w-5 h-5 text-tech-red" />
               <div>
-                <div className="font-medium text-white">Investors</div>
-                <div className="text-sm text-tech-gray-300">Investment highlights and strategic positioning</div>
+                <div className="font-medium text-white">Products</div>
+                <div className="text-sm text-tech-gray-300">Cloud infrastructure products and services</div>
               </div>
             </Link>
             <Link href="/solutions" className="flex items-center gap-3 p-4 bg-tech-gray-800/50 rounded-lg hover:bg-tech-gray-800/70 transition-colors">

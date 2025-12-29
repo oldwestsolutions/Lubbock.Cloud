@@ -19,7 +19,7 @@ export function TopBar() {
         setCurrentNewsIndex((prev) => (prev + 1) % newsItems.length);
         setIsVisible(true);
       }, 500); // Fade out, change, fade in
-    }, 5000); // Change every 5 seconds
+    }, 7500); // Change every 7.5 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -28,7 +28,6 @@ export function TopBar() {
     <div className="w-full bg-tech-gray-800 text-[11px] text-tech-gray-200">
       <div className="mx-auto max-w-7xl container-px h-7 flex items-center justify-between">
         <div className="flex items-center gap-2 overflow-hidden">
-          <span className="font-semibold text-tech-red flex-shrink-0">NEW:</span>
           <div className="relative h-4 overflow-hidden min-w-[200px]">
             <div 
               className={`transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}

@@ -31,7 +31,7 @@ export function Navbar() {
         <nav className="hidden md:flex items-center gap-6 text-sm text-tech-gray-300">
           <Link href="/solutions" className="hover:text-white transition-colors">Solutions</Link>
           <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-          <Link href="/investors" className="hover:text-white transition-colors">Investors</Link>
+          <Link href="/products" className="hover:text-white transition-colors">Products</Link>
         </nav>
         <div className="flex items-center gap-3 ml-auto">
           <button className="rounded-md p-2 text-tech-gray-300 hover:text-white hover:bg-tech-gray-800 transition-colors" aria-label="Search">
