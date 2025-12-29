@@ -265,6 +265,7 @@ export function SystemLayers() {
           <div className="space-y-6">
             <div>
               <h4 className="text-xl font-semibold text-white mb-3">What This Layer Does</h4>
+              <p className="text-tech-gray-300 text-sm mb-3 italic">GitLab as System of Record</p>
               <ul className="space-y-2 text-tech-gray-300">
                 <li className="flex items-start gap-2">
                   <span className="text-tech-blue mt-1">•</span>
@@ -471,6 +472,7 @@ export function SystemLayers() {
           <div className="space-y-6">
             <div>
               <h4 className="text-xl font-semibold text-white mb-3">What This Layer Does</h4>
+              <p className="text-tech-gray-300 text-sm mb-3 italic">Bitcoin Miners as Synthetic Demand</p>
               <ul className="space-y-2 text-tech-gray-300">
                 <li className="flex items-start gap-2">
                   <span className="text-tech-red mt-1">•</span>
@@ -599,6 +601,32 @@ export function SystemLayers() {
                 <p className="text-white font-semibold">Compute</p>
                 <p className="text-tech-gray-300 text-xs mt-1">(Miners / AI jobs)</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action Section */}
+        <div className="card-surface rounded-xl p-8 sm:p-12 bg-gradient-to-br from-tech-red/10 to-tech-blue/10 border-2 border-tech-red/20">
+          <div className="text-center max-w-3xl mx-auto">
+            <h3 className="text-3xl sm:text-4xl font-semibold mb-4">Ready to Transform Energy Constraints into Competitive Advantages?</h3>
+            <p className="text-tech-gray-300 text-lg mb-8">
+              Discover how Lubbock.cloud&apos;s integrated system architecture turns West Texas energy volatility into sustainable revenue streams and strategic moats.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/solutions"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-tech-red px-6 py-3 text-sm font-medium text-white hover:opacity-95 transition-opacity"
+              >
+                Explore Solutions
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="/investors"
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-white/30 bg-white/10 backdrop-blur-sm px-6 py-3 text-sm font-medium text-white hover:border-white/50 hover:bg-white/20 transition-colors"
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
