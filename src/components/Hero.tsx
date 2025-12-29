@@ -13,11 +13,11 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    badge: 'Energy Arbitrage • Primary Engine',
-    title: 'Energy arbitrage at scale.',
-    body: 'Energy arbitrage is the backbone. We transform cheap or negative-priced electricity and grid imbalance events into revenue through intelligent load management.',
-    primary: { label: 'Explore Three Pillars', href: '#three-pillars', variant: 'red' },
-    secondary: { label: 'Learn More', href: '#west-texas', variant: 'outline' },
+    badge: 'Natural Resource Optimization • Long-Term Moat',
+    title: 'Resource optimizer, not just a miner.',
+    body: 'We optimize water, power, and land resources to create sustainable competitive advantages. This is where Lubbock.cloud becomes hard to copy.',
+    primary: { label: 'See Ecosystem', href: '#ecosystem', variant: 'red' },
+    secondary: { label: 'Three Pillars', href: '#three-pillars', variant: 'outline' },
     backgroundImage: '/home.jpeg',
   },
   {
