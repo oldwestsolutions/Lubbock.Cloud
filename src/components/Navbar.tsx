@@ -34,6 +34,8 @@ export function Navbar() {
           <Link href="/investors" className="hover:text-white transition-colors">Investors</Link>
         </nav>
         <div className="flex items-center gap-3">
+          <Link href="/news" className="rounded-md px-3 py-2 text-sm text-tech-gray-300 hover:text-white hover:bg-tech-gray-800 transition-colors">News</Link>
+          <Link href="/support" className="rounded-md px-3 py-2 text-sm text-tech-gray-300 hover:text-white hover:bg-tech-gray-800 transition-colors">Support</Link>
           <button className="rounded-md p-2 text-tech-gray-300 hover:text-white hover:bg-tech-gray-800 transition-colors" aria-label="Search">
             <Search className="w-5 h-5" />
           </button>

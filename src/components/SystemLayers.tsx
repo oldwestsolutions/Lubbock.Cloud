@@ -184,7 +184,9 @@ export function SystemLayers() {
         {/* Layer 2: Algorithms */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-semibold mb-4">Algorithm & Workflow Layer</h2>
-          <span className="px-4 py-1.5 rounded-full bg-tech-blue/20 text-tech-blue text-sm font-medium">GitLab as System of Record</span>
+          <p className="text-tech-gray-300 text-lg max-w-3xl mx-auto">
+            This layer stores algorithms, not just code. It tracks energy strategies, load-shedding logic, and trading heuristics, enabling reproducibility and auditability. This is where energy arbitrage logic lives, mining schedules live, battery dispatch logic lives, and risk controls live.
+          </p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -343,7 +345,9 @@ export function SystemLayers() {
         {/* Layer 3: Flexible Compute */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-semibold mb-4">Flexible Compute Layer</h2>
-          <span className="px-4 py-1.5 rounded-full bg-tech-red/20 text-tech-red text-sm font-medium">Bitcoin Miners as Synthetic Demand</span>
+          <p className="text-tech-gray-300 text-lg max-w-3xl mx-auto">
+            Bitcoin miners function as synthetic demand, monetizing excess power instantly and acting as a buyer of last resort. They provide price discovery for energy and enable our entire arbitrage strategy through instant load response, stateless operations, and globally priced output.
+          </p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">

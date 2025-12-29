@@ -12,6 +12,7 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-tech-gray-300">
               <li><a href="/investor-relations" className="hover:text-white">Investor Relations</a></li>
               <li><a href="/partners" className="hover:text-white">Partners</a></li>
+              <li><a href="/press" className="hover:text-white">Press</a></li>
             </ul>
           </div>
           <div>
