@@ -42,9 +42,7 @@ const slides: Slide[] = [
 export function Hero() {
   const [index, setIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const indexRef = useRef(0);
-  const durationMs = 6000; // 6s per slide
 
   const slide = useMemo(() => slides[index], [index]);
 
@@ -62,21 +60,6 @@ export function Hero() {
   useEffect(() => {
     indexRef.current = index;
   }, [index]);
-
-  const start = () => {
-    if (timerRef.current) return;
-    timerRef.current = setInterval(() => {
-      const nextIndex = (indexRef.current + 1) % slides.length;
-      handleSlideChange(nextIndex);
-    }, durationMs);
-  };
-
-  const stop = () => {
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
-      timerRef.current = null;
-    }
-  };
 
   // Auto-transition removed - cards only change on manual click
 
