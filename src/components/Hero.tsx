@@ -15,7 +15,7 @@ const slides: Slide[] = [
   {
     badge: 'Energy Arbitrage • Primary Engine',
     title: 'Turn power volatility into competitive advantage.',
-    body: 'Energy arbitrage is the backbone. We transform cheap or negative-priced electricity, grid imbalance events, and off-peak pricing into revenue through intelligent load management.',
+    body: 'Energy arbitrage is the backbone. We transform cheap or negative-priced electricity and grid imbalance events into revenue through intelligent load management.',
     primary: { label: 'Explore Three Pillars', href: '#three-pillars', variant: 'red' },
     secondary: { label: 'Learn More', href: '#west-texas', variant: 'outline' },
     backgroundImage: '/home.jpeg',
