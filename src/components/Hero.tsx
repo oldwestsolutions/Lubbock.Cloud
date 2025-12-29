@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 type Slide = {
@@ -93,12 +94,17 @@ export function Hero() {
               i === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
           >
-            <img
-              src={slideItem.backgroundImage}
-              alt=""
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{ objectPosition: 'center' }}
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={slideItem.backgroundImage}
+                alt=""
+                fill
+                className="object-cover"
+                priority={i === 0}
+                quality={90}
+                sizes="100vw"
+              />
+            </div>
             <div className="absolute inset-0 bg-tech-gray-900/70" />
           </div>
         ))}
