@@ -5,9 +5,17 @@ import Link from 'next/link';
 export function BatteriesSection() {
   return (
     <section id="batteries" className="mx-auto max-w-7xl container-px py-20 sm:py-32 bg-tech-gray-800/30">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl sm:text-5xl font-semibold mb-4">How Batteries Fit</h2>
-        <p className="text-tech-gray-300 text-lg max-w-3xl mx-auto">
+      <div className="mb-16">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-12 h-12 rounded-full bg-tech-blue/20 flex items-center justify-center">
+            <Battery className="w-6 h-6 text-tech-blue" />
+          </div>
+          <div>
+            <h2 className="text-4xl sm:text-5xl font-semibold">Energy Storage Layer</h2>
+            <span className="px-4 py-1.5 rounded-full bg-tech-blue/20 text-tech-blue text-sm font-medium">Balance-Sheet Multipliers</span>
+          </div>
+        </div>
+        <p className="text-tech-gray-300 text-lg max-w-3xl">
           Batteries are the brain stem of the system — they&apos;re not optional
         </p>
       </div>

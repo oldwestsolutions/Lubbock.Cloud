@@ -63,7 +63,7 @@ export function WestTexasContext() {
           </p>
         </Link>
 
-        <Link href="/the-opportunity" className="card-surface rounded-xl p-6 bg-gradient-to-br from-tech-red/10 to-tech-blue/10 border-2 border-tech-red/20 hover:border-tech-red/40 transition-all hover:scale-[1.02] cursor-pointer">
+        <Link href="/the-opportunity" className="card-surface rounded-xl p-6 hover:border-tech-red/30 border border-transparent transition-all hover:scale-[1.02] cursor-pointer">
           <div className="mb-4">
             <Zap className="w-8 h-8 text-tech-red" />
           </div>
