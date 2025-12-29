@@ -100,6 +100,12 @@ export function Hero() {
               className="absolute inset-0 w-full h-full object-cover"
               style={{ objectPosition: 'center' }}
               loading={i === 0 ? 'eager' : 'lazy'}
+              onError={(e) => {
+                console.error('Failed to load image:', slideItem.backgroundImage, e);
+              }}
+              onLoad={() => {
+                console.log('Image loaded successfully:', slideItem.backgroundImage);
+              }}
             />
             <div className="absolute inset-0 bg-tech-gray-900/70" />
           </div>
