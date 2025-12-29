@@ -6,10 +6,7 @@ export function WestTexasContext() {
   return (
     <section id="west-texas" className="mx-auto max-w-7xl container-px py-20 sm:py-32 bg-tech-gray-800/30">
       <div className="text-center mb-16">
-        <h2 className="text-4xl sm:text-5xl font-semibold mb-4">West Texas Context</h2>
-        <p className="text-tech-gray-300 text-lg max-w-3xl mx-auto">
-          The unique energy landscape that makes Lubbock.cloud possible
-        </p>
+        <h2 className="text-4xl sm:text-5xl font-semibold mb-4">West Texas Landscape</h2>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

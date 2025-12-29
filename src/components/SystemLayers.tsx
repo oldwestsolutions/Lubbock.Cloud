@@ -257,7 +257,7 @@ export function SystemLayers() {
 
         {/* Layer 3: Flexible Compute */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Bitcoin Miner Illustration */}
+          {/* Left Column - Bitcoin Miner Oil Rig Illustration */}
           <div className="card-surface rounded-xl p-8 bg-tech-gray-900 border border-tech-gray-700">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -266,19 +266,40 @@ export function SystemLayers() {
               <span className="ml-4 text-tech-gray-400 text-sm">bitcoin-miner.terminal</span>
             </div>
             
-            {/* Miner Array Visualization */}
+            {/* Oil Rig Style Miner Visualization */}
             <div className="mb-6">
               <div className="bg-tech-gray-800/50 rounded-lg p-6 border border-tech-gray-700">
-                {/* Miner Rack */}
-                <div className="grid grid-cols-4 gap-2 mb-4">
-                  {[...Array(8)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="aspect-square bg-gradient-to-br from-tech-red/30 to-tech-red/10 rounded border border-tech-red/30 flex items-center justify-center"
-                    >
-                      <Cpu className="w-4 h-4 text-tech-red" />
+                {/* Oil Rig Structure */}
+                <div className="flex flex-col items-center mb-4">
+                  {/* Rig Tower */}
+                  <div className="relative mb-2">
+                    {/* Main Tower */}
+                    <div className="w-16 h-32 bg-gradient-to-b from-tech-red/40 via-tech-red/30 to-tech-red/20 border-2 border-tech-red/50 rounded-t-lg relative">
+                      {/* Tower Sections */}
+                      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-tech-red/60"></div>
+                      <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-tech-red/60"></div>
+                      <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-tech-red/60"></div>
+                      {/* Top Platform */}
+                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-20 h-3 bg-tech-red/50 rounded"></div>
                     </div>
-                  ))}
+                    {/* Rig Base */}
+                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-8 bg-gradient-to-b from-tech-gray-600 to-tech-gray-700 rounded-lg border border-tech-gray-500">
+                      <div className="flex items-center justify-center h-full gap-1">
+                        <Cpu className="w-3 h-3 text-tech-red" />
+                        <Cpu className="w-3 h-3 text-tech-red" />
+                        <Cpu className="w-3 h-3 text-tech-red" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Support Structures */}
+                  <div className="flex gap-8 mt-2">
+                    <div className="w-1 h-12 bg-tech-red/30"></div>
+                    <div className="w-1 h-12 bg-tech-red/30"></div>
+                  </div>
+                  
+                  {/* Ground Platform */}
+                  <div className="w-32 h-4 bg-tech-gray-700/50 rounded border border-tech-gray-600 mt-2"></div>
                 </div>
                 
                 {/* Miner Stats */}
