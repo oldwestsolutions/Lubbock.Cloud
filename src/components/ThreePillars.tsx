@@ -80,7 +80,7 @@ export function ThreePillars() {
 
           <div className="bg-tech-gray-800/50 rounded-lg p-6 border-l-4 border-tech-red">
             <p className="text-white font-medium">
-              <strong>Key Insight:</strong> Bitcoin miners are not "the business" — they are a flexible load that turns wasted power into money.
+              <strong>Key Insight:</strong> Bitcoin miners are not &quot;the business&quot; — they are a flexible load that turns wasted power into money.
             </p>
           </div>
         </div>
@@ -158,7 +158,7 @@ export function ThreePillars() {
 
           <div className="bg-tech-gray-800/50 rounded-lg p-6 border-l-4 border-tech-blue">
             <p className="text-white font-medium">
-              <strong>Cloud Without Uptime Guarantees:</strong> Mining, AI batch, and research workloads don't care about interruptions. This enables cost structures impossible for traditional cloud providers.
+              <strong>Cloud Without Uptime Guarantees:</strong> Mining, AI batch, and research workloads don&apos;t care about interruptions. This enables cost structures impossible for traditional cloud providers.
             </p>
           </div>
         </div>

@@ -23,7 +23,7 @@ export function WestTexasContext() {
           <div className="text-3xl mb-4">📊</div>
           <h3 className="text-xl font-semibold mb-2">Power Price Volatility</h3>
           <p className="text-tech-gray-300 text-sm">
-            ERCOT's real-time market creates extreme price swings — from negative prices to thousands of dollars per MWh during scarcity events.
+            ERCOT&apos;s real-time market creates extreme price swings — from negative prices to thousands of dollars per MWh during scarcity events.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export function WestTexasContext() {
           <div className="text-3xl mb-4">⚡</div>
           <h3 className="text-xl font-semibold mb-2">The Opportunity</h3>
           <p className="text-tech-gray-300 text-sm">
-            These constraints aren't problems — they're the raw materials for an energy arbitrage platform that turns volatility into competitive advantage.
+            These constraints aren&apos;t problems — they&apos;re the raw materials for an energy arbitrage platform that turns volatility into competitive advantage.
           </p>
         </div>
       </div>

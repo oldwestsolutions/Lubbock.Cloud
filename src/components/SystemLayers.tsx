@@ -52,7 +52,7 @@ export function SystemLayers() {
                 </div>
                 <div className="bg-tech-gray-800/50 rounded-lg p-4">
                   <p className="text-tech-gray-300 text-sm">
-                    Pure Storage represents high-density, low-latency, software-defined control of hardware. You're using their class of technology as an enabler.
+                    Pure Storage represents high-density, low-latency, software-defined control of hardware. You&apos;re using their class of technology as an enabler.
                   </p>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export function SystemLayers() {
             <div className="bg-tech-gray-800/50 rounded-lg p-6 border-l-4 border-tech-blue">
               <h5 className="font-semibold text-white mb-2">Key Insight</h5>
               <p className="text-tech-gray-300 text-sm mb-3">
-                Your "algorithms" are not just financial. They are:
+                Your &quot;algorithms&quot; are not just financial. They are:
               </p>
               <ul className="space-y-1 text-tech-gray-300 text-sm">
                 <li>• Power routing decisions</li>
@@ -187,8 +187,8 @@ export function SystemLayers() {
               <div className="bg-tech-gray-800/50 rounded-lg p-6">
                 <p className="text-white font-medium mb-3">Batteries let you:</p>
                 <ul className="space-y-2 text-tech-gray-300 text-sm">
-                  <li>• Buy power when it's free</li>
-                  <li>• Sell when it's scarce</li>
+                  <li>• Buy power when it&apos;s free</li>
+                  <li>• Sell when it&apos;s scarce</li>
                   <li>• Run miners only when profitable</li>
                   <li>• Provide ancillary grid services</li>
                 </ul>
@@ -248,7 +248,7 @@ export function SystemLayers() {
                 <div className="bg-tech-gray-800/50 rounded-lg p-4">
                   <p className="text-white font-medium mb-2">Strategic Role:</p>
                   <p className="text-tech-gray-300 text-sm">
-                    Miners are not speculative assets here — they are energy conversion machines. You're using miners the way oil traders use storage tanks.
+                    Miners are not speculative assets here — they are energy conversion machines. You&apos;re using miners the way oil traders use storage tanks.
                   </p>
                 </div>
               </div>
