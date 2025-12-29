@@ -182,6 +182,11 @@ export function SystemLayers() {
         </div>
 
         {/* Layer 2: Algorithms */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-4">Algorithm & Workflow Layer</h2>
+          <span className="px-4 py-1.5 rounded-full bg-tech-blue/20 text-tech-blue text-sm font-medium">GitLab as System of Record</span>
+        </div>
+        
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Laboratory Illustration */}
           <div className="card-surface rounded-xl p-8 bg-tech-gray-900 border border-tech-gray-700">
@@ -336,6 +341,11 @@ export function SystemLayers() {
         </div>
 
         {/* Layer 3: Flexible Compute */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-4">Flexible Compute Layer</h2>
+          <span className="px-4 py-1.5 rounded-full bg-tech-red/20 text-tech-red text-sm font-medium">Bitcoin Miners as Synthetic Demand</span>
+        </div>
+        
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Mining Machine Illustration */}
           <div className="card-surface rounded-xl p-8 bg-tech-gray-900 border border-tech-gray-700">
