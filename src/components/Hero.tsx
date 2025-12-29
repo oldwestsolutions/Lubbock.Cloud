@@ -93,7 +93,7 @@ export function Hero() {
               i === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
             style={{
-              backgroundImage: `url(${slideItem.backgroundImage})`,
+              backgroundImage: `url('${slideItem.backgroundImage}')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
