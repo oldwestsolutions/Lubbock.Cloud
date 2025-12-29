@@ -94,17 +94,13 @@ export function Hero() {
               i === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
           >
-            <div className="relative w-full h-full">
-              <Image
-                src={slideItem.backgroundImage}
-                alt=""
-                fill
-                className="object-cover"
-                priority={i === 0}
-                quality={90}
-                sizes="100vw"
-              />
-            </div>
+            <img
+              src={slideItem.backgroundImage}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ objectPosition: 'center' }}
+              loading={i === 0 ? 'eager' : 'lazy'}
+            />
             <div className="absolute inset-0 bg-tech-gray-900/70" />
           </div>
         ))}
