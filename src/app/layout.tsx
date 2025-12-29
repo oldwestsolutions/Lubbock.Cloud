@@ -39,7 +39,7 @@ export default function RootLayout({
         <div className="w-full bg-tech-gray-800 text-[11px] text-tech-gray-200">
           <div className="mx-auto max-w-7xl container-px h-7 flex items-center justify-between">
             <span>New: Dedicated servers powered by Supermicro</span>
-            <a href="/support" className="rounded-sm bg-tech-gray-700 px-2 py-0.5 text-tech-gray-100 font-medium hover:bg-tech-gray-600">Support</a>
+            <a href="/news" className="rounded-sm bg-tech-gray-700 px-2 py-0.5 text-tech-gray-100 font-medium hover:bg-tech-gray-600">News</a>
           </div>
         </div>
         {children}

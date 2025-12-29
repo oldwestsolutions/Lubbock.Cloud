@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { Logo } from './Logo';
 import { useEffect, useState } from 'react';
+import { Search } from 'lucide-react';
 
 export function Navbar() {
   const [isHidden, setIsHidden] = useState(false);
@@ -29,7 +30,9 @@ export function Navbar() {
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm text-tech-gray-300" />
         <div className="flex items-center gap-3">
-          <Link href="/login" className="rounded-md bg-tech-red px-3 py-2 text-sm font-medium text-white hover:opacity-95">Log in</Link>
+          <button className="rounded-md p-2 text-tech-gray-300 hover:text-white hover:bg-tech-gray-800 transition-colors" aria-label="Search">
+            <Search className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </header>
