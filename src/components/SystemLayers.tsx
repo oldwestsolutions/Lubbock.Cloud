@@ -182,6 +182,11 @@ export function SystemLayers() {
         </div>
 
         {/* Layer 2: Algorithms */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-4">Algorithm & Workflow Layer</h2>
+          <span className="px-4 py-1.5 rounded-full bg-tech-blue/20 text-tech-blue text-sm font-medium">GitLab as System of Record</span>
+        </div>
+        
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Laboratory Illustration */}
           <div className="card-surface rounded-xl p-8 bg-tech-gray-900 border border-tech-gray-700">
@@ -335,8 +340,13 @@ export function SystemLayers() {
         </div>
 
         {/* Layer 3: Flexible Compute */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-4">Flexible Compute Layer</h2>
+          <span className="px-4 py-1.5 rounded-full bg-tech-red/20 text-tech-red text-sm font-medium">Bitcoin Miners as Synthetic Demand</span>
+        </div>
+        
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Oil Drilling Rig Illustration */}
+          {/* Left Column - Mining Machine Illustration */}
           <div className="card-surface rounded-xl p-8 bg-tech-gray-900 border border-tech-gray-700">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -345,56 +355,56 @@ export function SystemLayers() {
               <span className="ml-4 text-tech-gray-400 text-sm">bitcoin-miner.terminal</span>
             </div>
             
-            {/* Oil Drilling Rig Visualization */}
+            {/* Mining Machine Visualization */}
             <div className="mb-6">
               <div className="bg-tech-gray-800/50 rounded-lg p-6 border border-tech-gray-700">
-                {/* Oil Rig Structure */}
+                {/* Mining Machine Structure */}
                 <div className="flex flex-col items-center mb-4">
-                  {/* Derrick (Main Tower) */}
-                  <div className="relative mb-2">
-                    {/* Derrick Structure */}
-                    <div className="relative">
-                      {/* Left Leg */}
-                      <div className="absolute left-0 w-1 h-40 bg-gradient-to-b from-tech-red/50 to-tech-red/30"></div>
-                      {/* Right Leg */}
-                      <div className="absolute right-0 w-1 h-40 bg-gradient-to-b from-tech-red/50 to-tech-red/30"></div>
-                      {/* Center Support */}
-                      <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-40 bg-tech-red/40"></div>
-                      {/* Cross Braces */}
-                      <div className="absolute top-8 left-0 right-0 h-1 bg-tech-red/30"></div>
-                      <div className="absolute top-16 left-0 right-0 h-1 bg-tech-red/30"></div>
-                      <div className="absolute top-24 left-0 right-0 h-1 bg-tech-red/30"></div>
-                      <div className="absolute top-32 left-0 right-0 h-1 bg-tech-red/30"></div>
-                      {/* Top Platform */}
-                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-tech-red/60 rounded-t border border-tech-red/50">
-                        <div className="flex items-center justify-center h-full">
-                          <Cpu className="w-3 h-3 text-white" />
-                        </div>
+                  {/* Main Machine Body */}
+                  <div className="relative w-32 h-24 bg-gradient-to-b from-tech-gray-700 to-tech-gray-800 rounded-lg border-2 border-tech-red/40 mb-2">
+                    {/* Machine Front Panel */}
+                    <div className="absolute inset-2 bg-tech-gray-800/50 rounded border border-tech-gray-600">
+                      {/* Status LEDs */}
+                      <div className="absolute top-2 left-2 flex gap-1">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                       </div>
-                      {/* Drilling Platform */}
-                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-6 bg-gradient-to-b from-tech-gray-600 to-tech-gray-700 rounded-lg border border-tech-gray-500">
-                        <div className="flex items-center justify-center h-full gap-1">
-                          <Cpu className="w-2.5 h-2.5 text-tech-red" />
-                          <Cpu className="w-2.5 h-2.5 text-tech-red" />
-                          <Cpu className="w-2.5 h-2.5 text-tech-red" />
-                        </div>
+                      {/* CPU Grid */}
+                      <div className="absolute top-6 left-1/2 transform -translate-x-1/2 grid grid-cols-3 gap-1">
+                        <Cpu className="w-3 h-3 text-tech-red" />
+                        <Cpu className="w-3 h-3 text-tech-red" />
+                        <Cpu className="w-3 h-3 text-tech-red" />
+                        <Cpu className="w-3 h-3 text-tech-red" />
+                        <Cpu className="w-3 h-3 text-tech-red" />
+                        <Cpu className="w-3 h-3 text-tech-red" />
+                      </div>
+                      {/* Power Indicator */}
+                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-tech-red/30 rounded-full overflow-hidden">
+                        <div className="w-3/4 h-full bg-tech-red rounded-full"></div>
                       </div>
                     </div>
-                    {/* Drill Pipe */}
-                    <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-1 h-16 bg-tech-gray-500/50"></div>
-                  </div>
-                  
-                  {/* Support Base */}
-                  <div className="w-40 h-6 bg-gradient-to-b from-tech-gray-700 to-tech-gray-800 rounded-lg border border-tech-gray-600 mt-2">
-                    <div className="flex items-center justify-center h-full gap-2">
-                      <div className="w-2 h-2 bg-tech-red/50 rounded"></div>
-                      <div className="w-2 h-2 bg-tech-red/50 rounded"></div>
-                      <div className="w-2 h-2 bg-tech-red/50 rounded"></div>
+                    {/* Heat Sink Fins */}
+                    <div className="absolute -right-1 top-2 bottom-2 w-2 flex flex-col gap-0.5">
+                      <div className="flex-1 bg-tech-gray-600 rounded"></div>
+                      <div className="flex-1 bg-tech-gray-600 rounded"></div>
+                      <div className="flex-1 bg-tech-gray-600 rounded"></div>
                     </div>
                   </div>
                   
-                  {/* Ground Level */}
-                  <div className="w-full h-3 bg-tech-gray-700/30 rounded border border-tech-gray-600/50 mt-2"></div>
+                  {/* Base Platform */}
+                  <div className="w-36 h-4 bg-gradient-to-b from-tech-gray-600 to-tech-gray-700 rounded border border-tech-gray-500">
+                    <div className="flex items-center justify-center h-full gap-1">
+                      <div className="w-1 h-1 bg-tech-red/50 rounded"></div>
+                      <div className="w-1 h-1 bg-tech-red/50 rounded"></div>
+                      <div className="w-1 h-1 bg-tech-red/50 rounded"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Connection Ports */}
+                  <div className="flex gap-4 mt-2">
+                    <div className="w-6 h-3 bg-tech-gray-600 rounded border border-tech-gray-500"></div>
+                    <div className="w-6 h-3 bg-tech-gray-600 rounded border border-tech-gray-500"></div>
+                  </div>
                 </div>
                 
                 {/* Miner Stats */}
