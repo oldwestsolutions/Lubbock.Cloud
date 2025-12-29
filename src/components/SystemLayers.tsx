@@ -1,5 +1,5 @@
 "use client";
-import { Database, GitBranch, Battery, Cpu } from 'lucide-react';
+import { Database, GitBranch, Battery, Cpu, Zap, Activity, TrendingUp, ArrowRight } from 'lucide-react';
 
 export function SystemLayers() {
   return (
