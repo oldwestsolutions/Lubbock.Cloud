@@ -19,7 +19,7 @@ const slides: Slide[] = [
     body: 'We optimize water, power, and land resources to create sustainable competitive advantages. This is where Lubbock.cloud becomes hard to copy.',
     primary: { label: 'See Ecosystem', href: '#ecosystem', variant: 'red' },
     secondary: { label: 'Three Pillars', href: '#three-pillars', variant: 'outline' },
-    backgroundImage: '/westtexastrain.jpg',
+    backgroundImage: '/westtexastrain.jpeg',
   },
   {
     badge: 'Compute Arbitrage • Secondary Engine',
