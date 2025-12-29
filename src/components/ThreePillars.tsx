@@ -1,4 +1,5 @@
 "use client";
+import { Hash, Zap, Droplet } from 'lucide-react';
 
 export function ThreePillars() {
   return (
@@ -14,7 +15,9 @@ export function ThreePillars() {
         {/* Pillar 1: Energy Arbitrage */}
         <div className="card-surface rounded-xl p-8 sm:p-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="text-4xl font-bold text-tech-red">1️⃣</div>
+            <div className="w-12 h-12 rounded-full bg-tech-red/20 flex items-center justify-center">
+              <Hash className="w-6 h-6 text-tech-red" />
+            </div>
             <h3 className="text-3xl font-semibold">Energy Arbitrage</h3>
             <span className="ml-auto px-4 py-1.5 rounded-full bg-tech-red/20 text-tech-red text-sm font-medium">Primary Engine</span>
           </div>
@@ -88,7 +91,9 @@ export function ThreePillars() {
         {/* Pillar 2: Compute Arbitrage */}
         <div className="card-surface rounded-xl p-8 sm:p-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="text-4xl font-bold text-tech-blue">2️⃣</div>
+            <div className="w-12 h-12 rounded-full bg-tech-blue/20 flex items-center justify-center">
+              <Zap className="w-6 h-6 text-tech-blue" />
+            </div>
             <h3 className="text-3xl font-semibold">Compute Arbitrage</h3>
             <span className="ml-auto px-4 py-1.5 rounded-full bg-tech-blue/20 text-tech-blue text-sm font-medium">Secondary Engine</span>
           </div>
@@ -166,7 +171,9 @@ export function ThreePillars() {
         {/* Pillar 3: Natural Resource Optimization */}
         <div className="card-surface rounded-xl p-8 sm:p-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="text-4xl font-bold text-tech-gray-400">3️⃣</div>
+            <div className="w-12 h-12 rounded-full bg-tech-gray-700/50 flex items-center justify-center">
+              <Droplet className="w-6 h-6 text-tech-gray-400" />
+            </div>
             <h3 className="text-3xl font-semibold">Natural Resource Optimization</h3>
             <span className="ml-auto px-4 py-1.5 rounded-full bg-tech-gray-700/50 text-tech-gray-300 text-sm font-medium">Long-Term Moat</span>
           </div>
@@ -178,7 +185,7 @@ export function ThreePillars() {
             <div className="space-y-6">
               <div>
                 <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                  <span className="text-2xl">💧</span>
+                  <Droplet className="w-6 h-6 text-tech-blue" />
                   Water Optimization
                 </h4>
                 <div className="space-y-3">
@@ -205,7 +212,7 @@ export function ThreePillars() {
             <div className="space-y-6">
               <div>
                 <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                  <span className="text-2xl">⚡</span>
+                  <Zap className="w-6 h-6 text-tech-red" />
                   Power Optimization
                 </h4>
                 <div className="space-y-3">

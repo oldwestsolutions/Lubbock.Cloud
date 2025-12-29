@@ -1,4 +1,5 @@
 "use client";
+import { Database, GitBranch, Battery, Cpu } from 'lucide-react';
 
 export function SystemLayers() {
   return (
@@ -14,7 +15,9 @@ export function SystemLayers() {
         {/* Layer 1: Storage */}
         <div className="card-surface rounded-xl p-8 sm:p-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="text-3xl font-bold text-tech-red">1️⃣</div>
+            <div className="w-12 h-12 rounded-full bg-tech-red/20 flex items-center justify-center">
+              <Database className="w-6 h-6 text-tech-red" />
+            </div>
             <h3 className="text-3xl font-semibold">Storage Layer</h3>
             <span className="ml-auto px-4 py-1.5 rounded-full bg-tech-red/20 text-tech-red text-sm font-medium">Pure Storage Archetype</span>
           </div>
@@ -72,7 +75,9 @@ export function SystemLayers() {
         {/* Layer 2: Algorithms */}
         <div className="card-surface rounded-xl p-8 sm:p-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="text-3xl font-bold text-tech-blue">2️⃣</div>
+            <div className="w-12 h-12 rounded-full bg-tech-blue/20 flex items-center justify-center">
+              <GitBranch className="w-6 h-6 text-tech-blue" />
+            </div>
             <h3 className="text-3xl font-semibold">Algorithm & Workflow Layer</h3>
             <span className="ml-auto px-4 py-1.5 rounded-full bg-tech-blue/20 text-tech-blue text-sm font-medium">GitLab as System of Record</span>
           </div>
@@ -144,7 +149,9 @@ export function SystemLayers() {
         {/* Layer 3: Energy Storage */}
         <div className="card-surface rounded-xl p-8 sm:p-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="text-3xl font-bold text-tech-gray-400">3️⃣</div>
+            <div className="w-12 h-12 rounded-full bg-tech-gray-700/50 flex items-center justify-center">
+              <Battery className="w-6 h-6 text-tech-gray-400" />
+            </div>
             <h3 className="text-3xl font-semibold">Energy Storage Layer</h3>
             <span className="ml-auto px-4 py-1.5 rounded-full bg-tech-gray-700/50 text-tech-gray-300 text-sm font-medium">Balance-Sheet Multipliers</span>
           </div>
@@ -209,7 +216,9 @@ export function SystemLayers() {
         {/* Layer 4: Flexible Compute */}
         <div className="card-surface rounded-xl p-8 sm:p-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="text-3xl font-bold text-tech-red">4️⃣</div>
+            <div className="w-12 h-12 rounded-full bg-tech-red/20 flex items-center justify-center">
+              <Cpu className="w-6 h-6 text-tech-red" />
+            </div>
             <h3 className="text-3xl font-semibold">Flexible Compute Layer</h3>
             <span className="ml-auto px-4 py-1.5 rounded-full bg-tech-red/20 text-tech-red text-sm font-medium">Bitcoin Miners as Synthetic Demand</span>
           </div>

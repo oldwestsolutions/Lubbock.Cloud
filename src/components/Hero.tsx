@@ -63,48 +63,68 @@ export function Hero() {
   return (
     <section className="relative">
       <div className="mx-auto max-w-7xl container-px py-14 sm:py-20" onMouseEnter={stop} onMouseLeave={start}>
-        <div className="flex justify-center">
-          <div className="transition-all duration-1000 ease-in-out will-change-transform will-change-opacity flex flex-col gap-5 max-w-3xl text-center" key={index}>
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
-            {slide.title}
-          </h1>
-          <p className="text-tech-gray-300 text-lg">
-            {slide.body}
-          </p>
-          <div className="flex items-center gap-3">
-            <Link
-              href={slide.primary.href}
-              className={
-                slide.primary.variant === 'red'
-                  ? 'rounded-md bg-tech-red px-4 py-2 text-sm font-medium text-white hover:opacity-95'
-                  : slide.primary.variant === 'blue'
-                  ? 'rounded-md bg-tech-blue px-4 py-2 text-sm font-medium text-white hover:opacity-95'
-                  : 'rounded-md bg-tech-gray-700 px-4 py-2 text-sm font-medium text-white hover:bg-tech-gray-600'
-              }
-            >
-              {slide.primary.label}
-            </Link>
-            <Link
-              href={slide.secondary.href}
-              className={
-                slide.secondary.variant === 'outline'
-                  ? 'rounded-md border border-white/10 px-4 py-2 text-sm hover:border-white/20'
-                  : 'rounded-md bg-tech-gray-700 px-4 py-2 text-sm font-medium text-white hover:bg-tech-gray-600'
-              }
-            >
-              {slide.secondary.label}
-            </Link>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Existing Content */}
+          <div className="transition-all duration-1000 ease-in-out will-change-transform will-change-opacity flex flex-col gap-5" key={index}>
+            <div className="inline-block">
+              <span className="text-xs font-medium text-tech-gray-400 uppercase tracking-wider">
+                {slide.badge}
+              </span>
+            </div>
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
+              {slide.title}
+            </h1>
+            <p className="text-tech-gray-300 text-lg">
+              {slide.body}
+            </p>
+            <div className="flex items-center gap-3">
+              <Link
+                href={slide.primary.href}
+                className={
+                  slide.primary.variant === 'red'
+                    ? 'rounded-md bg-tech-red px-4 py-2 text-sm font-medium text-white hover:opacity-95'
+                    : slide.primary.variant === 'blue'
+                    ? 'rounded-md bg-tech-blue px-4 py-2 text-sm font-medium text-white hover:opacity-95'
+                    : 'rounded-md bg-tech-gray-700 px-4 py-2 text-sm font-medium text-white hover:bg-tech-gray-600'
+                }
+              >
+                {slide.primary.label}
+              </Link>
+              <Link
+                href={slide.secondary.href}
+                className={
+                  slide.secondary.variant === 'outline'
+                    ? 'rounded-md border border-white/10 px-4 py-2 text-sm hover:border-white/20'
+                    : 'rounded-md bg-tech-gray-700 px-4 py-2 text-sm font-medium text-white hover:bg-tech-gray-600'
+                }
+              >
+                {slide.secondary.label}
+              </Link>
+            </div>
+            <div className="flex gap-2">
+              {slides.map((_, i) => (
+                <button
+                  key={i}
+                  aria-label={`Go to slide ${i + 1}`}
+                    className={`h-1.5 w-6 rounded-full transition-all duration-700 ${i === index ? 'bg-white w-10' : 'bg-white/30 w-6'}`}
+                    onClick={() => setIndex(i)}
+                />
+              ))}
+            </div>
           </div>
-          <div className="flex gap-2">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                aria-label={`Go to slide ${i + 1}`}
-                  className={`h-1.5 w-6 rounded-full transition-all duration-700 ${i === index ? 'bg-white w-10' : 'bg-white/30 w-6'}`}
-                  onClick={() => setIndex(i)}
-              />
-            ))}
-          </div>
+
+          {/* Right Column - Visual/Placeholder */}
+          <div className="hidden lg:block">
+            <div className="card-surface rounded-xl p-8 h-full min-h-[400px] flex items-center justify-center">
+              <div className="text-center">
+                <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-tech-red/20 to-tech-blue/20 flex items-center justify-center">
+                  <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <p className="text-tech-gray-400 text-sm">Energy Arbitrage Platform</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
