@@ -92,13 +92,13 @@ export function Hero() {
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
               i === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
-            style={{
-              backgroundImage: `url('${slideItem.backgroundImage}')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}
           >
+            <img
+              src={slideItem.backgroundImage}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ objectPosition: 'center' }}
+            />
             <div className="absolute inset-0 bg-tech-gray-900/70" />
           </div>
         ))}
