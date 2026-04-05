@@ -47,10 +47,13 @@ const FOOTER_SECTIONS = [
 
 function BrandMark({ className = '' }: { className?: string }) {
   return (
-    <div className={`inline-flex ${className}`}>
+    <div className={`flex items-center gap-3 ${className}`}>
       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] text-nb-lime shadow-[0_0_32px_rgba(255,255,255,0.06)] ring-1 ring-white/[0.1]">
         <CloudLogo className="h-7 w-7" />
       </div>
+      <span className="font-display text-lg font-semibold tracking-tight text-lub-ink">
+        Lubbock<span className="text-nb-lime"> Cloud</span>
+      </span>
     </div>
   );
 }
@@ -94,7 +97,7 @@ export function Footer() {
 
         <div className="mt-14 pt-10 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-tech-gray-600 text-center sm:text-left">
-            © {new Date().getFullYear()} Lubbock Cloud. All rights reserved.
+            © {new Date().getFullYear()} Old West Solutions. All rights reserved.
           </p>
           <p className="text-xs text-tech-gray-600">Lubbock, Texas</p>
         </div>
