@@ -1,46 +1,97 @@
-"use client";
+'use client';
+
 import Link from 'next/link';
-import { Logo } from './Logo';
-import { useEffect, useState } from 'react';
-import { Search } from 'lucide-react';
+import { useState } from 'react';
+
+const NAV_LINKS = [
+  { label: 'Tokens', href: '/tokens' },
+  { label: 'Marketplace', href: '/marketplace' },
+  { label: 'Redeem', href: '/redeem' },
+  { label: 'Vaults', href: '/vaults' },
+  { label: 'Clusters', href: '/clusters' },
+  { label: 'Docs', href: '/docs' },
+];
 
 export function Navbar() {
-  const [isHidden, setIsHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentY = window.scrollY;
-      const isScrollingDown = currentY > lastScrollY;
-      const beyondThreshold = currentY > 16;
-      setIsHidden(isScrollingDown && beyondThreshold);
-      setLastScrollY(currentY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className={`sticky top-0 z-50 w-full border-b border-white/5 bg-tech-gray-900/70 backdrop-blur supports-[backdrop-filter]:bg-tech-gray-900/60 transition-transform duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}>
-      <div className="mx-auto max-w-7xl container-px h-16 flex items-center gap-8">
-        <Link href="/" className="flex items-center gap-3">
-          <Logo className="h-7 w-7" />
-          <span className="font-semibold tracking-tight">Lubbock Cloud</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm text-tech-gray-300">
-          <Link href="/solutions" className="hover:text-white transition-colors">Solutions</Link>
-          <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-          <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-        </nav>
-        <div className="flex items-center gap-3 ml-auto">
-          <button className="rounded-md p-2 text-tech-gray-300 hover:text-white hover:bg-tech-gray-800 transition-colors" aria-label="Search">
-            <Search className="w-5 h-5" />
+    <nav className="sticky top-0 z-50 border-b border-white/[0.06] bg-tech-gray-950/80 backdrop-blur-xl">
+      <div className="mx-auto max-w-7xl container-px">
+        <div className="flex h-16 items-center justify-between">
+          <div className="flex items-center gap-10">
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-lub-blue to-lub-blue/60 flex items-center justify-center">
+                <svg viewBox="0 0 24 24" className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <span className="text-lg font-semibold tracking-tight">
+                lubbock<span className="text-lub-blue">.cloud</span>
+              </span>
+            </Link>
+
+            <div className="hidden lg:flex items-center gap-1">
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="px-3 py-2 text-sm text-tech-gray-400 hover:text-white transition-colors rounded-md hover:bg-white/5"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="hidden lg:flex items-center gap-3">
+            <Link href="/dashboard" className="btn-secondary text-xs py-2 px-4">
+              Dashboard
+            </Link>
+            <Link href="/login" className="btn-primary text-xs py-2 px-4">
+              Connect Wallet
+            </Link>
+          </div>
+
+          <button
+            className="lg:hidden p-2 text-tech-gray-400 hover:text-white"
+            onClick={() => setOpen(!open)}
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              {open ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
           </button>
         </div>
       </div>
-    </header>
+
+      {open && (
+        <div className="lg:hidden border-t border-white/[0.06] bg-tech-gray-950/95 backdrop-blur-xl">
+          <div className="container-px py-4 space-y-1">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block px-3 py-2.5 text-sm text-tech-gray-400 hover:text-white rounded-md hover:bg-white/5"
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="pt-3 border-t border-white/[0.06] mt-3 space-y-2">
+              <Link href="/dashboard" className="block btn-secondary text-xs text-center" onClick={() => setOpen(false)}>
+                Dashboard
+              </Link>
+              <Link href="/login" className="block btn-primary text-xs text-center" onClick={() => setOpen(false)}>
+                Connect Wallet
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 }
-
-

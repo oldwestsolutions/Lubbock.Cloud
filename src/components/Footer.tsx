@@ -1,57 +1,86 @@
+import Link from 'next/link';
+
+const FOOTER_SECTIONS = [
+  {
+    title: 'Platform',
+    links: [
+      { label: 'Tokens', href: '/tokens' },
+      { label: 'Marketplace', href: '/marketplace' },
+      { label: 'Redeem Compute', href: '/redeem' },
+      { label: 'Vaults', href: '/vaults' },
+      { label: 'Clusters', href: '/clusters' },
+    ],
+  },
+  {
+    title: 'Infrastructure',
+    links: [
+      { label: 'Dedicated Servers', href: '/dedicated-servers' },
+      { label: 'Storage', href: '/storage' },
+      { label: 'Networking', href: '/networking' },
+      { label: 'Acceleration', href: '/acceleration' },
+    ],
+  },
+  {
+    title: 'Developers',
+    links: [
+      { label: 'Documentation', href: '/docs' },
+      { label: 'API Reference', href: '/docs' },
+      { label: 'Developer Services', href: '/developer-services' },
+      { label: 'Support', href: '/support' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'About', href: '/company' },
+      { label: 'Investors', href: '/investors' },
+      { label: 'Press', href: '/press' },
+      { label: 'Privacy', href: '/privacy' },
+      { label: 'Terms', href: '/terms' },
+    ],
+  },
+];
+
 export function Footer() {
   return (
-    <footer className="mt-16 border-t border-white/5">
-      <div className="mx-auto max-w-7xl container-px py-12">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5 text-sm">
-          <div>
-            <h4 className="font-semibold">Lubbock Cloud</h4>
-            <p className="mt-3 text-tech-gray-300">Dedicated servers with modern performance and excellent connectivity.</p>
-          </div>
-          <div>
-            <h4 className="font-semibold">Company</h4>
-            <ul className="mt-3 space-y-2 text-tech-gray-300">
-              <li><a href="/investor-relations" className="hover:text-white">Investor Relations</a></li>
-              <li><a href="/partners" className="hover:text-white">Partners</a></li>
-              <li><a href="/press" className="hover:text-white">Press</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold">Services</h4>
-            <ul className="mt-3 space-y-2 text-tech-gray-300">
-              <li><a href="/services" className="hover:text-white">Services</a></li>
-              <li><a href="/dedicated-servers" className="hover:text-white">Dedicated Servers</a></li>
-              <li><a href="/developer-services" className="hover:text-white">Developer Services</a></li>
-              <li><a href="/storage" className="hover:text-white">Storage</a></li>
-              <li><a href="/networking" className="hover:text-white">Networking</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold">Solutions</h4>
-            <ul className="mt-3 space-y-2 text-tech-gray-300">
-              <li><a href="/solutions" className="hover:text-white">Solutions</a></li>
-              <li><a href="/acceleration" className="hover:text-white">Acceleration</a></li>
-              <li><a href="/blockchain" className="hover:text-white">Blockchain</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold">Support</h4>
-            <ul className="mt-3 space-y-2 text-tech-gray-300">
-              <li><a href="/docs" className="hover:text-white">Docs</a></li>
-              <li><a href="/support" className="hover:text-white">Support</a></li>
-              <li><a href="/our-team" className="hover:text-white">Our Team</a></li>
-            </ul>
-          </div>
+    <footer className="border-t border-white/[0.06] bg-tech-gray-950">
+      <div className="mx-auto max-w-7xl container-px py-16">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+          {FOOTER_SECTIONS.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-tech-gray-400">{section.title}</h3>
+              <ul className="mt-4 space-y-2.5">
+                {section.links.map((link) => (
+                  <li key={link.href + link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-tech-gray-500 hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-        <div className="mt-10 flex items-center justify-between text-xs text-tech-gray-400">
-          <p>© {new Date().getFullYear()} Lubbock Cloud</p>
-          <div className="flex items-center gap-4">
-            <a href="/privacy" className="hover:text-white">Privacy</a>
-            <a href="/terms" className="hover:text-white">Terms</a>
+
+        <div className="mt-12 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2.5">
+            <div className="w-6 h-6 rounded-md bg-gradient-to-br from-lub-blue to-lub-blue/60 flex items-center justify-center">
+              <svg viewBox="0 0 24 24" className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <span className="text-sm font-medium">
+              lubbock<span className="text-lub-blue">.cloud</span>
+            </span>
           </div>
+          <p className="text-xs text-tech-gray-600">
+            GPU infrastructure, made liquid. Lubbock, Texas.
+          </p>
         </div>
       </div>
     </footer>
   );
 }
-
-

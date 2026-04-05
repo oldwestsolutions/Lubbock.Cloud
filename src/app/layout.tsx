@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Analytics } from '@vercel/analytics/next';
@@ -6,14 +6,17 @@ import { TopBar } from '@/components/TopBar';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
+export const viewport: Viewport = {
+  themeColor: '#00b4ff',
+};
+
 export const metadata: Metadata = {
-  title: 'Lubbock Cloud',
-  description: 'Dedicated servers, engineered for performance and reliability with excellent connectivity. Straightforward pricing and a developer-first experience.',
+  title: 'Lubbock Cloud — Tokenized GPU Compute',
+  description: 'GPU infrastructure, made liquid. Buy, trade, and deploy tokenized compute backed by real AMD and NVIDIA hardware.',
   metadataBase: new URL('https://lubbock.cloud'),
-  themeColor: '#C8102E',
   openGraph: {
-    title: 'Lubbock Cloud',
-    description: 'Dedicated servers, engineered for performance and reliability with excellent connectivity. Straightforward pricing and a developer-first experience.',
+    title: 'Lubbock Cloud — Tokenized GPU Compute',
+    description: 'GPU infrastructure, made liquid. Buy, trade, and deploy tokenized compute backed by real AMD and NVIDIA hardware.',
     url: 'https://lubbock.cloud',
     siteName: 'Lubbock Cloud',
     locale: 'en_US',
@@ -21,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lubbock Cloud',
-    description: 'Dedicated servers, engineered for performance and reliability with excellent connectivity. Straightforward pricing and a developer-first experience.',
+    title: 'Lubbock Cloud — Tokenized GPU Compute',
+    description: 'GPU infrastructure, made liquid. Buy, trade, and deploy tokenized compute backed by real AMD and NVIDIA hardware.',
   },
   icons: {
     icon: '/icon.svg',
@@ -36,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen bg-tech-gray-900 text-white antialiased selection:bg-tech-red selection:text-white">
+      <body className="min-h-screen bg-tech-gray-950 text-white antialiased selection:bg-lub-blue selection:text-white">
         <TopBar />
         {children}
         <Analytics />

@@ -1,44 +1,44 @@
-"use client";
-import { useState, useEffect } from 'react';
+'use client';
 
-const newsItems = [
-  "New: Dedicated servers powered by Supermicro",
-  "Breaking: Energy arbitrage platform launches in West Texas",
-  "Update: Sodium-ion battery integration complete",
-  "Announcement: GitLab workflow system now live",
-];
+import { useEffect, useState } from 'react';
+import { COMPUTE_TOKENS } from '@/lib/mock-data';
+import { cn } from '@/lib/utils';
 
 export function TopBar() {
-  const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [offset, setOffset] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsVisible(false);
-      setTimeout(() => {
-        setCurrentNewsIndex((prev) => (prev + 1) % newsItems.length);
-        setIsVisible(true);
-      }, 500); // Fade out, change, fade in
-    }, 7500); // Change every 7.5 seconds
-
+      setOffset((prev) => prev + 1);
+    }, 50);
     return () => clearInterval(interval);
   }, []);
 
+  const doubled = [...COMPUTE_TOKENS, ...COMPUTE_TOKENS];
+
   return (
-    <div className="w-full bg-tech-gray-800 text-[11px] text-tech-gray-200">
-      <div className="mx-auto max-w-7xl container-px h-7 flex items-center justify-between">
-        <div className="flex items-center gap-2 overflow-hidden">
-          <div className="relative h-4 overflow-hidden min-w-[200px]">
-            <div 
-              className={`transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-            >
-              {newsItems[currentNewsIndex]}
+    <div className="h-8 bg-tech-gray-950 border-b border-white/[0.04] overflow-hidden">
+      <div className="h-full flex items-center">
+        <div
+          className="flex items-center gap-8 whitespace-nowrap"
+          style={{ transform: `translateX(-${offset % (COMPUTE_TOKENS.length * 200)}px)` }}
+        >
+          {doubled.map((token, i) => (
+            <div key={`${token.ticker}-${i}`} className="flex items-center gap-2 text-xs">
+              <span className="font-mono text-tech-gray-300">{token.ticker}</span>
+              <span className="font-mono text-white">${token.priceUsd.toFixed(2)}</span>
+              <span
+                className={cn(
+                  'font-mono',
+                  token.change24h >= 0 ? 'text-lub-green' : 'text-lub-red'
+                )}
+              >
+                {token.change24h >= 0 ? '+' : ''}{token.change24h.toFixed(2)}%
+              </span>
             </div>
-          </div>
+          ))}
         </div>
-        <a href="/support" className="rounded-sm bg-tech-gray-700 px-2 py-0.5 text-tech-gray-100 font-medium hover:bg-tech-gray-600 transition-colors">Support</a>
       </div>
     </div>
   );
 }
-
