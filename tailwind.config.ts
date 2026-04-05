@@ -9,20 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        /* Comp USA–style retail tech: black floor, gunmetal panels, brushed silver CTAs */
         nb: {
-          black: '#050505',
-          surface: '#0c0c0c',
-          raised: '#121212',
-          line: 'rgba(255,255,255,0.08)',
-          lime: '#e0ff4f',
-          'lime-hover': '#ecff6a',
-          'lime-muted': 'rgba(224, 255, 79, 0.12)',
-          cyan: '#cdf0fd',
-          'cyan-muted': 'rgba(205, 240, 253, 0.14)',
-          'cyan-text': '#9ee5f7',
+          black: '#000000',
+          surface: '#0a0a0a',
+          raised: '#141414',
+          line: 'rgba(255,255,255,0.07)',
+          /* Token name retained for fewer class renames — reads as chrome/silver */
+          lime: '#c6c6c6',
+          'lime-hover': '#dcdcdc',
+          'lime-muted': 'rgba(198, 198, 198, 0.14)',
+          cyan: '#9ca3af',
+          'cyan-muted': 'rgba(156, 163, 175, 0.12)',
+          'cyan-text': '#aeb4bf',
         },
         tech: {
-          red: '#7c2d2d',
+          red: '#525252',
           gray: {
             50: '#fafafa',
             100: '#f4f4f5',
@@ -36,20 +38,20 @@ const config: Config = {
             900: '#18181b',
             950: '#0a0a0a',
           },
-          blue: '#3f4f48',
+          blue: '#52525b',
         },
         lub: {
-          accent: '#5eb896',
-          'accent-muted': 'rgba(94, 184, 150, 0.12)',
-          cta: '#1a4538',
-          'cta-hover': '#234f42',
-          green: '#6bc49a',
-          'green-muted': 'rgba(107, 196, 154, 0.14)',
-          red: '#b85c5c',
-          'red-muted': 'rgba(184, 92, 92, 0.14)',
-          'red-deep': '#722a2a',
+          accent: '#b0b0b0',
+          'accent-muted': 'rgba(176, 176, 176, 0.12)',
+          cta: '#2a2a2a',
+          'cta-hover': '#383838',
+          green: '#d4d4d4',
+          'green-muted': 'rgba(212, 212, 212, 0.1)',
+          red: '#6b6b6b',
+          'red-muted': 'rgba(107, 107, 107, 0.14)',
+          'red-deep': '#1f1f1f',
           neutral: '#9ca3af',
-          ink: '#f5f5f5',
+          ink: '#ececec',
         },
       },
       fontFamily: {
@@ -61,16 +63,16 @@ const config: Config = {
         '4xl': '2rem',
       },
       boxShadow: {
-        soft: '0 32px 64px -16px rgba(0, 0, 0, 0.65)',
-        glow: '0 0 48px rgba(224, 255, 79, 0.07)',
-        'glow-red': '0 0 32px rgba(184, 92, 92, 0.06)',
+        soft: '0 32px 64px -16px rgba(0, 0, 0, 0.72)',
+        glow: '0 0 48px rgba(255, 255, 255, 0.04)',
+        'glow-red': '0 0 32px rgba(0, 0, 0, 0.35)',
       },
       backgroundImage: {
-        grid: 'radial-gradient(rgba(255,255,255,0.028) 1px, transparent 1px)',
+        grid: 'radial-gradient(rgba(255,255,255,0.022) 1px, transparent 1px)',
         'grid-dense':
-          'linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px)',
+          'linear-gradient(rgba(255,255,255,0.014) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.014) 1px, transparent 1px)',
         'hero-fade':
-          'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(224, 255, 79, 0.09), transparent 55%), radial-gradient(ellipse 60% 40% at 100% 0%, rgba(205, 240, 253, 0.04), transparent)',
+          'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(255, 255, 255, 0.06), transparent 55%), radial-gradient(ellipse 60% 40% at 100% 0%, rgba(255, 255, 255, 0.03), transparent)',
       },
       backgroundSize: {
         grid: '40px 40px',
@@ -78,8 +80,8 @@ const config: Config = {
       },
       keyframes: {
         glow: {
-          '0%': { boxShadow: '0 0 12px rgba(224, 255, 79, 0.05)' },
-          '100%': { boxShadow: '0 0 36px rgba(224, 255, 79, 0.1)' },
+          '0%': { boxShadow: '0 0 12px rgba(255, 255, 255, 0.03)' },
+          '100%': { boxShadow: '0 0 36px rgba(255, 255, 255, 0.07)' },
         },
       },
       animation: {

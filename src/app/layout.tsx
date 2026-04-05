@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
 export const viewport: Viewport = {
-  themeColor: '#050505',
+  themeColor: '#000000',
 };
 
 export const metadata: Metadata = {
@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
-      <body className="min-h-screen bg-nb-black text-lub-ink antialiased selection:bg-nb-lime/35 selection:text-neutral-950">
+      <body className="min-h-screen bg-nb-black text-lub-ink antialiased selection:bg-white/20 selection:text-white">
         {children}
         <Analytics />
       </body>

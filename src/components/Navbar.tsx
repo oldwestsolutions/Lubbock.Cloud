@@ -21,7 +21,7 @@ export function Navbar() {
         <div className="flex h-[60px] lg:h-[68px] items-center justify-between">
           <div className="flex items-center gap-10 lg:gap-14">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-nb-lime text-neutral-950 shadow-[0_0_24px_rgba(224,255,79,0.2)]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-nb-lime text-neutral-950 shadow-[0_0_28px_rgba(255,255,255,0.12)]">
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                 </svg>

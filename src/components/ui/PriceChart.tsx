@@ -43,7 +43,7 @@ export function PriceChart({ data, height = 240, className }: PriceChartProps) {
   }, [filteredData]);
 
   const positive = filteredData.length >= 2 && filteredData[filteredData.length - 1].price >= filteredData[0].price;
-  const color = positive ? '#6bc49a' : '#b85c5c';
+  const color = positive ? '#d4d4d4' : '#6b6b6b';
 
   const hoveredData = hoveredIndex !== null ? filteredData[hoveredIndex] : null;
 

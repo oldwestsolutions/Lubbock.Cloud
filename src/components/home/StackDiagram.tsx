@@ -57,7 +57,7 @@ export function StackDiagram() {
               ))}
             </div>
 
-            {/* Vertical rail — Nebius-style lime sidebar */}
+            {/* Vertical rail — retail stack callouts */}
             <div className="lg:w-[148px] shrink-0 lg:ml-6 lg:border-l border-white/[0.08] lg:pl-6">
               <p className="nb-eyebrow mb-4 lg:mt-1 text-nb-lime/90">Platform</p>
               <ul className="space-y-3">
@@ -67,7 +67,7 @@ export function StackDiagram() {
                     className="flex items-start gap-2.5 text-[13px] sm:text-sm text-tech-gray-400 leading-snug"
                   >
                     <span
-                      className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-nb-lime shadow-[0_0_10px_rgba(224,255,79,0.45)]"
+                      className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-nb-lime shadow-[0_0_10px_rgba(255,255,255,0.35)]"
                       aria-hidden
                     />
                     {line}

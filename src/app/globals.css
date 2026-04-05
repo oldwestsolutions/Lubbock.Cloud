@@ -45,7 +45,7 @@
   .glow-card::before {
     content: '';
     @apply absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-500 pointer-events-none;
-    background: linear-gradient(135deg, rgba(224, 255, 79, 0.04), rgba(205, 240, 253, 0.03), transparent 60%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(180, 184, 192, 0.04), transparent 60%);
   }
 
   .glow-card:hover::before {
@@ -94,19 +94,19 @@
   }
 
   .input-field {
-    @apply w-full rounded-2xl bg-nb-surface border border-white/[0.08] px-4 py-3 text-sm text-lub-ink placeholder:text-tech-gray-600 focus:outline-none focus:border-nb-cyan-text/40 focus:ring-1 focus:ring-nb-lime/15 transition-colors;
+    @apply w-full rounded-2xl bg-nb-surface border border-white/[0.08] px-4 py-3 text-sm text-lub-ink placeholder:text-tech-gray-600 focus:outline-none focus:border-tech-gray-500/50 focus:ring-1 focus:ring-white/10 transition-colors;
   }
 
   .nb-tag {
-    @apply inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium bg-nb-cyan-muted text-nb-cyan-text border border-sky-200/15;
+    @apply inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium bg-white/[0.06] text-tech-gray-300 border border-white/[0.1];
   }
 
   .badge-amd {
-    @apply inline-flex items-center rounded-full bg-lub-red-muted px-2.5 py-0.5 text-xs font-medium text-lub-red border border-lub-red/25;
+    @apply inline-flex items-center rounded-full bg-tech-gray-800/80 px-2.5 py-0.5 text-xs font-medium text-tech-gray-300 border border-white/[0.08];
   }
 
   .badge-nvidia {
-    @apply inline-flex items-center rounded-full bg-lub-green-muted px-2.5 py-0.5 text-xs font-medium text-lub-green border border-lub-green/25;
+    @apply inline-flex items-center rounded-full bg-tech-gray-700/50 px-2.5 py-0.5 text-xs font-medium text-tech-gray-200 border border-white/[0.1];
   }
 
   .change-positive {

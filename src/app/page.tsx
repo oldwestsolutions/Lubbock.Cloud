@@ -222,7 +222,7 @@ function GpuFleetSection() {
                       <div className="flex items-center gap-3 min-w-[140px]">
                         <div className="flex-1 h-1.5 bg-tech-gray-800 rounded-full overflow-hidden">
                           <div
-                            className={`h-full rounded-full ${pct > 60 ? 'bg-lub-green' : pct > 30 ? 'bg-tech-gray-600' : 'bg-lub-red-deep'}`}
+                            className={`h-full rounded-full ${pct > 60 ? 'bg-tech-gray-300' : pct > 30 ? 'bg-tech-gray-600' : 'bg-tech-gray-800'}`}
                             style={{ width: `${pct}%` }}
                           />
                         </div>
@@ -245,7 +245,7 @@ function GpuFleetSection() {
 function RocmSection() {
   return (
     <section className="relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-lub-red-muted to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-tech-gray-900/80 to-transparent" />
       <div className="relative mx-auto max-w-[1280px] container-px py-20 sm:py-24">
         <div className="flex flex-wrap items-center gap-3 mb-4">
           <span className="badge-amd">AMD</span>
@@ -262,7 +262,7 @@ function RocmSection() {
               <div className="flex items-start justify-between">
                 <h3 className="font-medium">{service.name}</h3>
                 {!service.available && (
-                  <span className="text-[10px] uppercase tracking-wider text-lub-red bg-lub-red-muted border border-lub-red/25 rounded-full px-2 py-0.5">
+                  <span className="text-[10px] uppercase tracking-wider text-tech-gray-400 bg-white/[0.06] border border-white/[0.1] rounded-full px-2 py-0.5">
                     Coming Soon
                   </span>
                 )}

@@ -32,10 +32,10 @@ export function OrderBook({ bids, asks, className }: OrderBookProps) {
         {asks.slice().reverse().map((ask, i) => (
           <div key={`ask-${i}`} className="relative grid grid-cols-3 gap-2 py-0.5 text-xs font-mono">
             <div
-              className="absolute inset-0 bg-lub-red/5"
+              className="absolute inset-0 bg-tech-gray-700/25"
               style={{ width: `${(ask.total / maxAskTotal) * 100}%`, right: 0, left: 'auto' }}
             />
-            <span className="relative text-lub-red">${ask.price.toFixed(2)}</span>
+            <span className="relative text-tech-gray-500">${ask.price.toFixed(2)}</span>
             <span className="relative text-right text-tech-gray-300">{ask.amount.toLocaleString()}</span>
             <span className="relative text-right text-tech-gray-500">${ask.total.toLocaleString()}</span>
           </div>
@@ -51,10 +51,10 @@ export function OrderBook({ bids, asks, className }: OrderBookProps) {
         {bids.map((bid, i) => (
           <div key={`bid-${i}`} className="relative grid grid-cols-3 gap-2 py-0.5 text-xs font-mono">
             <div
-              className="absolute inset-0 bg-lub-green/5"
+              className="absolute inset-0 bg-white/[0.04]"
               style={{ width: `${(bid.total / maxBidTotal) * 100}%`, right: 0, left: 'auto' }}
             />
-            <span className="relative text-lub-green">${bid.price.toFixed(2)}</span>
+            <span className="relative text-tech-gray-200">${bid.price.toFixed(2)}</span>
             <span className="relative text-right text-tech-gray-300">{bid.amount.toLocaleString()}</span>
             <span className="relative text-right text-tech-gray-500">${bid.total.toLocaleString()}</span>
           </div>

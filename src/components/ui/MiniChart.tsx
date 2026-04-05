@@ -30,7 +30,7 @@ export function MiniChart({ data, width = 120, height = 40, positive = true }: M
     return `${path} L${width},${height} L0,${height} Z`;
   }, [path, width, height, data.length]);
 
-  const color = positive ? '#6bc49a' : '#b85c5c';
+  const color = positive ? '#d4d4d4' : '#6b6b6b';
   const gradientId = `grad-${positive ? 'pos' : 'neg'}-${Math.random().toString(36).slice(2, 6)}`;
 
   return (
