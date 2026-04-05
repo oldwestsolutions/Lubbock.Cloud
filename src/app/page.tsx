@@ -5,8 +5,9 @@ import { Footer } from '@/components/Footer';
 import { FeatureGrid, InfrastructureSplit, CaseStudyMetrics } from '@/components/home';
 import { COMPUTE_TOKENS, GPU_SPECS, ROCM_SERVICES } from '@/lib/mock-data';
 
+/** Unsplash: dramatic sky / clouds (ixlib required for stable delivery) */
 const HERO_CLOUD_SRC =
-  'https://images.unsplash.com/photo-1517483000871-1dbfbf731534?auto=format&fit=crop&w=1400&q=85';
+  'https://images.unsplash.com/photo-1517483000871-1dbfbf731534?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80';
 
 function HeroSection() {
   return (
@@ -15,8 +16,8 @@ function HeroSection() {
       <div className="absolute inset-0 bg-hero-fade" />
 
       <div className="relative mx-auto max-w-[1280px] container-px pt-20 pb-16 sm:pt-28 sm:pb-20 lg:pt-28 lg:pb-24">
-        <div className="grid items-center gap-12 lg:gap-10 xl:gap-14 lg:grid-cols-2 lg:items-center">
-          <div className="max-w-xl lg:max-w-none xl:max-w-xl">
+        <div className="grid min-w-0 items-center gap-12 lg:gap-10 xl:gap-14 lg:grid-cols-2 lg:items-center">
+          <div className="min-w-0 max-w-xl lg:max-w-none xl:max-w-xl">
             <p className="nb-eyebrow mb-6">Tokenized GPU cloud</p>
 
             <div className="inline-flex items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 mb-8 backdrop-blur-sm">
@@ -58,7 +59,7 @@ function HeroSection() {
             </div>
           </div>
 
-          <div className="relative w-full max-w-xl mx-auto lg:max-w-none lg:mx-0">
+          <div className="relative w-full min-w-0 max-w-xl mx-auto lg:max-w-none lg:mx-0">
             <div
               className="pointer-events-none absolute -inset-6 sm:-inset-8 rounded-[2.5rem] bg-gradient-to-br from-white/[0.07] via-nb-lime/[0.06] to-transparent opacity-80 blur-3xl"
               aria-hidden
@@ -67,18 +68,18 @@ function HeroSection() {
               className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,420px)] h-[min(100%,420px)] rounded-full bg-white/[0.03] blur-[80px]"
               aria-hidden
             />
-            <div className="relative aspect-[5/4] sm:aspect-[4/3] lg:aspect-[5/4] rounded-[1.75rem] sm:rounded-3xl overflow-hidden border border-white/[0.09] bg-nb-raised shadow-[0_48px_120px_-48px_rgba(0,0,0,0.85),0_0_0_1px_rgba(255,255,255,0.04)_inset] ring-1 ring-white/[0.05]">
+            <div className="relative w-full aspect-[5/4] sm:aspect-[4/3] lg:aspect-[5/4] rounded-[1.75rem] sm:rounded-3xl overflow-hidden border border-white/[0.09] bg-nb-raised shadow-[0_48px_120px_-48px_rgba(0,0,0,0.85),0_0_0_1px_rgba(255,255,255,0.04)_inset] ring-1 ring-white/[0.05]">
               <Image
                 src={HERO_CLOUD_SRC}
                 alt="Atmospheric clouds over open sky"
                 fill
-                className="object-cover object-[center_35%] scale-105 sm:scale-100 transition-transform duration-700 ease-out"
-                sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-[center_40%]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-nb-black via-nb-black/25 to-transparent sm:bg-gradient-to-l sm:from-nb-black sm:via-nb-black/40 sm:to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-nb-black/50" />
-              <div className="absolute bottom-5 left-5 right-5 sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-[240px] rounded-2xl border border-white/[0.08] bg-nb-black/55 backdrop-blur-md px-4 py-3">
+              <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-nb-black/90 via-nb-black/20 to-transparent sm:bg-gradient-to-l sm:from-nb-black sm:via-nb-black/35 sm:to-transparent" />
+              <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-br from-transparent via-transparent to-nb-black/40" />
+              <div className="absolute bottom-5 left-5 right-5 z-[2] sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-[240px] rounded-2xl border border-white/[0.08] bg-nb-black/55 backdrop-blur-md px-4 py-3">
                 <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-tech-gray-500">Region</p>
                 <p className="mt-1 font-display text-sm font-semibold text-lub-ink">Lubbock, Texas</p>
                 <p className="mt-0.5 text-xs text-tech-gray-500">Low-latency GPU fabric</p>
