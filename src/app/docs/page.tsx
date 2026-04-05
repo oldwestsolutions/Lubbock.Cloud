@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { CloudLogo } from '@/components/CloudLogo';
 import Link from 'next/link';
 
 const DOC_SECTIONS = [
@@ -70,9 +71,7 @@ export default function DocsPage() {
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
           <Link href="#" className="glow-card p-5 hover:border-white/10 transition-all group">
             <div className="w-10 h-10 rounded-xl bg-lub-accent-muted flex items-center justify-center mb-3 ring-1 ring-lub-accent/15">
-              <svg className="w-5 h-5 text-lub-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-              </svg>
+              <CloudLogo className="w-5 h-5 text-lub-accent" />
             </div>
             <h3 className="font-medium text-lub-ink group-hover:text-lub-accent transition-colors">Quick Start</h3>
             <p className="text-sm text-tech-gray-400 mt-1">Go from zero to GPU session in 5 minutes.</p>

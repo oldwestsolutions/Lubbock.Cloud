@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CloudLogo } from '@/components/CloudLogo';
 
 const FOOTER_DESCRIPTION =
   'Tokenized GPU compute from West Texas — trade capacity like a commodity, redeem on real AMD and NVIDIA hardware, and run inference and training with the ergonomics of a modern AI cloud.';
@@ -46,15 +47,10 @@ const FOOTER_SECTIONS = [
 
 function BrandMark({ className = '' }: { className?: string }) {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-nb-lime text-neutral-950 shadow-[0_0_28px_rgba(255,255,255,0.1)]">
-        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-        </svg>
+    <div className={`inline-flex ${className}`}>
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] text-nb-lime shadow-[0_0_32px_rgba(255,255,255,0.06)] ring-1 ring-white/[0.1]">
+        <CloudLogo className="h-7 w-7" />
       </div>
-      <span className="font-display text-lg font-semibold tracking-tight text-lub-ink">
-        lubbock<span className="text-nb-lime">.cloud</span>
-      </span>
     </div>
   );
 }
@@ -65,7 +61,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1280px] container-px py-16 sm:py-20">
         <div className="grid gap-14 lg:gap-12 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-4 xl:col-span-3">
-            <Link href="/" className="inline-block">
+            <Link href="/" className="inline-block rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20" aria-label="Lubbock Cloud home">
               <BrandMark />
             </Link>
             <p className="mt-6 text-[14px] leading-relaxed text-tech-gray-500 max-w-sm">{FOOTER_DESCRIPTION}</p>

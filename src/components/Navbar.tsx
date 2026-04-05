@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { CloudLogo } from '@/components/CloudLogo';
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -10,15 +11,14 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-white/[0.06] bg-nb-black/80 backdrop-blur-2xl supports-[backdrop-filter]:bg-nb-black/65">
       <div className="mx-auto max-w-[1280px] container-px">
         <div className="flex h-[60px] lg:h-[68px] items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-nb-lime text-neutral-950 shadow-[0_0_28px_rgba(255,255,255,0.12)]">
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-              </svg>
+          <Link
+            href="/"
+            className="flex items-center rounded-2xl p-1.5 -m-1.5 hover:bg-white/[0.04] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
+            aria-label="Lubbock Cloud home"
+          >
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.06] text-nb-lime shadow-[0_0_32px_rgba(255,255,255,0.06)] ring-1 ring-white/[0.1]">
+              <CloudLogo className="h-[22px] w-[22px]" />
             </div>
-            <span className="font-display text-lg font-semibold tracking-tight text-lub-ink">
-              lubbock<span className="text-nb-lime">.cloud</span>
-            </span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-3">

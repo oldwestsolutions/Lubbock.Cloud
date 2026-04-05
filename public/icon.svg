@@ -1,7 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#000000" rx="8" />
-  <rect x="8" y="8" width="22" height="22" fill="#525252" rx="3" />
-  <rect x="34" y="8" width="22" height="22" fill="#a3a3a3" rx="3" />
-  <rect x="8" y="34" width="22" height="22" fill="#a3a3a3" rx="3" />
-  <rect x="34" y="34" width="22" height="22" fill="#d4d4d4" rx="3" />
+  <rect width="64" height="64" rx="14" fill="#000000"/>
+  <g transform="translate(20 19)">
+    <path
+      fill="#c6c6c6"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M4.5 9.75a6 6 0 0 1 11.573-2.226 3.75 3.75 0 0 1 4.133 4.303A4.5 4.5 0 0 1 18 20.25H6.75a5.25 5.25 0 0 1-2.23-10.004 6.072 6.072 0 0 1-.02-.496Z"
+    />
+  </g>
 </svg>
