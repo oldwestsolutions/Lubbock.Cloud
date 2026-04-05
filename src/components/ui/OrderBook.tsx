@@ -43,7 +43,7 @@ export function OrderBook({ bids, asks, className }: OrderBookProps) {
       </div>
 
       <div className="border-y border-white/5 py-2 mb-3">
-        <span className="text-sm font-mono font-medium text-lub-accent">$2.84</span>
+        <span className="text-sm font-mono font-medium text-nb-lime">$2.84</span>
         <span className="text-xs text-tech-gray-500 ml-2">Spread: $0.02 (0.70%)</span>
       </div>
 

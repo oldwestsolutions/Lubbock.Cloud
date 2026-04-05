@@ -14,50 +14,54 @@
 
 @layer base {
   ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
   }
   ::-webkit-scrollbar-track {
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.12);
   }
 }
 
 @layer components {
   .card-surface {
-    @apply bg-tech-gray-900/80 backdrop-blur-md shadow-soft border border-white/[0.06] rounded-2xl;
+    @apply bg-nb-raised/90 backdrop-blur-md shadow-soft border border-white/[0.07] rounded-3xl;
   }
 
   .container-px {
-    @apply px-4 sm:px-6 lg:px-8;
+    @apply px-5 sm:px-8 lg:px-10 xl:px-12;
   }
 
   .glow-card {
-    @apply relative bg-tech-gray-900/90 backdrop-blur-md border border-white/[0.06] rounded-2xl overflow-hidden;
+    @apply relative bg-nb-raised/95 backdrop-blur-md border border-white/[0.07] rounded-3xl overflow-hidden;
   }
 
   .glow-card::before {
     content: '';
-    @apply absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 pointer-events-none;
-    background: linear-gradient(135deg, rgba(94, 184, 150, 0.05), transparent 55%);
+    @apply absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-500 pointer-events-none;
+    background: linear-gradient(135deg, rgba(224, 255, 79, 0.04), rgba(205, 240, 253, 0.03), transparent 60%);
   }
 
   .glow-card:hover::before {
     @apply opacity-100;
   }
 
+  .nb-eyebrow {
+    @apply text-[11px] sm:text-xs font-medium uppercase tracking-[0.2em] text-tech-gray-500;
+  }
+
   .stat-value {
-    @apply text-2xl font-semibold tracking-tight font-mono text-lub-ink;
+    @apply font-display text-2xl sm:text-3xl font-semibold tracking-tight text-lub-ink;
   }
 
   .stat-label {
-    @apply text-xs uppercase tracking-wider text-tech-gray-500;
+    @apply text-xs uppercase tracking-[0.14em] text-tech-gray-500 mt-2;
   }
 
   .ticker-text {
@@ -65,31 +69,36 @@
   }
 
   .section-heading {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-lub-ink;
+    @apply font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold tracking-tight text-lub-ink leading-[1.12];
   }
 
   .section-subheading {
-    @apply text-tech-gray-400 text-base sm:text-lg max-w-2xl mt-4 leading-relaxed;
+    @apply text-tech-gray-500 text-base sm:text-lg max-w-2xl mt-5 leading-relaxed font-normal;
   }
 
   .page-container {
-    @apply mx-auto max-w-7xl container-px py-12 sm:py-16;
+    @apply mx-auto max-w-7xl container-px py-14 sm:py-20;
   }
 
+  /* Nebius-style pill CTAs */
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-xl bg-lub-cta px-6 py-3 text-sm font-medium text-white hover:bg-lub-cta-hover transition-colors duration-200;
+    @apply inline-flex items-center justify-center rounded-full bg-nb-lime px-8 py-3.5 text-[15px] font-semibold tracking-tight text-neutral-950 hover:bg-nb-lime-hover transition-colors duration-200 active:scale-[0.98];
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-xl border border-white/[0.1] px-6 py-3 text-sm font-medium text-tech-gray-200 hover:bg-white/[0.04] hover:border-white/[0.14] transition-all duration-200;
+    @apply inline-flex items-center justify-center rounded-full border border-white/[0.14] bg-transparent px-8 py-3.5 text-[15px] font-medium tracking-tight text-tech-gray-200 hover:bg-white/[0.05] hover:border-white/[0.22] transition-all duration-200;
   }
 
   .btn-amber {
-    @apply inline-flex items-center justify-center rounded-xl bg-lub-cta px-6 py-3 text-sm font-medium text-white hover:bg-lub-cta-hover transition-colors duration-200;
+    @apply inline-flex items-center justify-center rounded-full bg-nb-lime px-8 py-3.5 text-[15px] font-semibold text-neutral-950 hover:bg-nb-lime-hover transition-colors duration-200;
   }
 
   .input-field {
-    @apply w-full rounded-xl bg-tech-gray-900/80 border border-white/[0.08] px-3 py-2.5 text-sm text-lub-ink placeholder:text-tech-gray-600 focus:outline-none focus:border-lub-accent/40 focus:ring-1 focus:ring-lub-accent/20 transition-colors;
+    @apply w-full rounded-2xl bg-nb-surface border border-white/[0.08] px-4 py-3 text-sm text-lub-ink placeholder:text-tech-gray-600 focus:outline-none focus:border-nb-cyan-text/40 focus:ring-1 focus:ring-nb-lime/15 transition-colors;
+  }
+
+  .nb-tag {
+    @apply inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium bg-nb-cyan-muted text-nb-cyan-text border border-sky-200/15;
   }
 
   .badge-amd {
@@ -109,7 +118,7 @@
   }
 
   .table-header {
-    @apply text-xs uppercase tracking-wider text-tech-gray-500 font-medium;
+    @apply text-xs uppercase tracking-[0.12em] text-tech-gray-500 font-medium;
   }
 
   .nb-section {

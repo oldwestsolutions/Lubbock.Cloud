@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Outfit } from 'next/font/google';
 import './globals.css';
 import { Analytics } from '@vercel/analytics/next';
-import { TopBar } from '@/components/TopBar';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
 export const viewport: Viewport = {
-  themeColor: '#0c0c0e',
+  themeColor: '#050505',
 };
 
 export const metadata: Metadata = {
@@ -38,9 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="min-h-screen bg-tech-gray-950 text-lub-ink antialiased selection:bg-lub-accent/30 selection:text-lub-ink">
-        <TopBar />
+    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+      <body className="min-h-screen bg-nb-black text-lub-ink antialiased selection:bg-nb-lime/35 selection:text-neutral-950">
         {children}
         <Analytics />
       </body>

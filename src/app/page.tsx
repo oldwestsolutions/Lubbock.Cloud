@@ -6,44 +6,40 @@ import { COMPUTE_TOKENS, GPU_SPECS, ROCM_SERVICES } from '@/lib/mock-data';
 function HeroSection() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid bg-grid opacity-40" />
+      <div className="absolute inset-0 bg-grid bg-grid opacity-50" />
       <div className="absolute inset-0 bg-hero-fade" />
 
-      <div className="relative mx-auto max-w-7xl container-px pt-28 pb-24 sm:pt-36 sm:pb-32">
-        <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 rounded-full bg-lub-accent-muted border border-lub-accent/20 px-4 py-2 mb-10">
-            <div className="w-1.5 h-1.5 rounded-full bg-lub-accent" />
-            <span className="text-xs font-medium tracking-wide text-tech-gray-300">
-              Live — 934 GPUs across 6 accelerator classes
-            </span>
+      <div className="relative mx-auto max-w-[1280px] container-px pt-20 pb-20 sm:pt-28 sm:pb-28 lg:pt-32 lg:pb-32">
+        <div className="max-w-[720px]">
+          <p className="nb-eyebrow mb-6">Tokenized GPU cloud</p>
+
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 mb-8 backdrop-blur-sm">
+            <span className="nb-tag !rounded-full !py-0.5">Live fleet</span>
+            <span className="text-[13px] text-tech-gray-400">934 GPUs · 6 accelerator classes</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-[4.25rem] font-semibold tracking-tight leading-[1.06] text-lub-ink">
-            Compute is no longer
+          <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.5rem] font-semibold tracking-[-0.03em] leading-[1.05] text-lub-ink">
+            The cloud for AI
             <br />
-            rented. It&apos;s{' '}
-            <span className="text-lub-accent">owned</span>,{' '}
-            <span className="text-lub-red">traded</span>,
-            <br />
-            and <span className="text-tech-gray-200">deployed</span>.
+            infrastructure,{' '}
+            <span className="text-nb-lime">made liquid</span>.
           </h1>
 
-          <p className="mt-8 text-lg sm:text-xl text-tech-gray-500 max-w-2xl leading-relaxed">
-            Tokenized GPU infrastructure backed by real AMD and NVIDIA hardware.
-            Buy compute tokens, redeem them for live GPU sessions, or trade them
-            on an open marketplace. GPU infrastructure, made liquid.
+          <p className="mt-8 text-lg sm:text-xl text-tech-gray-500 max-w-xl leading-[1.55]">
+            Buy and trade compute tokens backed by real AMD and NVIDIA hardware. Redeem for GPU sessions,
+            API credits, or batch jobs — with the clarity of a modern AI platform.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Link href="/tokens" className="btn-primary text-base px-8 py-3">
-              Explore Tokens
+          <div className="mt-11 flex flex-col sm:flex-row gap-3 sm:items-center">
+            <Link href="/tokens" className="btn-primary justify-center sm:justify-center">
+              Explore tokens
             </Link>
-            <Link href="/marketplace" className="btn-secondary text-base px-8 py-3">
-              Open Marketplace
+            <Link href="/marketplace" className="btn-secondary justify-center">
+              Open marketplace
             </Link>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
+          <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-8 sm:gap-x-10">
             {[
               { label: 'Total GPU Capacity', value: '1,568' },
               { label: 'Tokens Circulating', value: '60M+' },
@@ -64,17 +60,18 @@ function HeroSection() {
 
 function TokenTickerSection() {
   return (
-    <section className="nb-section bg-tech-gray-900/40">
-      <div className="mx-auto max-w-7xl container-px py-20">
-        <div className="flex items-end justify-between mb-10">
+    <section className="nb-section bg-nb-surface/80">
+      <div className="mx-auto max-w-[1280px] container-px py-20 sm:py-24">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
           <div>
-            <h2 className="section-heading">Live Token Prices</h2>
-            <p className="section-subheading">
-              Each token is backed 1:1 by a GPU-hour on real hardware.
+            <p className="nb-eyebrow mb-3">Marketplace</p>
+            <h2 className="section-heading">Live token prices</h2>
+            <p className="section-subheading mt-0">
+              Each token maps to one GPU-hour on dedicated hardware.
             </p>
           </div>
-          <Link href="/tokens" className="hidden sm:inline-flex btn-secondary text-xs">
-            View All
+          <Link href="/tokens" className="hidden sm:inline-flex btn-secondary !py-2.5 !px-6 text-sm shrink-0">
+            View all
           </Link>
         </div>
 
@@ -150,22 +147,23 @@ function HowItWorksSection() {
   return (
     <section className="relative">
       <div className="absolute inset-0 bg-grid-dense bg-grid-dense opacity-20" />
-      <div className="relative mx-auto max-w-7xl container-px py-20">
-        <h2 className="section-heading text-center">How It Works</h2>
+      <div className="relative mx-auto max-w-[1280px] container-px py-20 sm:py-24">
+        <p className="nb-eyebrow text-center mb-3">How it works</p>
+        <h2 className="section-heading text-center">From tokens to production GPUs</h2>
         <p className="section-subheading text-center mx-auto">
-          From token acquisition to GPU deployment in four steps.
+          Four steps — the same clarity you expect from a modern AI cloud.
         </p>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step) => (
-            <div key={step.number} className="glow-card p-6 group">
-              <span className="text-4xl font-semibold text-tech-gray-800 group-hover:text-lub-accent/25 transition-colors">
+            <div key={step.number} className="glow-card p-7 sm:p-8 group">
+              <span className="font-display text-4xl font-semibold text-tech-gray-800 group-hover:text-nb-lime/30 transition-colors">
                 {step.number}
               </span>
-              <h3 className="text-lg font-medium mt-4 text-lub-ink">{step.title}</h3>
-              <p className="text-sm text-tech-gray-500 mt-2 leading-relaxed">{step.description}</p>
-              <Link href={step.href} className="inline-block mt-4 text-sm text-lub-accent hover:text-lub-green transition-colors">
-                {step.cta} &rarr;
+              <h3 className="font-display text-lg font-semibold mt-5 text-lub-ink">{step.title}</h3>
+              <p className="text-sm text-tech-gray-500 mt-3 leading-relaxed">{step.description}</p>
+              <Link href={step.href} className="inline-block mt-5 text-sm font-medium text-nb-lime hover:text-nb-lime-hover transition-colors">
+                {step.cta} →
               </Link>
             </div>
           ))}
@@ -178,10 +176,11 @@ function HowItWorksSection() {
 function GpuFleetSection() {
   return (
     <section className="nb-section">
-      <div className="mx-auto max-w-7xl container-px py-20">
-        <h2 className="section-heading">GPU Fleet Status</h2>
+      <div className="mx-auto max-w-[1280px] container-px py-20 sm:py-24">
+        <p className="nb-eyebrow mb-3">Fleet</p>
+        <h2 className="section-heading">Accelerator availability</h2>
         <p className="section-subheading">
-          Real-time availability across our accelerator fleet in Lubbock, Texas.
+          Live view of capacity across our Lubbock, Texas region.
         </p>
 
         <div className="mt-12 overflow-x-auto">
@@ -237,12 +236,12 @@ function RocmSection() {
   return (
     <section className="relative">
       <div className="absolute inset-0 bg-gradient-to-b from-lub-red-muted to-transparent" />
-      <div className="relative mx-auto max-w-7xl container-px py-20">
-        <div className="flex items-center gap-3 mb-3">
+      <div className="relative mx-auto max-w-[1280px] container-px py-20 sm:py-24">
+        <div className="flex flex-wrap items-center gap-3 mb-4">
           <span className="badge-amd">AMD</span>
-          <span className="text-xs text-tech-gray-500 uppercase tracking-wider font-medium">ROCm-Native</span>
+          <span className="nb-tag">ROCm-native</span>
         </div>
-        <h2 className="section-heading">ROCm-Native Compute Services</h2>
+        <h2 className="section-heading">Managed ROCm services</h2>
         <p className="section-subheading">
           Purpose-built AI services running natively on AMD Instinct hardware.
           No ROCm complexity — just APIs.
@@ -262,7 +261,7 @@ function RocmSection() {
               <p className="text-sm text-tech-gray-400 mt-2 leading-relaxed">{service.description}</p>
               <div className="mt-4 flex items-center justify-between text-xs">
                 <span className="font-mono text-tech-gray-500">{service.gpuModel}</span>
-                <span className="font-mono text-lub-accent">${service.pricePerHour.toFixed(2)}/hr</span>
+                <span className="font-mono text-nb-lime">${service.pricePerHour.toFixed(2)}/hr</span>
               </div>
             </div>
           ))}
@@ -274,23 +273,23 @@ function RocmSection() {
 
 function CtaSection() {
   return (
-    <section className="nb-section">
-      <div className="mx-auto max-w-7xl container-px py-28 text-center">
-        <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-lub-ink">
-          GPU infrastructure,
+    <section className="nb-section bg-nb-surface/50">
+      <div className="mx-auto max-w-[1280px] container-px py-24 sm:py-32 text-center">
+        <p className="nb-eyebrow mb-4">Get started</p>
+        <h2 className="font-display text-4xl sm:text-5xl lg:text-[3.25rem] font-semibold tracking-tight text-lub-ink leading-[1.1]">
+          Own, trade, and deploy
           <br />
-          <span className="text-lub-accent">made liquid.</span>
+          <span className="text-nb-lime">GPU infrastructure</span>
         </h2>
-        <p className="mt-6 text-tech-gray-500 text-lg max-w-xl mx-auto leading-relaxed">
-          Stop renting compute by the hour. Own it, trade it, and deploy it
-          on your terms.
+        <p className="mt-6 text-tech-gray-500 text-lg max-w-lg mx-auto leading-relaxed">
+          Stop renting by the hour. Build on tokenized compute with a product experience modeled for AI teams.
         </p>
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/tokens" className="btn-primary text-base px-8 py-3">
-            Get Started
+        <div className="mt-12 flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center">
+          <Link href="/tokens" className="btn-primary">
+            Get started
           </Link>
-          <Link href="/docs" className="btn-secondary text-base px-8 py-3">
-            Read the Docs
+          <Link href="/docs" className="btn-secondary">
+            Documentation
           </Link>
         </div>
       </div>

@@ -9,6 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        nb: {
+          black: '#050505',
+          surface: '#0c0c0c',
+          raised: '#121212',
+          line: 'rgba(255,255,255,0.08)',
+          lime: '#e0ff4f',
+          'lime-hover': '#ecff6a',
+          'lime-muted': 'rgba(224, 255, 79, 0.12)',
+          cyan: '#cdf0fd',
+          'cyan-muted': 'rgba(205, 240, 253, 0.14)',
+          'cyan-text': '#9ee5f7',
+        },
         tech: {
           red: '#7c2d2d',
           gray: {
@@ -22,7 +34,7 @@ const config: Config = {
             700: '#3f3f46',
             800: '#27272a',
             900: '#18181b',
-            950: '#0c0c0e',
+            950: '#0a0a0a',
           },
           blue: '#3f4f48',
         },
@@ -37,37 +49,37 @@ const config: Config = {
           'red-muted': 'rgba(184, 92, 92, 0.14)',
           'red-deep': '#722a2a',
           neutral: '#9ca3af',
-          ink: '#fafafa',
+          ink: '#f5f5f5',
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
-        display: ['var(--font-inter)'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-outfit)', 'var(--font-inter)', 'system-ui', 'sans-serif'],
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
       borderRadius: {
-        '2xl': '1rem',
-        '3xl': '1.25rem',
+        '4xl': '2rem',
       },
       boxShadow: {
-        soft: '0 24px 48px -12px rgba(0, 0, 0, 0.45)',
-        glow: '0 0 32px rgba(94, 184, 150, 0.08)',
+        soft: '0 32px 64px -16px rgba(0, 0, 0, 0.65)',
+        glow: '0 0 48px rgba(224, 255, 79, 0.07)',
         'glow-red': '0 0 32px rgba(184, 92, 92, 0.06)',
       },
       backgroundImage: {
-        grid: 'radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px)',
+        grid: 'radial-gradient(rgba(255,255,255,0.028) 1px, transparent 1px)',
         'grid-dense':
-          'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)',
-        'hero-fade': 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(94, 184, 150, 0.08), transparent)',
+          'linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px)',
+        'hero-fade':
+          'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(224, 255, 79, 0.09), transparent 55%), radial-gradient(ellipse 60% 40% at 100% 0%, rgba(205, 240, 253, 0.04), transparent)',
       },
       backgroundSize: {
-        grid: '32px 32px',
-        'grid-dense': '24px 24px',
+        grid: '40px 40px',
+        'grid-dense': '28px 28px',
       },
       keyframes: {
         glow: {
-          '0%': { boxShadow: '0 0 8px rgba(94, 184, 150, 0.06)' },
-          '100%': { boxShadow: '0 0 24px rgba(94, 184, 150, 0.12)' },
+          '0%': { boxShadow: '0 0 12px rgba(224, 255, 79, 0.05)' },
+          '100%': { boxShadow: '0 0 36px rgba(224, 255, 79, 0.1)' },
         },
       },
       animation: {

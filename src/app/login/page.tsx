@@ -53,7 +53,7 @@ export default function LoginPage() {
           </button>
         </form>
         <p className="mt-6 text-center text-xs text-tech-gray-500">
-          <Link href="/" className="text-lub-accent hover:text-lub-green transition-colors">
+          <Link href="/" className="text-nb-lime hover:text-nb-lime-hover transition-colors">
             ← Back to home
           </Link>
         </p>

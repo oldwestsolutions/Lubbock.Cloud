@@ -43,18 +43,18 @@ const FOOTER_SECTIONS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] bg-[#09090b]">
-      <div className="mx-auto max-w-7xl container-px py-20">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+    <footer className="border-t border-white/[0.06] bg-nb-black">
+      <div className="mx-auto max-w-[1280px] container-px py-16 sm:py-20">
+        <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
           {FOOTER_SECTIONS.map((section) => (
             <div key={section.title}>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-tech-gray-400">{section.title}</h3>
-              <ul className="mt-4 space-y-2.5">
+              <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-tech-gray-500">{section.title}</h3>
+              <ul className="mt-5 space-y-3">
                 {section.links.map((link) => (
                   <li key={link.href + link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-tech-gray-500 hover:text-white transition-colors"
+                      className="text-[14px] text-tech-gray-400 hover:text-lub-ink transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -65,19 +65,19 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2.5">
-            <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-lub-cta to-lub-cta-hover flex items-center justify-center ring-1 ring-white/[0.06]">
-              <svg viewBox="0 0 24 24" className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
+        <div className="mt-14 pt-10 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-5">
+          <div className="flex items-center gap-3">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-nb-lime text-neutral-950">
+              <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg>
             </div>
-            <span className="text-sm font-medium">
-              lubbock<span className="text-lub-accent">.cloud</span>
+            <span className="font-display text-sm font-semibold tracking-tight">
+              lubbock<span className="text-nb-lime">.cloud</span>
             </span>
           </div>
-          <p className="text-xs text-tech-gray-600">
-            GPU infrastructure, made liquid. Lubbock, Texas.
+          <p className="text-xs text-tech-gray-600 text-center sm:text-right max-w-sm leading-relaxed">
+            Tokenized GPU infrastructure. Lubbock, Texas.
           </p>
         </div>
       </div>
