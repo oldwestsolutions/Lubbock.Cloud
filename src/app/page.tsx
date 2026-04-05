@@ -1,13 +1,8 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { FeatureGrid, InfrastructureSplit, CaseStudyMetrics } from '@/components/home';
 import { COMPUTE_TOKENS, GPU_SPECS, ROCM_SERVICES } from '@/lib/mock-data';
-
-/** Unsplash: dramatic sky / clouds (ixlib required for stable delivery) */
-const HERO_CLOUD_SRC =
-  'https://images.unsplash.com/photo-1517483000871-1dbfbf731534?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80';
 
 function HeroSection() {
   return (
@@ -69,13 +64,15 @@ function HeroSection() {
               aria-hidden
             />
             <div className="relative w-full aspect-[5/4] sm:aspect-[4/3] lg:aspect-[5/4] rounded-[1.75rem] sm:rounded-3xl overflow-hidden border border-white/[0.09] bg-nb-raised shadow-[0_48px_120px_-48px_rgba(0,0,0,0.85),0_0_0_1px_rgba(255,255,255,0.04)_inset] ring-1 ring-white/[0.05]">
-              <Image
-                src={HERO_CLOUD_SRC}
-                alt="Atmospheric clouds over open sky"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-[center_40%]"
+              {/* Local SVG — previous Unsplash asset returned 404; avoids remote image optimizer issues */}
+              <img
+                src="/hero-cloud.svg"
+                alt=""
+                width={1600}
+                height={1280}
+                decoding="async"
+                fetchPriority="high"
+                className="absolute inset-0 h-full w-full object-cover object-center"
               />
               <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-nb-black/90 via-nb-black/20 to-transparent sm:bg-gradient-to-l sm:from-nb-black sm:via-nb-black/35 sm:to-transparent" />
               <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-br from-transparent via-transparent to-nb-black/40" />
