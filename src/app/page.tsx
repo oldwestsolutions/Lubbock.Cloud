@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { StackDiagram, FeatureGrid, InfrastructureSplit, CaseStudyMetrics } from '@/components/home';
 import { COMPUTE_TOKENS, GPU_SPECS, ROCM_SERVICES } from '@/lib/mock-data';
 
 function HeroSection() {
@@ -117,28 +118,32 @@ function HowItWorksSection() {
     {
       number: '01',
       title: 'Acquire Tokens',
-      description: 'Purchase compute tokens backed by specific GPU hardware. Each token represents one GPU-hour of compute on that accelerator.',
+      description:
+        'Purchase compute tokens backed by specific GPU hardware. Each token represents one GPU-hour of compute on that accelerator.',
       cta: 'Buy Tokens',
       href: '/marketplace',
     },
     {
       number: '02',
       title: 'Redeem or Trade',
-      description: 'Redeem tokens for live GPU sessions, API credits, or batch jobs. Or trade unused tokens on the open marketplace at market price.',
+      description:
+        'Redeem tokens for live GPU sessions, API credits, or batch jobs. Or trade unused tokens on the open marketplace at market price.',
       cta: 'Start Trading',
       href: '/marketplace',
     },
     {
       number: '03',
       title: 'Lock in Vaults',
-      description: 'Lock tokens for 3, 6, or 12 months to earn yield, discounted compute rates, and priority queue access.',
+      description:
+        'Lock tokens for 3, 6, or 12 months to earn yield, discounted compute rates, and priority queue access.',
       cta: 'Explore Vaults',
       href: '/vaults',
     },
     {
       number: '04',
       title: 'Deploy at Scale',
-      description: 'Lease enterprise clusters with dedicated hardware, InfiniBand networking, and white-glove support for production workloads.',
+      description:
+        'Lease enterprise clusters with dedicated hardware, InfiniBand networking, and white-glove support for production workloads.',
       cta: 'View Clusters',
       href: '/clusters',
     },
@@ -162,7 +167,10 @@ function HowItWorksSection() {
               </span>
               <h3 className="font-display text-lg font-semibold mt-5 text-lub-ink">{step.title}</h3>
               <p className="text-sm text-tech-gray-500 mt-3 leading-relaxed">{step.description}</p>
-              <Link href={step.href} className="inline-block mt-5 text-sm font-medium text-nb-lime hover:text-nb-lime-hover transition-colors">
+              <Link
+                href={step.href}
+                className="inline-block mt-5 text-sm font-medium text-nb-lime hover:text-nb-lime-hover transition-colors"
+              >
                 {step.cta} →
               </Link>
             </div>
@@ -183,7 +191,7 @@ function GpuFleetSection() {
           Live view of capacity across our Lubbock, Texas region.
         </p>
 
-        <div className="mt-12 overflow-x-auto">
+        <div className="mt-12 overflow-x-auto rounded-3xl border border-white/[0.07] bg-nb-black/30 p-4 sm:p-6">
           <table className="w-full min-w-[700px]">
             <thead>
               <tr className="border-b border-white/[0.06]">
@@ -218,7 +226,9 @@ function GpuFleetSection() {
                             style={{ width: `${pct}%` }}
                           />
                         </div>
-                        <span className="text-xs font-mono text-tech-gray-400 w-16">{gpu.available}/{gpu.total}</span>
+                        <span className="text-xs font-mono text-tech-gray-400 w-16">
+                          {gpu.available}/{gpu.total}
+                        </span>
                       </div>
                     </td>
                   </tr>
@@ -243,8 +253,7 @@ function RocmSection() {
         </div>
         <h2 className="section-heading">Managed ROCm services</h2>
         <p className="section-subheading">
-          Purpose-built AI services running natively on AMD Instinct hardware.
-          No ROCm complexity — just APIs.
+          Purpose-built AI services running natively on AMD Instinct hardware. No ROCm complexity — just APIs.
         </p>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -302,8 +311,12 @@ export default function Page() {
     <main>
       <Navbar />
       <HeroSection />
+      <StackDiagram />
+      <FeatureGrid />
       <TokenTickerSection />
       <HowItWorksSection />
+      <InfrastructureSplit />
+      <CaseStudyMetrics />
       <GpuFleetSection />
       <RocmSection />
       <CtaSection />
