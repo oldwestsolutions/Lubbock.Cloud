@@ -8,7 +8,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/[0.06] bg-nb-black/80 backdrop-blur-2xl supports-[backdrop-filter]:bg-nb-black/65">
+    <nav className="relative border-b border-white/[0.06] bg-nb-black/80 backdrop-blur-2xl supports-[backdrop-filter]:bg-nb-black/65">
       <div className="mx-auto max-w-[1280px] container-px">
         <div className="flex h-[60px] lg:h-[68px] items-center justify-between">
           <Link
