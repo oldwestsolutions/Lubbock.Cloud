@@ -40,16 +40,12 @@ function HeroSection() {
             </Link>
           </div>
 
-          <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-8 sm:gap-x-10">
-            {[
-              { label: 'Total GPU Capacity', value: '1,568' },
-              { label: 'Tokens Circulating', value: '60M+' },
-              { label: 'Market Cap', value: '$253M' },
-              { label: '24h Volume', value: '$13.3M' },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p className="stat-value text-xl sm:text-2xl">{stat.value}</p>
-                <p className="stat-label mt-1">{stat.label}</p>
+          <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-y-8 gap-x-8 sm:gap-x-10">
+            {['Nvidia', 'AMD', 'Super Micro Computers'].map((name) => (
+              <div key={name}>
+                <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200">
+                  {name}
+                </p>
               </div>
             ))}
           </div>
