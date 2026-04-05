@@ -40,14 +40,16 @@ function HeroSection() {
             </Link>
           </div>
 
-          <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-y-8 gap-x-8 sm:gap-x-10">
-            {['Nvidia', 'AMD', 'Super Micro Computers'].map((name) => (
-              <div key={name}>
-                <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200">
-                  {name}
-                </p>
-              </div>
-            ))}
+          <div className="mt-20 flex flex-col gap-y-8 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-x-10 lg:gap-x-14">
+            <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200">
+              Nvidia
+            </p>
+            <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200">
+              AMD
+            </p>
+            <p className="font-display text-lg sm:text-xl md:text-2xl font-semibold tracking-tight text-tech-gray-200 whitespace-nowrap">
+              Super Micro Computers
+            </p>
           </div>
         </div>
       </div>
