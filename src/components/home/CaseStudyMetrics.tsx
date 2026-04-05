@@ -15,7 +15,7 @@ const METRICS = [
 
 export function CaseStudyMetrics() {
   return (
-    <section className="relative">
+    <section className="relative nb-section">
       <div className="absolute inset-0 bg-gradient-to-b from-sky-400/[0.06] to-transparent pointer-events-none" aria-hidden />
       <div className="relative mx-auto max-w-[1280px] container-px py-16 sm:py-24">
         <p className="nb-eyebrow mb-3">Case study</p>

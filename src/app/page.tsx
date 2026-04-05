@@ -150,7 +150,7 @@ function HowItWorksSection() {
   ];
 
   return (
-    <section className="relative">
+    <section className="relative nb-section">
       <div className="absolute inset-0 bg-grid-dense bg-grid-dense opacity-20" />
       <div className="relative mx-auto max-w-[1280px] container-px py-20 sm:py-24">
         <p className="nb-eyebrow text-center mb-3">How it works</p>
@@ -311,11 +311,11 @@ export default function Page() {
     <main>
       <Navbar />
       <HeroSection />
-      <FeatureGrid />
-      <TokenTickerSection />
       <HowItWorksSection />
       <InfrastructureSplit />
       <CaseStudyMetrics />
+      <FeatureGrid />
+      <TokenTickerSection />
       <GpuFleetSection />
       <RocmSection />
       <CtaSection />

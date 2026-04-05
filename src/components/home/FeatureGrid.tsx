@@ -12,7 +12,7 @@ const MANAGED = [
 
 export function FeatureGrid() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden nb-section">
       <div className="absolute inset-0 bg-grid opacity-[0.35]" aria-hidden />
       <div className="relative mx-auto max-w-[1280px] container-px py-16 sm:py-24">
         <h2 className="section-heading max-w-4xl">
