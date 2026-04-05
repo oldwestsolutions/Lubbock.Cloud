@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { ComputeTokensExplorer } from '@/components/tokens/ComputeTokensExplorer';
 import { PriceChart } from '@/components/ui/PriceChart';
 import { OrderBook } from '@/components/ui/OrderBook';
 import { COMPUTE_TOKENS, ORDER_BOOK_BIDS, ORDER_BOOK_ASKS, RECENT_ORDERS } from '@/lib/mock-data';
@@ -131,6 +132,9 @@ export default function MarketplacePage() {
     <main>
       <Navbar />
       <div className="page-container">
+        <ComputeTokensExplorer />
+
+        <div id="trade" className="scroll-mt-28 pt-4 border-t border-white/[0.06]">
         {/* Token selector */}
         <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-6 scrollbar-hide">
           {COMPUTE_TOKENS.map((token) => (
@@ -238,6 +242,7 @@ export default function MarketplacePage() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <Footer />

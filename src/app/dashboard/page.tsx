@@ -100,7 +100,7 @@ export default function DashboardPage() {
               <div className="lg:col-span-2 glow-card p-5">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-sm font-medium">Token Balances</h3>
-                  <Link href="/tokens" className="text-xs text-lub-accent hover:text-lub-accent/80 transition-colors">View All</Link>
+                  <Link href="/marketplace" className="text-xs text-lub-accent hover:text-lub-accent/80 transition-colors">View All</Link>
                 </div>
                 <div className="space-y-1">
                   <div className="grid grid-cols-12 gap-2 py-2 text-xs">

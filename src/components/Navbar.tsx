@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const NAV_LINKS = [
-  { label: 'Tokens', href: '/tokens' },
+  { label: 'Tokenomics', href: '/tokens' },
   { label: 'Marketplace', href: '/marketplace' },
   { label: 'Redeem', href: '/redeem' },
   { label: 'Vaults', href: '/vaults' },

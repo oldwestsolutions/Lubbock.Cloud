@@ -4,7 +4,7 @@ const FOOTER_SECTIONS = [
   {
     title: 'Platform',
     links: [
-      { label: 'Tokens', href: '/tokens' },
+      { label: 'Tokenomics', href: '/tokens' },
       { label: 'Marketplace', href: '/marketplace' },
       { label: 'Redeem Compute', href: '/redeem' },
       { label: 'Vaults', href: '/vaults' },

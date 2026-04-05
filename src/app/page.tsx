@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { StackDiagram, FeatureGrid, InfrastructureSplit, CaseStudyMetrics } from '@/components/home';
+import { FeatureGrid, InfrastructureSplit, CaseStudyMetrics } from '@/components/home';
 import { COMPUTE_TOKENS, GPU_SPECS, ROCM_SERVICES } from '@/lib/mock-data';
 
 function HeroSection() {
@@ -33,7 +33,7 @@ function HeroSection() {
 
           <div className="mt-11 flex flex-col sm:flex-row gap-3 sm:items-center">
             <Link href="/tokens" className="btn-primary justify-center sm:justify-center">
-              Explore tokens
+              Tokenomics
             </Link>
             <Link href="/marketplace" className="btn-secondary justify-center">
               Open marketplace
@@ -71,7 +71,7 @@ function TokenTickerSection() {
               Each token maps to one GPU-hour on dedicated hardware.
             </p>
           </div>
-          <Link href="/tokens" className="hidden sm:inline-flex btn-secondary !py-2.5 !px-6 text-sm shrink-0">
+          <Link href="/marketplace" className="hidden sm:inline-flex btn-secondary !py-2.5 !px-6 text-sm shrink-0">
             View all
           </Link>
         </div>
@@ -80,7 +80,7 @@ function TokenTickerSection() {
           {COMPUTE_TOKENS.map((token) => (
             <Link
               key={token.id}
-              href="/tokens"
+              href="/marketplace"
               className="glow-card p-5 hover:border-white/10 transition-all group"
             >
               <div className="flex items-start justify-between">
@@ -311,7 +311,6 @@ export default function Page() {
     <main>
       <Navbar />
       <HeroSection />
-      <StackDiagram />
       <FeatureGrid />
       <TokenTickerSection />
       <HowItWorksSection />
