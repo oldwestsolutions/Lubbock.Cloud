@@ -1,12 +1,6 @@
-export type GpuVendor = 'AMD' | 'NVIDIA';
+export type GpuVendor = 'AMD';
 
-export type GpuModel =
-  | 'MI300X'
-  | 'MI325X'
-  | 'MI355X'
-  | 'H100'
-  | 'H200'
-  | 'B200';
+export type GpuModel = 'MI300X' | 'MI325X' | 'MI355X' | 'MI250X' | 'MI210' | 'MI300A';
 
 export interface GpuSpec {
   model: GpuModel;
@@ -93,7 +87,7 @@ export interface ClusterPackage {
   networkGbps: number;
   pricePerMonth: number;
   features: string[];
-  tier: 'inference' | 'training' | 'heavy-training' | 'hybrid';
+  tier: 'inference' | 'training' | 'heavy-training' | 'scale-out';
 }
 
 export interface PricePoint {

@@ -129,21 +129,21 @@ export default function AccelerationPage() {
           <div className="bg-tech-gray-800/60 p-8 rounded-lg border border-white/10">
             <h3 className="text-2xl font-bold mb-4 text-tech-red">GPU Acceleration Nodes</h3>
             <p className="text-tech-gray-300 mb-6">
-              Dedicated GPU resources for machine learning, AI training, and high-performance computing. 
-              Choose from NVIDIA A100, V100, or RTX 4090 GPUs.
+              Dedicated AMD Instinct resources for machine learning, AI training, and high-performance computing. Pick the
+              memory tier that matches your model footprint.
             </p>
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span className="text-tech-gray-300">NVIDIA A100 (80GB)</span>
-                <span className="text-white font-medium">$2.50/hour</span>
+                <span className="text-tech-gray-300">MI300X (192 GB HBM3)</span>
+                <span className="text-white font-medium">$2.84/hour</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-tech-gray-300">NVIDIA V100 (32GB)</span>
-                <span className="text-white font-medium">$1.50/hour</span>
+                <span className="text-tech-gray-300">MI250X (128 GB HBM2e)</span>
+                <span className="text-white font-medium">$2.18/hour</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-tech-gray-300">RTX 4090 (24GB)</span>
-                <span className="text-white font-medium">$0.80/hour</span>
+                <span className="text-tech-gray-300">MI210 (64 GB HBM2e)</span>
+                <span className="text-white font-medium">$1.42/hour</span>
               </div>
             </div>
             <button className="w-full mt-6 bg-tech-red text-white px-6 py-3 rounded-md hover:opacity-95 transition-opacity font-medium">
@@ -163,7 +163,7 @@ export default function AccelerationPage() {
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 bg-tech-red rounded-full"></div>
-                <span className="text-tech-gray-300">CUDA and cuDNN optimized</span>
+                <span className="text-tech-gray-300">ROCm and PyTorch tuned</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 bg-tech-red rounded-full"></div>

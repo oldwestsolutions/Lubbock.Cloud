@@ -68,7 +68,7 @@ export default function RedeemPage() {
                       )}
                     >
                       <div className="flex items-center justify-between">
-                        <span className={g.vendor === 'AMD' ? 'badge-amd' : 'badge-nvidia'}>{g.vendor}</span>
+                        <span className="badge-amd">{g.vendor}</span>
                         <span className="text-xs font-mono text-tech-gray-500">{formatUsd(t.priceUsd)}/hr</span>
                       </div>
                       <p className="font-medium mt-2">{g.model}</p>

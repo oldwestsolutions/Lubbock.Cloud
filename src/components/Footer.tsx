@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { CloudLogo } from '@/components/CloudLogo';
 
 const FOOTER_DESCRIPTION =
-  'Tokenized GPU compute from West Texas — trade capacity like a commodity, redeem on real AMD and NVIDIA hardware, and run inference and training with the ergonomics of a modern AI cloud.';
+  'Tokenized GPU compute from West Texas — trade capacity like a commodity, redeem on AMD Instinct accelerators, and run inference and training with the ergonomics of a modern AI cloud.';
 
 const FOOTER_SECTIONS = [
   {
@@ -51,9 +51,7 @@ function BrandMark({ className = '' }: { className?: string }) {
       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] text-nb-lime shadow-[0_0_32px_rgba(255,255,255,0.06)] ring-1 ring-white/[0.1]">
         <CloudLogo className="h-7 w-7" />
       </div>
-      <span className="font-display text-lg font-semibold tracking-tight text-lub-ink">
-        Lubbock<span className="text-nb-lime"> Cloud</span>
-      </span>
+      <span className="font-display text-lg font-semibold tracking-tight text-lub-ink">Lubbock Cloud</span>
     </div>
   );
 }

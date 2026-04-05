@@ -162,9 +162,7 @@ export default function MarketplacePage() {
           <div>
             <div className="flex items-center gap-3">
               <h1 className="text-2xl font-semibold">{selectedToken.ticker}</h1>
-              <span className={selectedToken.vendor === 'AMD' ? 'badge-amd' : 'badge-nvidia'}>
-                {selectedToken.vendor}
-              </span>
+              <span className="badge-amd">{selectedToken.vendor}</span>
             </div>
             <p className="text-sm text-tech-gray-500 mt-1">
               {selectedToken.gpuModel} · {selectedToken.hbmTier} · {selectedToken.gpuHoursPerToken} GPU-hr per token

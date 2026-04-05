@@ -28,7 +28,7 @@ function HeroSection() {
             </h1>
 
             <p className="mt-8 text-lg sm:text-xl text-tech-gray-500 max-w-xl leading-[1.55]">
-              Buy and trade compute tokens backed by real AMD and NVIDIA hardware. Redeem for GPU sessions,
+              Buy and trade compute tokens backed by AMD Instinct accelerators. Redeem for GPU sessions,
               API credits, or batch jobs — with the clarity of a modern AI platform.
             </p>
 
@@ -42,14 +42,12 @@ function HeroSection() {
             </div>
 
             <div className="mt-14 flex flex-col gap-y-8 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-x-10 lg:gap-x-12">
-              <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200">
-                Nvidia
-              </p>
-              <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200">
-                AMD
+              <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200">AMD</p>
+              <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200 whitespace-nowrap">
+                Super Micro Computers
               </p>
               <p className="font-display text-lg sm:text-xl md:text-2xl font-semibold tracking-tight text-tech-gray-200 whitespace-nowrap">
-                Super Micro Computers
+                Micron Technology
               </p>
             </div>
           </div>
@@ -117,9 +115,7 @@ function TokenTickerSection() {
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="ticker-text font-medium text-lub-ink">{token.ticker}</span>
-                    <span className={token.vendor === 'AMD' ? 'badge-amd' : 'badge-nvidia'}>
-                      {token.vendor}
-                    </span>
+                    <span className="badge-amd">{token.vendor}</span>
                   </div>
                   <p className="text-xs text-tech-gray-500 mt-1">{token.hbmTier}</p>
                 </div>
@@ -240,7 +236,7 @@ function GpuFleetSection() {
                   <tr key={gpu.model} className="border-b border-white/[0.04] hover:bg-white/[0.02]">
                     <td className="py-4">
                       <div className="flex items-center gap-3">
-                        <span className={gpu.vendor === 'AMD' ? 'badge-amd' : 'badge-nvidia'}>{gpu.vendor}</span>
+                        <span className="badge-amd">{gpu.vendor}</span>
                         <span className="font-medium">{gpu.model}</span>
                       </div>
                     </td>

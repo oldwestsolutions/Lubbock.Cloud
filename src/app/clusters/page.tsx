@@ -7,19 +7,19 @@ const TIER_COLORS: Record<string, string> = {
   inference: 'from-lub-accent/15 to-tech-gray-900',
   training: 'from-lub-red/12 to-tech-gray-900',
   'heavy-training': 'from-tech-gray-700/30 to-tech-gray-900',
-  hybrid: 'from-lub-green-muted to-tech-gray-900',
+  'scale-out': 'from-lub-green-muted to-tech-gray-900',
 };
 
 const TIER_BADGES: Record<string, string> = {
   inference: 'bg-lub-accent-muted text-lub-accent border-lub-accent/25',
   training: 'bg-lub-red-muted text-lub-red border-lub-red/25',
   'heavy-training': 'bg-white/[0.06] text-tech-gray-300 border-white/[0.1]',
-  hybrid: 'bg-lub-green-muted text-lub-green border-lub-green/25',
+  'scale-out': 'bg-lub-green-muted text-lub-green border-lub-green/25',
 };
 
 export const metadata = {
   title: 'Enterprise Clusters — Lubbock Cloud',
-  description: 'Dedicated GPU clusters for inference, training, and hybrid workloads. AMD and NVIDIA hardware with InfiniBand networking.',
+  description: 'Dedicated GPU clusters for inference, training, and scale-out workloads. AMD Instinct with InfiniBand networking.',
 };
 
 export default function ClustersPage() {

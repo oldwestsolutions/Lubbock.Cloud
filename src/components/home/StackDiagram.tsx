@@ -1,7 +1,7 @@
 const LAYERS = [
   {
     title: 'Hardware',
-    items: ['AMD MI300X / MI325X', 'NVIDIA H100 / H200 / B200', 'InfiniBand fabric', 'NVMe + object tiers'],
+    items: ['AMD MI300X / MI325X / MI355X', 'MI250X / MI210 / MI300A', 'InfiniBand fabric', 'NVMe + object tiers'],
   },
   {
     title: 'Token layer',
@@ -9,7 +9,7 @@ const LAYERS = [
   },
   {
     title: 'Orchestration',
-    items: ['Job queue & priorities', 'Kubernetes pools', 'ROCm / CUDA images', 'VPC & networking'],
+    items: ['Job queue & priorities', 'Kubernetes pools', 'ROCm container images', 'VPC & networking'],
   },
   {
     title: 'Inference & APIs',

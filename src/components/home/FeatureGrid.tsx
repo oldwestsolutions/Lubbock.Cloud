@@ -36,10 +36,10 @@ export function FeatureGrid() {
             <div className="absolute inset-0 bg-gradient-to-t from-nb-black via-nb-black/40 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
               <p className="font-display text-xl sm:text-2xl font-semibold text-lub-ink leading-tight">
-                Latest AMD &amp; NVIDIA GPUs
+                Latest AMD Instinct accelerators
               </p>
               <p className="mt-2 text-sm text-tech-gray-400 max-w-xs">
-                MI300X through B200 — matched 1:1 to liquid compute tokens.
+                MI210 through MI355X — matched 1:1 to liquid compute tokens.
               </p>
             </div>
           </div>

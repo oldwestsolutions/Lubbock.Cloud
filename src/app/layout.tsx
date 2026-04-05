@@ -12,11 +12,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'Lubbock Cloud — Tokenized GPU Compute',
-  description: 'GPU infrastructure, made liquid. Buy, trade, and deploy tokenized compute backed by real AMD and NVIDIA hardware.',
+  description: 'GPU infrastructure, made liquid. Buy, trade, and deploy tokenized compute backed by AMD Instinct accelerators.',
   metadataBase: new URL('https://lubbock.cloud'),
   openGraph: {
     title: 'Lubbock Cloud — Tokenized GPU Compute',
-    description: 'GPU infrastructure, made liquid. Buy, trade, and deploy tokenized compute backed by real AMD and NVIDIA hardware.',
+    description: 'GPU infrastructure, made liquid. Buy, trade, and deploy tokenized compute backed by AMD Instinct accelerators.',
     url: 'https://lubbock.cloud',
     siteName: 'Lubbock Cloud',
     locale: 'en_US',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Lubbock Cloud — Tokenized GPU Compute',
-    description: 'GPU infrastructure, made liquid. Buy, trade, and deploy tokenized compute backed by real AMD and NVIDIA hardware.',
+    description: 'GPU infrastructure, made liquid. Buy, trade, and deploy tokenized compute backed by AMD Instinct accelerators.',
   },
   icons: {
     icon: '/icon.svg',

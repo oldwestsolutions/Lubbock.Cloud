@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import { MiniChart } from '@/components/ui/MiniChart';
 import { GpuAvailability } from '@/components/ui/GpuAvailability';
@@ -19,14 +18,7 @@ function TokenRow({ token, gpu }: { token: ComputeToken; gpu: (typeof GPU_SPECS)
     >
       <div className="col-span-3 sm:col-span-3">
         <div className="flex items-center gap-3">
-          <div
-            className={cn(
-              'w-10 h-10 rounded-lg flex items-center justify-center text-xs font-mono font-bold',
-              token.vendor === 'AMD'
-                ? 'bg-red-500/10 text-red-400 border border-red-500/20'
-                : 'bg-green-500/10 text-green-400 border border-green-500/20'
-            )}
-          >
+          <div className="w-10 h-10 rounded-lg flex items-center justify-center text-xs font-mono font-bold bg-tech-gray-800/80 text-tech-gray-200 border border-white/[0.08]">
             {token.gpuModel.slice(0, 4)}
           </div>
           <div>
@@ -64,39 +56,16 @@ function TokenRow({ token, gpu }: { token: ComputeToken; gpu: (typeof GPU_SPECS)
 }
 
 export function ComputeTokensExplorer() {
-  const [filter, setFilter] = useState<'all' | 'AMD' | 'NVIDIA'>('all');
-
-  const filtered = filter === 'all' ? COMPUTE_TOKENS : COMPUTE_TOKENS.filter((t) => t.vendor === filter);
-
   const totalMarketCap = COMPUTE_TOKENS.reduce((sum, t) => sum + t.marketCap, 0);
   const totalVolume = COMPUTE_TOKENS.reduce((sum, t) => sum + t.volume24h, 0);
 
   return (
     <div className="mb-16 sm:mb-20">
-      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-        <div>
-          <h2 className="section-heading">Compute Tokens</h2>
-          <p className="section-subheading">
-            Each token represents one GPU-hour of compute on real hardware. Backed 1:1 by accelerator capacity.
-          </p>
-        </div>
-        <div className="flex gap-2">
-          {(['all', 'AMD', 'NVIDIA'] as const).map((f) => (
-            <button
-              key={f}
-              type="button"
-              onClick={() => setFilter(f)}
-              className={cn(
-                'px-3 py-1.5 text-xs font-medium rounded-md transition-colors',
-                filter === f
-                  ? 'bg-white/10 text-white'
-                  : 'text-tech-gray-500 hover:text-tech-gray-300 hover:bg-white/5'
-              )}
-            >
-              {f === 'all' ? 'All Tokens' : f}
-            </button>
-          ))}
-        </div>
+      <div className="mb-10">
+        <h2 className="section-heading">Compute Tokens</h2>
+        <p className="section-subheading">
+          Each token represents one GPU-hour of compute on AMD Instinct hardware. Backed 1:1 by accelerator capacity.
+        </p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
@@ -127,7 +96,7 @@ export function ComputeTokensExplorer() {
           <div className="col-span-2 table-header text-right hidden sm:block">Volume / MCap</div>
           <div className="col-span-2 table-header hidden lg:block">GPU Status</div>
         </div>
-        {filtered.map((token) => (
+        {COMPUTE_TOKENS.map((token) => (
           <TokenRow
             key={token.id}
             token={token}
@@ -149,8 +118,8 @@ export function ComputeTokensExplorer() {
           <div className="glow-card p-6">
             <h4 className="font-medium">Memory-Tiered</h4>
             <p className="text-sm text-tech-gray-400 mt-2">
-              Token price reflects the HBM tier of the GPU. Higher-memory accelerators like MI355X (288 GB) command a
-              premium over H100 (80 GB).
+              Token price reflects the HBM tier of the accelerator. Higher-memory Instinct parts like MI355X (288 GB)
+              command a premium over entry tiers such as MI210 (64 GB).
             </p>
           </div>
           <div className="glow-card p-6">
