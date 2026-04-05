@@ -43,8 +43,8 @@ const FOOTER_SECTIONS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] bg-tech-gray-950">
-      <div className="mx-auto max-w-7xl container-px py-16">
+    <footer className="border-t border-white/[0.06] bg-[#09090b]">
+      <div className="mx-auto max-w-7xl container-px py-20">
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
           {FOOTER_SECTIONS.map((section) => (
             <div key={section.title}>
@@ -67,13 +67,13 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-6 h-6 rounded-md bg-gradient-to-br from-lub-blue to-lub-blue/60 flex items-center justify-center">
+            <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-lub-cta to-lub-cta-hover flex items-center justify-center ring-1 ring-white/[0.06]">
               <svg viewBox="0 0 24 24" className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg>
             </div>
             <span className="text-sm font-medium">
-              lubbock<span className="text-lub-blue">.cloud</span>
+              lubbock<span className="text-lub-accent">.cloud</span>
             </span>
           </div>
           <p className="text-xs text-tech-gray-600">

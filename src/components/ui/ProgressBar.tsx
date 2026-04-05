@@ -8,7 +8,7 @@ interface ProgressBarProps {
   showLabel?: boolean;
 }
 
-export function ProgressBar({ value, max = 100, color = 'bg-lub-blue', className, showLabel = true }: ProgressBarProps) {
+export function ProgressBar({ value, max = 100, color = 'bg-lub-accent', className, showLabel = true }: ProgressBarProps) {
   const pct = Math.min((value / max) * 100, 100);
 
   return (

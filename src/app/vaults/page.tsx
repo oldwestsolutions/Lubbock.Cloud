@@ -58,7 +58,7 @@ export default function VaultsPage() {
           </div>
           <div className="glow-card p-4">
             <p className="stat-label">Avg APY</p>
-            <p className="stat-value text-lg mt-1 text-lub-amber">{(USER_VAULTS.reduce((s, v) => s + v.apy, 0) / USER_VAULTS.length).toFixed(1)}%</p>
+            <p className="stat-value text-lg mt-1 text-lub-accent">{(USER_VAULTS.reduce((s, v) => s + v.apy, 0) / USER_VAULTS.length).toFixed(1)}%</p>
           </div>
         </div>
 
@@ -76,7 +76,7 @@ export default function VaultsPage() {
                     className={cn(
                       'glow-card p-5 text-left transition-all',
                       selectedTier === lt.months
-                        ? 'border-lub-amber/40 shadow-glow-amber'
+                        ? 'border-lub-accent/35 shadow-glow'
                         : 'hover:border-white/10'
                     )}
                   >
@@ -84,7 +84,7 @@ export default function VaultsPage() {
                     <div className="mt-3 space-y-2">
                       <div className="flex justify-between text-sm">
                         <span className="text-tech-gray-400">APY</span>
-                        <span className="font-mono text-lub-amber font-medium">{lt.apy}%</span>
+                        <span className="font-mono text-lub-accent font-medium">{lt.apy}%</span>
                       </div>
                       <div className="flex justify-between text-sm">
                         <span className="text-tech-gray-400">Rate Discount</span>
@@ -161,7 +161,7 @@ export default function VaultsPage() {
                           <p className="text-xs text-lub-green font-mono mt-0.5">+{vault.earned.toFixed(1)} earned</p>
                         </div>
                       </div>
-                      <ProgressBar value={pct} color="bg-lub-amber" />
+                      <ProgressBar value={pct} color="bg-lub-accent" />
                       <div className="flex justify-between text-xs text-tech-gray-500 mt-2">
                         <span>Locked: {vault.startDate}</span>
                         <span>Matures: {vault.maturityDate}</span>
@@ -189,7 +189,7 @@ export default function VaultsPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-tech-gray-400">APY</span>
-                  <span className="font-mono text-lub-amber">{tier.apy}%</span>
+                  <span className="font-mono text-lub-accent">{tier.apy}%</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-tech-gray-400">Amount</span>
@@ -213,8 +213,8 @@ export default function VaultsPage() {
               </div>
 
               {showConfirm ? (
-                <div className="mt-6 p-4 rounded-lg bg-lub-amber/10 border border-lub-amber/20">
-                  <p className="text-sm font-medium text-lub-amber">Vault Created</p>
+                <div className="mt-6 p-4 rounded-xl bg-lub-accent-muted border border-lub-accent/25">
+                  <p className="text-sm font-medium text-lub-accent">Vault Created</p>
                   <p className="text-xs text-tech-gray-400 mt-1">
                     {numAmount} {selectedTicker} locked for {selectedTier} months at {tier.apy}% APY.
                   </p>

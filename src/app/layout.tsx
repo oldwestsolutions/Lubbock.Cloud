@@ -7,7 +7,7 @@ import { TopBar } from '@/components/TopBar';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const viewport: Viewport = {
-  themeColor: '#00b4ff',
+  themeColor: '#0c0c0e',
 };
 
 export const metadata: Metadata = {
@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen bg-tech-gray-950 text-white antialiased selection:bg-lub-blue selection:text-white">
+      <body className="min-h-screen bg-tech-gray-950 text-lub-ink antialiased selection:bg-lub-accent/30 selection:text-lub-ink">
         <TopBar />
         {children}
         <Analytics />

@@ -16,18 +16,18 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/[0.06] bg-tech-gray-950/80 backdrop-blur-xl">
+    <nav className="sticky top-0 z-50 border-b border-white/[0.06] bg-tech-gray-950/90 backdrop-blur-xl supports-[backdrop-filter]:bg-tech-gray-950/75">
       <div className="mx-auto max-w-7xl container-px">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center gap-10">
+        <div className="flex h-14 lg:h-16 items-center justify-between">
+          <div className="flex items-center gap-8 lg:gap-12">
             <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-lub-blue to-lub-blue/60 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-lub-cta to-lub-cta-hover flex items-center justify-center ring-1 ring-white/[0.08]">
                 <svg viewBox="0 0 24 24" className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                 </svg>
               </div>
               <span className="text-lg font-semibold tracking-tight">
-                lubbock<span className="text-lub-blue">.cloud</span>
+                lubbock<span className="text-lub-accent">.cloud</span>
               </span>
             </Link>
 
@@ -36,7 +36,7 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-3 py-2 text-sm text-tech-gray-400 hover:text-white transition-colors rounded-md hover:bg-white/5"
+                  className="px-3 py-2 text-sm text-tech-gray-400 hover:text-lub-ink transition-colors rounded-lg hover:bg-white/[0.04]"
                 >
                   {link.label}
                 </Link>

@@ -26,17 +26,17 @@ const TX_ICONS: Record<string, string> = {
 };
 
 const TX_COLORS: Record<string, string> = {
-  buy: 'bg-lub-blue/10 text-lub-blue',
-  sell: 'bg-lub-red/10 text-lub-red',
-  redeem: 'bg-lub-purple/10 text-lub-purple',
-  lock: 'bg-lub-amber/10 text-lub-amber',
-  unlock: 'bg-lub-green/10 text-lub-green',
-  earn: 'bg-lub-green/10 text-lub-green',
+  buy: 'bg-lub-accent-muted text-lub-accent',
+  sell: 'bg-lub-red-muted text-lub-red',
+  redeem: 'bg-white/[0.06] text-tech-gray-300',
+  lock: 'bg-lub-red-muted text-lub-red',
+  unlock: 'bg-lub-green-muted text-lub-green',
+  earn: 'bg-lub-green-muted text-lub-green',
 };
 
 const STATUS_COLORS: Record<string, string> = {
   running: 'bg-lub-green/10 text-lub-green border-lub-green/20',
-  queued: 'bg-lub-amber/10 text-lub-amber border-lub-amber/20',
+  queued: 'bg-tech-gray-800 text-tech-gray-400 border-white/[0.08]',
   completed: 'bg-tech-gray-800 text-tech-gray-400 border-tech-gray-700',
   failed: 'bg-lub-red/10 text-lub-red border-lub-red/20',
 };
@@ -76,7 +76,7 @@ export default function DashboardPage() {
               className={cn(
                 'px-4 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px',
                 activeTab === tab
-                  ? 'border-lub-blue text-white'
+                  ? 'border-lub-accent text-lub-ink'
                   : 'border-transparent text-tech-gray-500 hover:text-tech-gray-300'
               )}
             >
@@ -100,7 +100,7 @@ export default function DashboardPage() {
               <div className="lg:col-span-2 glow-card p-5">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-sm font-medium">Token Balances</h3>
-                  <Link href="/tokens" className="text-xs text-lub-blue hover:text-lub-blue/80 transition-colors">View All</Link>
+                  <Link href="/tokens" className="text-xs text-lub-accent hover:text-lub-accent/80 transition-colors">View All</Link>
                 </div>
                 <div className="space-y-1">
                   <div className="grid grid-cols-12 gap-2 py-2 text-xs">
@@ -154,7 +154,7 @@ export default function DashboardPage() {
             <div className="mt-6 glow-card p-5">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-sm font-medium">Compute Sessions</h3>
-                <button onClick={() => setActiveTab('jobs')} className="text-xs text-lub-blue hover:text-lub-blue/80 transition-colors">
+                <button onClick={() => setActiveTab('jobs')} className="text-xs text-lub-accent hover:text-lub-accent/80 transition-colors">
                   View All
                 </button>
               </div>
@@ -172,7 +172,7 @@ export default function DashboardPage() {
                     </div>
                     {job.status === 'running' && (
                       <div className="w-32">
-                        <ProgressBar value={job.progress} color="bg-lub-blue" />
+                        <ProgressBar value={job.progress} color="bg-lub-accent" />
                       </div>
                     )}
                   </div>
@@ -184,7 +184,7 @@ export default function DashboardPage() {
             <div className="mt-6 glow-card p-5">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-sm font-medium">Vault Positions</h3>
-                <Link href="/vaults" className="text-xs text-lub-blue hover:text-lub-blue/80 transition-colors">Manage Vaults</Link>
+                <Link href="/vaults" className="text-xs text-lub-accent hover:text-lub-accent/80 transition-colors">Manage Vaults</Link>
               </div>
               <div className="grid gap-3 sm:grid-cols-3">
                 {USER_VAULTS.map((vault) => {
@@ -196,12 +196,12 @@ export default function DashboardPage() {
                     <div key={vault.id} className="p-4 bg-tech-gray-800/40 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
                         <span className="font-mono text-sm font-medium">{vault.tokenTicker}</span>
-                        <span className="text-xs text-lub-amber font-mono">{vault.apy}% APY</span>
+                        <span className="text-xs text-lub-accent font-mono">{vault.apy}% APY</span>
                       </div>
                       <p className="text-lg font-mono font-medium">{formatNumber(vault.amountLocked)}</p>
                       <p className="text-xs text-lub-green font-mono">+{vault.earned.toFixed(1)} earned</p>
                       <div className="mt-3">
-                        <ProgressBar value={pct} color="bg-lub-amber" />
+                        <ProgressBar value={pct} color="bg-lub-accent" />
                       </div>
                     </div>
                   );
@@ -233,7 +233,7 @@ export default function DashboardPage() {
                 <div className="col-span-2 text-right font-mono text-sm text-tech-gray-300">{job.tokensUsed}</div>
                 <div className="col-span-2 text-right font-mono text-sm text-tech-gray-300">{job.gpuHours}h</div>
                 <div className="col-span-2">
-                  <ProgressBar value={job.progress} color={job.status === 'completed' ? 'bg-lub-green' : 'bg-lub-blue'} />
+                  <ProgressBar value={job.progress} color={job.status === 'completed' ? 'bg-lub-green' : 'bg-lub-accent'} />
                 </div>
               </div>
             ))}
@@ -280,7 +280,7 @@ export default function DashboardPage() {
                         <span className="font-mono text-xs text-tech-gray-400">{tx.ticker}</span>
                         <span className={cn(
                           'text-[10px] px-1.5 py-0.5 rounded',
-                          tx.status === 'confirmed' ? 'bg-lub-green/10 text-lub-green' : 'bg-lub-amber/10 text-lub-amber'
+                          tx.status === 'confirmed' ? 'bg-lub-green-muted text-lub-green' : 'bg-lub-red-muted text-lub-red'
                         )}>
                           {tx.status}
                         </span>
@@ -309,7 +309,7 @@ export default function DashboardPage() {
                     <p className="text-xs text-tech-gray-400">Production</p>
                     <p className="font-mono text-sm mt-0.5">lc_prod_•••••••••••••••••••k7x</p>
                   </div>
-                  <button className="text-xs text-lub-blue hover:text-lub-blue/80">Copy</button>
+                  <button className="text-xs text-lub-accent hover:text-lub-accent/80">Copy</button>
                   <button className="text-xs text-lub-red hover:text-lub-red/80">Revoke</button>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-tech-gray-800/60 rounded-lg">
@@ -317,7 +317,7 @@ export default function DashboardPage() {
                     <p className="text-xs text-tech-gray-400">Development</p>
                     <p className="font-mono text-sm mt-0.5">lc_dev_•••••••••••••••••••m2p</p>
                   </div>
-                  <button className="text-xs text-lub-blue hover:text-lub-blue/80">Copy</button>
+                  <button className="text-xs text-lub-accent hover:text-lub-accent/80">Copy</button>
                   <button className="text-xs text-lub-red hover:text-lub-red/80">Revoke</button>
                 </div>
               </div>

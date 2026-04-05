@@ -69,30 +69,30 @@ export default function DocsPage() {
         {/* Quick links */}
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
           <Link href="#" className="glow-card p-5 hover:border-white/10 transition-all group">
-            <div className="w-10 h-10 rounded-lg bg-lub-blue/10 flex items-center justify-center mb-3">
-              <svg className="w-5 h-5 text-lub-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+            <div className="w-10 h-10 rounded-xl bg-lub-accent-muted flex items-center justify-center mb-3 ring-1 ring-lub-accent/15">
+              <svg className="w-5 h-5 text-lub-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg>
             </div>
-            <h3 className="font-medium group-hover:text-lub-blue transition-colors">Quick Start</h3>
+            <h3 className="font-medium text-lub-ink group-hover:text-lub-accent transition-colors">Quick Start</h3>
             <p className="text-sm text-tech-gray-400 mt-1">Go from zero to GPU session in 5 minutes.</p>
           </Link>
           <Link href="#" className="glow-card p-5 hover:border-white/10 transition-all group">
-            <div className="w-10 h-10 rounded-lg bg-lub-amber/10 flex items-center justify-center mb-3">
-              <svg className="w-5 h-5 text-lub-amber" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+            <div className="w-10 h-10 rounded-xl bg-lub-red-muted flex items-center justify-center mb-3 ring-1 ring-lub-red/15">
+              <svg className="w-5 h-5 text-lub-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                 <path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
-            <h3 className="font-medium group-hover:text-lub-amber transition-colors">API Reference</h3>
+            <h3 className="font-medium text-lub-ink group-hover:text-lub-red transition-colors">API Reference</h3>
             <p className="text-sm text-tech-gray-400 mt-1">Full endpoint documentation with examples.</p>
           </Link>
           <Link href="#" className="glow-card p-5 hover:border-white/10 transition-all group">
-            <div className="w-10 h-10 rounded-lg bg-lub-green/10 flex items-center justify-center mb-3">
+            <div className="w-10 h-10 rounded-xl bg-lub-green-muted flex items-center justify-center mb-3 ring-1 ring-lub-green/15">
               <svg className="w-5 h-5 text-lub-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                 <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <h3 className="font-medium group-hover:text-lub-green transition-colors">SDKs & Libraries</h3>
+            <h3 className="font-medium text-lub-ink group-hover:text-lub-green transition-colors">SDKs & Libraries</h3>
             <p className="text-sm text-tech-gray-400 mt-1">Python, Node.js, and Go client libraries.</p>
           </Link>
         </div>
@@ -109,9 +109,9 @@ export default function DocsPage() {
                     href={item.href}
                     className="flex gap-4 p-4 rounded-lg hover:bg-white/[0.03] transition-colors group border border-transparent hover:border-white/[0.06]"
                   >
-                    <div className="w-1 rounded-full bg-tech-gray-800 group-hover:bg-lub-blue transition-colors flex-shrink-0" />
+                    <div className="w-1 rounded-full bg-tech-gray-800 group-hover:bg-lub-accent transition-colors flex-shrink-0" />
                     <div>
-                      <h3 className="text-sm font-medium group-hover:text-lub-blue transition-colors">{item.title}</h3>
+                      <h3 className="text-sm font-medium text-lub-ink group-hover:text-lub-accent transition-colors">{item.title}</h3>
                       <p className="text-xs text-tech-gray-500 mt-1">{item.description}</p>
                     </div>
                   </Link>

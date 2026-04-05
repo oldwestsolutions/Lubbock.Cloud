@@ -17,16 +17,16 @@ export function TopBar() {
   const doubled = [...COMPUTE_TOKENS, ...COMPUTE_TOKENS];
 
   return (
-    <div className="h-8 bg-tech-gray-950 border-b border-white/[0.04] overflow-hidden">
+    <div className="h-9 bg-[#09090b] border-b border-white/[0.05] overflow-hidden">
       <div className="h-full flex items-center">
         <div
-          className="flex items-center gap-8 whitespace-nowrap"
+          className="flex items-center gap-10 whitespace-nowrap pl-4"
           style={{ transform: `translateX(-${offset % (COMPUTE_TOKENS.length * 200)}px)` }}
         >
           {doubled.map((token, i) => (
-            <div key={`${token.ticker}-${i}`} className="flex items-center gap-2 text-xs">
-              <span className="font-mono text-tech-gray-300">{token.ticker}</span>
-              <span className="font-mono text-white">${token.priceUsd.toFixed(2)}</span>
+            <div key={`${token.ticker}-${i}`} className="flex items-center gap-2 text-[11px]">
+              <span className="font-mono text-tech-gray-500">{token.ticker}</span>
+              <span className="font-mono text-lub-ink">${token.priceUsd.toFixed(2)}</span>
               <span
                 className={cn(
                   'font-mono',

@@ -6,27 +6,29 @@ import { COMPUTE_TOKENS, GPU_SPECS, ROCM_SERVICES } from '@/lib/mock-data';
 function HeroSection() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid bg-grid opacity-30" />
-      <div className="absolute inset-0 bg-gradient-to-b from-lub-blue/5 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-grid bg-grid opacity-40" />
+      <div className="absolute inset-0 bg-hero-fade" />
 
-      <div className="relative mx-auto max-w-7xl container-px pt-24 pb-20 sm:pt-32 sm:pb-28">
+      <div className="relative mx-auto max-w-7xl container-px pt-28 pb-24 sm:pt-36 sm:pb-32">
         <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 rounded-full bg-lub-blue/10 border border-lub-blue/20 px-4 py-1.5 mb-8">
-            <div className="w-2 h-2 rounded-full bg-lub-green animate-pulse" />
-            <span className="text-xs font-medium text-lub-blue">Live — 934 GPUs available across 6 accelerator classes</span>
+          <div className="inline-flex items-center gap-2 rounded-full bg-lub-accent-muted border border-lub-accent/20 px-4 py-2 mb-10">
+            <div className="w-1.5 h-1.5 rounded-full bg-lub-accent" />
+            <span className="text-xs font-medium tracking-wide text-tech-gray-300">
+              Live — 934 GPUs across 6 accelerator classes
+            </span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.08]">
+          <h1 className="text-5xl sm:text-6xl lg:text-[4.25rem] font-semibold tracking-tight leading-[1.06] text-lub-ink">
             Compute is no longer
             <br />
             rented. It&apos;s{' '}
-            <span className="text-lub-blue">owned</span>,{' '}
-            <span className="text-lub-amber">traded</span>,
+            <span className="text-lub-accent">owned</span>,{' '}
+            <span className="text-lub-red">traded</span>,
             <br />
-            and <span className="text-white">deployed</span>.
+            and <span className="text-tech-gray-200">deployed</span>.
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-tech-gray-400 max-w-2xl leading-relaxed">
+          <p className="mt-8 text-lg sm:text-xl text-tech-gray-500 max-w-2xl leading-relaxed">
             Tokenized GPU infrastructure backed by real AMD and NVIDIA hardware.
             Buy compute tokens, redeem them for live GPU sessions, or trade them
             on an open marketplace. GPU infrastructure, made liquid.
@@ -62,8 +64,8 @@ function HeroSection() {
 
 function TokenTickerSection() {
   return (
-    <section className="border-y border-white/[0.06] bg-tech-gray-900/50">
-      <div className="mx-auto max-w-7xl container-px py-16">
+    <section className="nb-section bg-tech-gray-900/40">
+      <div className="mx-auto max-w-7xl container-px py-20">
         <div className="flex items-end justify-between mb-10">
           <div>
             <h2 className="section-heading">Live Token Prices</h2>
@@ -86,7 +88,7 @@ function TokenTickerSection() {
               <div className="flex items-start justify-between">
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="ticker-text font-medium text-white">{token.ticker}</span>
+                    <span className="ticker-text font-medium text-lub-ink">{token.ticker}</span>
                     <span className={token.vendor === 'AMD' ? 'badge-amd' : 'badge-nvidia'}>
                       {token.vendor}
                     </span>
@@ -157,12 +159,12 @@ function HowItWorksSection() {
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step) => (
             <div key={step.number} className="glow-card p-6 group">
-              <span className="text-4xl font-semibold text-tech-gray-800 group-hover:text-lub-blue/20 transition-colors">
+              <span className="text-4xl font-semibold text-tech-gray-800 group-hover:text-lub-accent/25 transition-colors">
                 {step.number}
               </span>
-              <h3 className="text-lg font-medium mt-4">{step.title}</h3>
-              <p className="text-sm text-tech-gray-400 mt-2 leading-relaxed">{step.description}</p>
-              <Link href={step.href} className="inline-block mt-4 text-sm text-lub-blue hover:text-lub-blue/80 transition-colors">
+              <h3 className="text-lg font-medium mt-4 text-lub-ink">{step.title}</h3>
+              <p className="text-sm text-tech-gray-500 mt-2 leading-relaxed">{step.description}</p>
+              <Link href={step.href} className="inline-block mt-4 text-sm text-lub-accent hover:text-lub-green transition-colors">
                 {step.cta} &rarr;
               </Link>
             </div>
@@ -175,7 +177,7 @@ function HowItWorksSection() {
 
 function GpuFleetSection() {
   return (
-    <section className="border-y border-white/[0.06]">
+    <section className="nb-section">
       <div className="mx-auto max-w-7xl container-px py-20">
         <h2 className="section-heading">GPU Fleet Status</h2>
         <p className="section-subheading">
@@ -213,7 +215,7 @@ function GpuFleetSection() {
                       <div className="flex items-center gap-3 min-w-[140px]">
                         <div className="flex-1 h-1.5 bg-tech-gray-800 rounded-full overflow-hidden">
                           <div
-                            className={`h-full rounded-full ${pct > 60 ? 'bg-lub-green' : pct > 30 ? 'bg-lub-amber' : 'bg-lub-red'}`}
+                            className={`h-full rounded-full ${pct > 60 ? 'bg-lub-green' : pct > 30 ? 'bg-tech-gray-600' : 'bg-lub-red-deep'}`}
                             style={{ width: `${pct}%` }}
                           />
                         </div>
@@ -234,7 +236,7 @@ function GpuFleetSection() {
 function RocmSection() {
   return (
     <section className="relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-red-500/[0.02] to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-lub-red-muted to-transparent" />
       <div className="relative mx-auto max-w-7xl container-px py-20">
         <div className="flex items-center gap-3 mb-3">
           <span className="badge-amd">AMD</span>
@@ -252,7 +254,7 @@ function RocmSection() {
               <div className="flex items-start justify-between">
                 <h3 className="font-medium">{service.name}</h3>
                 {!service.available && (
-                  <span className="text-[10px] uppercase tracking-wider text-lub-amber bg-lub-amber/10 border border-lub-amber/20 rounded-full px-2 py-0.5">
+                  <span className="text-[10px] uppercase tracking-wider text-lub-red bg-lub-red-muted border border-lub-red/25 rounded-full px-2 py-0.5">
                     Coming Soon
                   </span>
                 )}
@@ -260,7 +262,7 @@ function RocmSection() {
               <p className="text-sm text-tech-gray-400 mt-2 leading-relaxed">{service.description}</p>
               <div className="mt-4 flex items-center justify-between text-xs">
                 <span className="font-mono text-tech-gray-500">{service.gpuModel}</span>
-                <span className="font-mono text-lub-blue">${service.pricePerHour.toFixed(2)}/hr</span>
+                <span className="font-mono text-lub-accent">${service.pricePerHour.toFixed(2)}/hr</span>
               </div>
             </div>
           ))}
@@ -272,14 +274,14 @@ function RocmSection() {
 
 function CtaSection() {
   return (
-    <section className="border-t border-white/[0.06]">
-      <div className="mx-auto max-w-7xl container-px py-24 text-center">
-        <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight">
+    <section className="nb-section">
+      <div className="mx-auto max-w-7xl container-px py-28 text-center">
+        <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-lub-ink">
           GPU infrastructure,
           <br />
-          <span className="text-lub-blue">made liquid.</span>
+          <span className="text-lub-accent">made liquid.</span>
         </h2>
-        <p className="mt-4 text-tech-gray-400 text-lg max-w-xl mx-auto">
+        <p className="mt-6 text-tech-gray-500 text-lg max-w-xl mx-auto leading-relaxed">
           Stop renting compute by the hour. Own it, trade it, and deploy it
           on your terms.
         </p>

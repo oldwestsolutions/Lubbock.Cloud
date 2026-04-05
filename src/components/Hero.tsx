@@ -1,6 +1,5 @@
 "use client";
 import Link from 'next/link';
-import Image from 'next/image';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 type Slide = {
@@ -83,7 +82,7 @@ export function Hero() {
                 backgroundRepeat: 'no-repeat',
               }}
             />
-            <div className="absolute inset-0 bg-tech-gray-900/70" />
+            <div className="absolute inset-0 bg-tech-gray-950/80" />
           </div>
         ))}
       </div>
@@ -109,10 +108,10 @@ export function Hero() {
                 href={slide.primary.href}
                 className={
                   slide.primary.variant === 'red'
-                    ? 'rounded-md bg-tech-red px-4 py-2 text-sm font-medium text-white hover:opacity-95 shadow-lg'
+                    ? 'rounded-xl bg-lub-red-deep px-4 py-2.5 text-sm font-medium text-white hover:opacity-90 shadow-lg ring-1 ring-white/10'
                     : slide.primary.variant === 'blue'
-                    ? 'rounded-md bg-tech-blue px-4 py-2 text-sm font-medium text-white hover:opacity-95 shadow-lg'
-                    : 'rounded-md bg-tech-gray-700 px-4 py-2 text-sm font-medium text-white hover:bg-tech-gray-600 shadow-lg'
+                    ? 'rounded-xl bg-lub-cta px-4 py-2.5 text-sm font-medium text-white hover:bg-lub-cta-hover shadow-lg ring-1 ring-white/10'
+                    : 'rounded-xl bg-tech-gray-800 px-4 py-2.5 text-sm font-medium text-white hover:bg-tech-gray-700 shadow-lg border border-white/10'
                 }
               >
                 {slide.primary.label}
@@ -121,8 +120,8 @@ export function Hero() {
                 href={slide.secondary.href}
                 className={
                   slide.secondary.variant === 'outline'
-                    ? 'rounded-md border border-white/30 bg-white/10 backdrop-blur-sm px-4 py-2 text-sm hover:border-white/50 hover:bg-white/20 shadow-lg'
-                    : 'rounded-md bg-tech-gray-700/80 backdrop-blur-sm px-4 py-2 text-sm font-medium text-white hover:bg-tech-gray-600/80 shadow-lg'
+                    ? 'rounded-xl border border-white/15 bg-white/[0.06] backdrop-blur-sm px-4 py-2.5 text-sm hover:border-white/25 hover:bg-white/[0.1] shadow-lg'
+                    : 'rounded-xl bg-tech-gray-900/80 backdrop-blur-sm px-4 py-2.5 text-sm font-medium text-white hover:bg-tech-gray-800 border border-white/10 shadow-lg'
                 }
               >
                 {slide.secondary.label}

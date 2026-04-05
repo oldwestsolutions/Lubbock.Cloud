@@ -8,7 +8,7 @@ interface GpuAvailabilityProps {
 
 export function GpuAvailability({ gpu, compact = false }: GpuAvailabilityProps) {
   const pct = (gpu.available / gpu.total) * 100;
-  const color = pct > 60 ? 'bg-lub-green' : pct > 30 ? 'bg-lub-amber' : 'bg-lub-red';
+  const color = pct > 60 ? 'bg-lub-green' : pct > 30 ? 'bg-tech-gray-600' : 'bg-lub-red-deep';
   const statusText = pct > 60 ? 'Available' : pct > 30 ? 'Limited' : 'Scarce';
 
   if (compact) {

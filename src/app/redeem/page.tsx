@@ -50,7 +50,7 @@ export default function RedeemPage() {
             {/* Step 1: GPU Selection */}
             <div>
               <h2 className="text-sm font-medium text-tech-gray-300 mb-4 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-lub-blue/20 text-lub-blue text-xs flex items-center justify-center font-medium">1</span>
+                <span className="w-6 h-6 rounded-full bg-lub-accent/20 text-lub-accent text-xs flex items-center justify-center font-medium">1</span>
                 Select GPU Type
               </h2>
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -63,7 +63,7 @@ export default function RedeemPage() {
                       className={cn(
                         'glow-card p-4 text-left transition-all',
                         selectedGpu === g.model
-                          ? 'border-lub-blue/40 shadow-glow'
+                          ? 'border-lub-accent/40 shadow-glow'
                           : 'hover:border-white/10'
                       )}
                     >
@@ -74,7 +74,7 @@ export default function RedeemPage() {
                       <p className="font-medium mt-2">{g.model}</p>
                       <p className="text-xs text-tech-gray-500 mt-1">{g.hbmSize} · {g.fp16Tflops} TFLOPS</p>
                       <div className="mt-3 flex items-center gap-2">
-                        <div className={cn('w-2 h-2 rounded-full', g.available > g.total * 0.3 ? 'bg-lub-green' : 'bg-lub-amber')} />
+                        <div className={cn('w-2 h-2 rounded-full', g.available > g.total * 0.3 ? 'bg-lub-green' : 'bg-tech-gray-600')} />
                         <span className="text-xs text-tech-gray-400">{g.available} available</span>
                       </div>
                     </button>
@@ -86,7 +86,7 @@ export default function RedeemPage() {
             {/* Step 2: Duration */}
             <div>
               <h2 className="text-sm font-medium text-tech-gray-300 mb-4 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-lub-blue/20 text-lub-blue text-xs flex items-center justify-center font-medium">2</span>
+                <span className="w-6 h-6 rounded-full bg-lub-accent/20 text-lub-accent text-xs flex items-center justify-center font-medium">2</span>
                 Select Duration
               </h2>
               <div className="grid gap-3 grid-cols-3 sm:grid-cols-6">
@@ -97,7 +97,7 @@ export default function RedeemPage() {
                     className={cn(
                       'glow-card p-3 text-center transition-all',
                       selectedDuration === d.hours
-                        ? 'border-lub-blue/40 shadow-glow'
+                        ? 'border-lub-accent/40 shadow-glow'
                         : 'hover:border-white/10'
                     )}
                   >
@@ -111,7 +111,7 @@ export default function RedeemPage() {
             {/* Step 3: Job Type */}
             <div>
               <h2 className="text-sm font-medium text-tech-gray-300 mb-4 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-lub-blue/20 text-lub-blue text-xs flex items-center justify-center font-medium">3</span>
+                <span className="w-6 h-6 rounded-full bg-lub-accent/20 text-lub-accent text-xs flex items-center justify-center font-medium">3</span>
                 Select Job Type
               </h2>
               <div className="grid gap-3 sm:grid-cols-3">
@@ -122,11 +122,11 @@ export default function RedeemPage() {
                     className={cn(
                       'glow-card p-5 text-left transition-all',
                       selectedJobType === job.id
-                        ? 'border-lub-blue/40 shadow-glow'
+                        ? 'border-lub-accent/40 shadow-glow'
                         : 'hover:border-white/10'
                     )}
                   >
-                    <div className="w-8 h-8 rounded-lg bg-tech-gray-800 flex items-center justify-center text-xs font-mono text-lub-blue mb-3">
+                    <div className="w-8 h-8 rounded-lg bg-tech-gray-800 flex items-center justify-center text-xs font-mono text-lub-accent mb-3">
                       {job.icon}
                     </div>
                     <p className="font-medium text-sm">{job.label}</p>
@@ -201,7 +201,7 @@ export default function RedeemPage() {
               {!hasBalance && (
                 <p className="text-xs text-tech-gray-500 mt-3 text-center">
                   You need {tokensNeeded - (balance?.available ?? 0)} more tokens.{' '}
-                  <a href="/marketplace" className="text-lub-blue hover:underline">Buy tokens</a>
+                  <a href="/marketplace" className="text-lub-accent hover:underline">Buy tokens</a>
                 </p>
               )}
             </div>
