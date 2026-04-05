@@ -1,55 +1,89 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { FeatureGrid, InfrastructureSplit, CaseStudyMetrics } from '@/components/home';
 import { COMPUTE_TOKENS, GPU_SPECS, ROCM_SERVICES } from '@/lib/mock-data';
 
+const HERO_CLOUD_SRC =
+  'https://images.unsplash.com/photo-1517483000871-1dbfbf731534?auto=format&fit=crop&w=1400&q=85';
+
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden min-h-0 lg:min-h-[min(92vh,880px)]">
       <div className="absolute inset-0 bg-grid bg-grid opacity-50" />
       <div className="absolute inset-0 bg-hero-fade" />
 
-      <div className="relative mx-auto max-w-[1280px] container-px pt-20 pb-20 sm:pt-28 sm:pb-28 lg:pt-32 lg:pb-32">
-        <div className="max-w-[720px]">
-          <p className="nb-eyebrow mb-6">Tokenized GPU cloud</p>
+      <div className="relative mx-auto max-w-[1280px] container-px pt-20 pb-16 sm:pt-28 sm:pb-20 lg:pt-28 lg:pb-24">
+        <div className="grid items-center gap-12 lg:gap-10 xl:gap-14 lg:grid-cols-2 lg:items-center">
+          <div className="max-w-xl lg:max-w-none xl:max-w-xl">
+            <p className="nb-eyebrow mb-6">Tokenized GPU cloud</p>
 
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 mb-8 backdrop-blur-sm">
-            <span className="nb-tag !rounded-full !py-0.5">Live fleet</span>
-            <span className="text-[13px] text-tech-gray-400">934 GPUs · 6 accelerator classes</span>
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 mb-8 backdrop-blur-sm">
+              <span className="nb-tag !rounded-full !py-0.5">Live fleet</span>
+              <span className="text-[13px] text-tech-gray-400">934 GPUs · 6 accelerator classes</span>
+            </div>
+
+            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-semibold tracking-[-0.03em] leading-[1.05] text-lub-ink">
+              The cloud for AI
+              <br />
+              infrastructure,{' '}
+              <span className="text-nb-lime">made liquid</span>.
+            </h1>
+
+            <p className="mt-8 text-lg sm:text-xl text-tech-gray-500 max-w-xl leading-[1.55]">
+              Buy and trade compute tokens backed by real AMD and NVIDIA hardware. Redeem for GPU sessions,
+              API credits, or batch jobs — with the clarity of a modern AI platform.
+            </p>
+
+            <div className="mt-11 flex flex-col sm:flex-row gap-3 sm:items-center">
+              <Link href="/tokens" className="btn-primary justify-center sm:justify-center">
+                Tokenomics
+              </Link>
+              <Link href="/marketplace" className="btn-secondary justify-center">
+                Open marketplace
+              </Link>
+            </div>
+
+            <div className="mt-14 flex flex-col gap-y-8 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-x-10 lg:gap-x-12">
+              <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200">
+                Nvidia
+              </p>
+              <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200">
+                AMD
+              </p>
+              <p className="font-display text-lg sm:text-xl md:text-2xl font-semibold tracking-tight text-tech-gray-200 whitespace-nowrap">
+                Super Micro Computers
+              </p>
+            </div>
           </div>
 
-          <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.5rem] font-semibold tracking-[-0.03em] leading-[1.05] text-lub-ink">
-            The cloud for AI
-            <br />
-            infrastructure,{' '}
-            <span className="text-nb-lime">made liquid</span>.
-          </h1>
-
-          <p className="mt-8 text-lg sm:text-xl text-tech-gray-500 max-w-xl leading-[1.55]">
-            Buy and trade compute tokens backed by real AMD and NVIDIA hardware. Redeem for GPU sessions,
-            API credits, or batch jobs — with the clarity of a modern AI platform.
-          </p>
-
-          <div className="mt-11 flex flex-col sm:flex-row gap-3 sm:items-center">
-            <Link href="/tokens" className="btn-primary justify-center sm:justify-center">
-              Tokenomics
-            </Link>
-            <Link href="/marketplace" className="btn-secondary justify-center">
-              Open marketplace
-            </Link>
-          </div>
-
-          <div className="mt-20 flex flex-col gap-y-8 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-x-10 lg:gap-x-14">
-            <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200">
-              Nvidia
-            </p>
-            <p className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-tech-gray-200">
-              AMD
-            </p>
-            <p className="font-display text-lg sm:text-xl md:text-2xl font-semibold tracking-tight text-tech-gray-200 whitespace-nowrap">
-              Super Micro Computers
-            </p>
+          <div className="relative w-full max-w-xl mx-auto lg:max-w-none lg:mx-0">
+            <div
+              className="pointer-events-none absolute -inset-6 sm:-inset-8 rounded-[2.5rem] bg-gradient-to-br from-white/[0.07] via-nb-lime/[0.06] to-transparent opacity-80 blur-3xl"
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,420px)] h-[min(100%,420px)] rounded-full bg-white/[0.03] blur-[80px]"
+              aria-hidden
+            />
+            <div className="relative aspect-[5/4] sm:aspect-[4/3] lg:aspect-[5/4] rounded-[1.75rem] sm:rounded-3xl overflow-hidden border border-white/[0.09] bg-nb-raised shadow-[0_48px_120px_-48px_rgba(0,0,0,0.85),0_0_0_1px_rgba(255,255,255,0.04)_inset] ring-1 ring-white/[0.05]">
+              <Image
+                src={HERO_CLOUD_SRC}
+                alt="Atmospheric clouds over open sky"
+                fill
+                className="object-cover object-[center_35%] scale-105 sm:scale-100 transition-transform duration-700 ease-out"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-nb-black via-nb-black/25 to-transparent sm:bg-gradient-to-l sm:from-nb-black sm:via-nb-black/40 sm:to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-nb-black/50" />
+              <div className="absolute bottom-5 left-5 right-5 sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-[240px] rounded-2xl border border-white/[0.08] bg-nb-black/55 backdrop-blur-md px-4 py-3">
+                <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-tech-gray-500">Region</p>
+                <p className="mt-1 font-display text-sm font-semibold text-lub-ink">Lubbock, Texas</p>
+                <p className="mt-0.5 text-xs text-tech-gray-500">Low-latency GPU fabric</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
